@@ -2,16 +2,17 @@
   "name": "uni-preset-vue",
   "version": "0.0.0",
   "scripts": {
+    "build:app": "uni build -p app",
+    "build:h5": "uni build",
+    "build:mp-weixin": "uni build -p mp-weixin",
     "dev:app": "uni -p app",
     "dev:app-android": "uni -p app-android",
     "dev:app-ios": "uni -p app-ios",
     "dev:custom": "uni -p",
+    "dev": "uni",
     "dev:h5": "uni",
     "dev:h5:ssr": "uni --ssr",
     "dev:mp-weixin": "uni -p mp-weixin",
-    "build:app": "uni build -p app",
-    "build:h5": "uni build",
-    "build:mp-weixin": "uni build -p mp-weixin",
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
@@ -20,6 +21,8 @@
     "@dcloudio/uni-components": "3.0.0-3080720230703001",
     "@dcloudio/uni-h5": "3.0.0-3080720230703001",
     "@dcloudio/uni-mp-weixin": "3.0.0-3080720230703001",
+    "sass": "^1.64.1",
+    "sass-loader": "^13.3.2",
     "vue": "^3.2.45",
     "vue-i18n": "^9.1.9"
   },
@@ -30,7 +33,8 @@
     "@dcloudio/uni-stacktracey": "3.0.0-3080720230703001",
     "@dcloudio/vite-plugin-uni": "3.0.0-3080720230703001",
     "@vue/tsconfig": "^0.1.3",
-    "typescript": "^4.9.4",
+    "prettier": "^2.4.1",
+    "typescript": "^5.1.6",
     "vite": "4.0.4",
     "vue-tsc": "^1.0.24"
   }

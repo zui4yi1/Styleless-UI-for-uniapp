@@ -1,3 +1,87 @@
+/* 品牌主色 */
+$ui-color-primary: #ee22cc;
+
+/* 通用主色 */
+$ui-color-white: #ffffff;
+$ui-color-black: #000000;
+$ui-color-transparent: transparent;
+
+/* 字体颜色 */
+$ui-color-base: #1d2129;
+$ui-color-secondary: #1d2129;
+$ui-color-placeholder: #1d2129;
+$ui-color-disabled: #1d2129;
+
+/* 边框颜色 */
+$ui-color-line-light: #f3f3f3;
+$ui-color-line-default: #c3c3c3;
+$ui-color-line-deep: #a1a1a1;
+
+/* 背景颜色 */
+$ui-color-fill-light: #d1d1d1;
+$ui-color-fill-default: #b1b1b1;
+$ui-color-fill-deep: #919191;
+
+/* 主色扩展 */
+$ui-color-primary-dark-1: #ff11dd;
+$ui-color-primary-light-1: #ee13dd;
+$ui-color-primary-light-2: #ff1cdd;
+$ui-color-primary-light-3: #ff1fdd;
+$ui-color-white-dark-1: #e8f3ff;
+$ui-color-white-light-1: #ffffff;
+$ui-color-white-light-2: #93beff;
+$ui-color-white-light-3: #f7f7f7;
+$ui-color-black-dark-1: #000000;
+$ui-color-black-light-1: #000000;
+$ui-color-black-light-2: #000000;
+$ui-color-black-light-3: #000000;
+$ui-color-transparent-dark-1: transparent;
+$ui-color-transparent-light-1: transparent;
+$ui-color-transparent-light-2: transparent;
+$ui-color-transparent-light-3: transparent;
+
+/* 字体家族 */
+$ui-font-family-regular: 'PingFangSC-Regular';
+$ui-font-family-medium: 'PingFangSC-Medium';
+
+/* 遮罩颜色 */
+$ui-mask-default: rgba(0, 0, 0, 0.3);
+$ui-mask-deep: rgba(0, 0, 0, 0.75);
+
+/* 阴影颜色 */
+$ui-shadow-default: xxxxxxxx;
+
+/* 字体尺寸 */
+$ui-font-size-desc: 20rpx;
+$ui-font-size-secondary: 24rpx;
+$ui-font-size-content: 28rpx;
+$ui-font-size-header: 30rpx;
+$ui-font-size-title: 34rpx;
+$ui-font-size-xt: 40rpx;
+$ui-font-size-xxt: 48rpx;
+
+/* 间距 */
+$ui-gap-xs: 8rpx;
+$ui-gap-small: 16rpx;
+$ui-gap-default: 24rpx;
+$ui-gap-large: 32rpx;
+$ui-gap-xl: 40rpx;
+
+/* 高度 */
+$ui-height-button-default: 96rpx;
+$ui-height-button-small: 64rpx;
+$ui-height-cell-default: 88rpx;
+$ui-height-cell-large: 120rpx;
+
+/* 圆角 */
+$ui-radius-none: 0;
+$ui-radius-round: 50%;
+$ui-radius-small: 8rpx;
+$ui-radius-default: 12rpx;
+$ui-radius-large: 20rpx;
+$ui-radius-xl: 32rpx;
+$ui-radius-cell-default: 44rpx;
+
 /**
  * 这里是uni-app内置的常用样式变量
  *

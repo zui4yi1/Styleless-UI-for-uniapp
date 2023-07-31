@@ -1,0 +1,18 @@
+{
+	// Place your Styleless-UI-for-uniapp 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"vue-base-component": {
+		"scope": "vue",
+		"prefix": "vue-base-component",
+		"body": [
+			"<template>\r  <view :class=\"[ComponentName, className]\"></view>\r</template>\r<script setup lang=\"ts\">\r  import { ref } from 'vue';\r\r  // ComponentName and childContainerClassName\r  const ComponentName = 'sl-$1';\r  const childContainerClassName = (suffixName: string) => [ComponentName, suffixName].join('-');\r\r  // define props\r  interface IProps {\r    className?: string | string[];\r  }\r  const props = withDefaults(defineProps<IProps>(), {\r    className: '',\r  });\r\r  // define emits\r  // const emites = defineEmits(['']);\r\r  const hello = ref('Hello');\r</script>\r",
+			"$2"
+		],
+		"description": "snippets for base components"
+	}
+}
