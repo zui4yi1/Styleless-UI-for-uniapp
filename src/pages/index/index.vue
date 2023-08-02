@@ -1,5 +1,8 @@
 <template>
   <view>
+    <view>
+      <text>aaa</text>
+    </view>
     <view class="flex">
       <text>abc</text>
       <sl-icon />
@@ -13,6 +16,7 @@
 
 <script setup lang="ts">
   import { ref } from 'vue';
+  // eslint-disable-next-line no-unused-vars
+
   const title = ref('Hello');
-  alert(2);
 </script>
