@@ -6,7 +6,7 @@
   >
     <button
       :class="[
-        clz.append('body'),
+        clz.join('body'),
         bodyClazz,
         `border-${radius}`,
         `height-${size}`,

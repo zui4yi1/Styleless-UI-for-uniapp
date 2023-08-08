@@ -1,7 +1,7 @@
 <template>
   <view :class="[clz.root(), className]">
     <view
-      :class="[clz.append('body')]"
+      :class="[clz.join('body')]"
       class="float-clear"
       :style="{
         marginRight: `-${gutter}rpx`,
@@ -25,4 +25,6 @@
 
   provide('gutter', _props.gutter);
   provide('rowGutter', _props.rowGutter || _props.gutter);
+  provide('height', _props.height);
+  provide('radius', _props.radius);
 </script>

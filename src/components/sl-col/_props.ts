@@ -25,4 +25,9 @@ export const props = buildProps({
     type: Number,
     default: 0,
   },
+
+  bg: {
+    type: String as PropType<IColor>,
+    default: 'white',
+  },
 } as const);

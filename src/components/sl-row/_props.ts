@@ -1,4 +1,5 @@
 import { buildProps } from '@/utils/element-plus/props';
+import type { PropType } from 'vue';
 
 export const props = buildProps({
   /**
@@ -15,5 +16,13 @@ export const props = buildProps({
   rowGutter: {
     type: [String, Array],
     default: 0,
+  },
+  height: {
+    type: [String, Array],
+    default: 88,
+  },
+  radius: {
+    type: String as PropType<IRadius>,
+    default: 'none',
   },
 } as const);
