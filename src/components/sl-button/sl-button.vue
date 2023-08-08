@@ -9,8 +9,8 @@
         clz.append('body'),
         bodyClazz,
         `border-${radius}`,
-        `font-${theme.fontSize}`,
         `height-${size}`,
+        `font-${theme.fontSize}`,
         `color-${theme.color}`,
         disabled ? `bg-${theme.bg}-disabled` : `bg-${theme.bg}`,
       ]"
@@ -31,9 +31,6 @@
 
   const ComponentName = 'sl-button';
   const clz = useClassName(ComponentName);
-
-  // will be valid from vue 3.3+
-  // defineOptions({ name: ComponentName });
 
   defineProps(props);
   defineEmits(['click']);

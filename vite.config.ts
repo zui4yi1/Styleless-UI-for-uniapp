@@ -1,7 +1,13 @@
 import uni from '@dcloudio/vite-plugin-uni';
 import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
+import path from 'path';
 export default defineConfig({
+  resolve: {
+    //使用@路径
+    alias: {
+      '@': path.resolve('src'),
+    },
+  },
   plugins: [uni()],
 });

@@ -10,7 +10,7 @@
     "scope": "vue",
     "prefix": "vue-base-component",
     "body": [
-      "<template>\r  <view :class=\"[clz.root(), className]\" class=\"\"></view>\r</template>\r<script setup lang=\"ts\">\r  import { useClassName } from '@/hooks/use-class-name';\r  import { defaultProps, type IProps } from './_props';\r\r  const ComponentName = 'sl-$1';\r  const clz = useClassName(ComponentName);\r\r  defineOptions({ name: ComponentName });\r\r  // eslint-disable-next-line @typescript-eslint/no-unused-vars\r  const props = withDefaults(defineProps<IProps>(), defaultProps);\r\r  // eslint-disable-next-line @typescript-eslint/no-unused-vars\r  const emites = defineEmits(['click']);\r</script>\r",
+      "<template>\r  <view :class=\"[clz.root(), className]\" class=\"\"></view>\r</template>\r<script setup lang=\"ts\">\r  import { useClassName } from '@/hooks/use-class-name';\r  import { props } from './_props';\r\r  const ComponentName = 'sl-$1';\r  const clz = useClassName(ComponentName);\r\r  defineProps(props);\r  // defineEmits(['click']);\r</script>\r",
       "$2"
     ],
     "description": "snippets for base components"

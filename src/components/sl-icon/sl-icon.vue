@@ -20,12 +20,8 @@
   import { props } from './_props';
 
   const ComponentName = 'sl-icon';
-
   const clz = useClassName(ComponentName);
 
-  // be valid from vue 3.3+
-  // defineOptions({ name: ComponentName });
   defineProps(props);
-
   defineEmits(['click']);
 </script>

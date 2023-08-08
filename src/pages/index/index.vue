@@ -18,6 +18,17 @@
       <sl-icon className="pr-xxs" />
       <view>确定</view>
     </sl-button>
+    <sl-card className="mt-d">aaaa</sl-card>
+
+    <sl-row className="mt-d">
+      <sl-col><view class="bg-primary h-88">第一个</view></sl-col>
+      <sl-col><view class="bg-disabled h-88">第二个</view></sl-col>
+      <sl-col><view class="bg-primary h-88">第三个</view></sl-col>
+      <sl-col><view class="bg-line-default h-88">第四个</view></sl-col>
+      <sl-col>
+        <sl-card className=" h-88">第一个</sl-card>
+      </sl-col>
+    </sl-row>
   </view>
 </template>
 
