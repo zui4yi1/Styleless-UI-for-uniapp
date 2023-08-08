@@ -1,23 +1,40 @@
-import type { CSSProperties } from 'vue';
+import { buildProps } from '@/utils/element-plus/props';
+import type { CSSProperties, PropType } from 'vue';
 
-export interface IProps {
-  className?: string | string[];
-  iconLib?: string;
-  name: string;
-  color?: IColor;
-  size?: string | number;
-  index?: string | number;
-  hoverClass?: string;
-  styleProps?: CSSProperties;
-}
-
-export const defaultProps = {
-  className: '',
-  iconLib: 'common',
-  name: 'icon_add',
-  color: 'placeholder' as IColor,
-  hoverClass: '',
-  size: 36,
-  index: 0,
-  styleProps: () => ({}),
-};
+export const props = buildProps({
+  /**
+   * @description inject global classNames to the component root
+   */
+  className: {
+    type: [String, Array],
+    default: '',
+  },
+  iconLib: {
+    type: String,
+    default: 'common',
+  },
+  name: {
+    type: String,
+    default: 'icon_add',
+  },
+  color: {
+    type: String as PropType<IColor>,
+    default: 'placeholder',
+  },
+  hoverClass: {
+    type: String,
+    default: '',
+  },
+  size: {
+    type: [String, Number],
+    default: 28,
+  },
+  index: {
+    type: Number,
+    default: 0,
+  },
+  styleProps: {
+    type: Object as PropType<CSSProperties>,
+    default: () => ({}),
+  },
+} as const);

@@ -24,6 +24,8 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-3080720230703001",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.1",
+    "lodash-es": "^4.17.21",
+    "lodash-unified": "^1.0.3",
     "sass": "^1.64.1",
     "sass-loader": "^13.3.2",
     "vue": "^3.2.45",

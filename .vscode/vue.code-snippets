@@ -19,7 +19,7 @@
     "scope": "typescript",
     "prefix": "vue-base-component-props",
     "body": [
-      "export interface IProps {\r  className?: string | string[];\r}\r\rexport const defaultProps = {\r  className: '',\r};\r",
+      "import { buildProps } from '@/utils/element-plus/props';\r\rexport const props = buildProps({\r  /**\r   * @description inject global classNames to the component root\r   */\r  className: {\r    type: [String, Array],\r    default: '',\r  },\r  xxx: {\r    type: String,\r    default: '',\r  },\r} as const);",
       "$2"
     ],
     "description": "snippets for base components props"
