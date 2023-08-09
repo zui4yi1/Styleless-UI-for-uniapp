@@ -27,6 +27,23 @@
       <sl-col>第四个</sl-col>
       <sl-col>第五个</sl-col>
     </sl-row>
+    <sl-empty bg="placeholder" content="暂无数据" type="inline">
+      <view class="color-primary">没有数据</view>
+    </sl-empty>
+    <sl-line className="mt-d" />
+    <sl-space-group className="mt-d">
+      <sl-space-item><view class="w-120 bg-primary">第一个</view></sl-space-item>
+      <sl-space-item><view class="w-120 bg-placeholder color-white">第二个</view></sl-space-item>
+      <sl-space-item>第三个</sl-space-item>
+      <sl-space-item>第四个</sl-space-item>
+      <sl-space-item>第五个</sl-space-item>
+      <sl-space-item><view class="w-120 bg-placeholder color-white">第二个</view></sl-space-item>
+      <sl-space-item><view class="w-120 bg-placeholder color-white">第二个</view></sl-space-item>
+      <sl-space-item><view class="w-120 bg-placeholder color-white">第二个</view></sl-space-item>
+      <sl-space-item><view class="w-120 bg-placeholder color-white">第二个</view></sl-space-item>
+      <sl-space-item><view class="w-120 bg-placeholder color-white">第二个</view></sl-space-item>
+    </sl-space-group>
+    <view class="mt-d w-120 bg-placeholder color-white">第二个</view>
   </view>
 </template>
 

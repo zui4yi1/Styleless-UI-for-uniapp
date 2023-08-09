@@ -26,7 +26,7 @@ export const props = buildProps({
     default: '',
   },
   size: {
-    type: [String, Number],
+    type: Number,
     default: 28,
   },
   index: {

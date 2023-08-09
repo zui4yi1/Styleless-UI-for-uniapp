@@ -3,12 +3,13 @@
   "compilerOptions": {
     "sourceMap": true,
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
+
     "lib": ["esnext", "dom"],
     "types": ["@dcloudio/types"],
-    "ignoreDeprecations": "5.0"
+    "ignoreDeprecations": "5.0",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src/**/*.ts", "typings/*.d.ts", "src/**/*.vue"]
 }

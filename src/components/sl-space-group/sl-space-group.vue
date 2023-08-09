@@ -17,13 +17,12 @@
   import { provide } from 'vue';
   import { props } from './_props';
 
-  const ComponentName = 'sl-row';
+  const ComponentName = 'sl-space-group';
   const clz = useClassName(ComponentName);
 
   const _props = defineProps(props);
 
   provide('gutter', _props.gutter);
   provide('rowGutter', _props.rowGutter || _props.gutter);
-  provide('height', _props.height);
-  provide('radius', _props.radius);
+  provide('layout', _props.layout);
 </script>
