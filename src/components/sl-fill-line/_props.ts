@@ -10,7 +10,7 @@ export const props = buildProps({
     default: '',
   },
   height: {
-    type: Number,
+    type: [Number, String],
     default: 0,
   },
   size: {

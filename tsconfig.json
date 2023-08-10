@@ -5,7 +5,7 @@
     "baseUrl": ".",
 
     "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types"],
+    "types": ["@dcloudio/types", "@types/uni-app"],
     "ignoreDeprecations": "5.0",
     "paths": {
       "@/*": ["./src/*"]

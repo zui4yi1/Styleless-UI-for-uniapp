@@ -7,7 +7,7 @@
       { 'safe-bottom': isBottom, [`height-${size}`]: height !== 0 },
     ]"
     class=""
-    :style="height ? { height: `${height}rpx` } : {}"
+    :style="height ? { height: typeof height === 'number' ? `${height}rpx` : height } : {}"
   ></view>
 </template>
 <script setup lang="ts">
