@@ -63,7 +63,7 @@
 
 .flex-right {
   display: flex;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .flex-top {
@@ -148,7 +148,8 @@
 .border-none {
   border: none;
 }
-.border-none:before, .border-none:after {
+.border-none:before,
+.border-none:after {
   border: none;
 }
 
@@ -242,10 +243,11 @@
 .float-clear {
   display: invalid;
 }
-.float-clear:before, .float-clear:after {
+.float-clear:before,
+.float-clear:after {
   display: table;
   clear: both;
-  content: "";
+  content: '';
 }
 
 /* bold 类 */
@@ -274,8 +276,20 @@
   transform: rotate(45deg);
 }
 
+.scale {
+  transform: scale(1);
+}
+.scale-popup {
+  transform: scale(1.2);
+}
 .scale-half {
   transform: scale(0.5);
+}
+.scale-half-x {
+  transform: scaleY(0.5);
+}
+.scale-half-y {
+  transform: scaleX(0.5);
 }
 
 .scale-double {
@@ -993,4 +1007,51 @@
 
 .delayShow {
   animation: delayShow 1s ease-out forwords;
+}
+
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.abs-full {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.abs-bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.abs-center {
+  width: 66%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.toppest {
+  z-index: 99999;
+}
+.mask-1 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.transition-mask {
+  transition: all 0.3s ease-in-out;
+}
+
+.z-hide {
+  z-index: -1;
 }

@@ -3,6 +3,16 @@
     <view>
       <text>bbb</text>
     </view>
+
+    <view
+      :style="{
+        width: '100%',
+        border: 'none',
+        borderBottomWidth: '10rpx',
+        borderBottomStyle: 'solid',
+        borderBottomColor: '#ccc',
+      }"
+    ></view>
     <view class="flex">
       <text>确定</text>
       <sl-icon />
@@ -11,10 +21,14 @@
 
       <sl-icon name="loading" className="spin" />
     </view>
-    <sl-button :icon="{ name: 'icon_add' }">
-      <view>确定</view>
+    <sl-popup v-model:open="isOpen" title="请选择一个" :closeOnTab="false">
+      <view class="rect-200">测试</view>
+    </sl-popup>
+    <view>{{ isOpen }}</view>
+    <sl-button :icon="{ name: 'icon_add' }" @click="isOpen = true">
+      <view>打开mask</view>
     </sl-button>
-    <sl-button className="mt-d">
+    <!-- <sl-button className="mt-d">
       <sl-icon className="pr-xxs" />
       <view>确定</view>
     </sl-button>
@@ -43,7 +57,7 @@
       <sl-space-item><view class="w-120 bg-placeholder color-white">第二个</view></sl-space-item>
       <sl-space-item><view class="w-120 bg-placeholder color-white">第二个</view></sl-space-item>
     </sl-space-group>
-    <view class="mt-d w-120 bg-placeholder color-white">第二个</view>
+    <view class="mt-d w-120 bg-placeholder color-white">第二个</view> -->
   </view>
 </template>
 
@@ -53,4 +67,5 @@
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const title = ref('Hello');
+  const isOpen = ref(false);
 </script>
