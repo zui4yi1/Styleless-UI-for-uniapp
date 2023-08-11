@@ -125,10 +125,13 @@ export const useScrollRefresher = (props: any, instance: any) => {
     // #ifdef MP-WEIXIN || APP-PLUS
     dy = e.detail.dy;
     // #endif
-    showPullTip.value = true;
+    showPullTip.value = false;
+    showRefreshTip.value = false;
     if (dy >= 0 && dy < props.threshold) {
       showPullTip.value = true;
+      showRefreshTip.value = false;
     } else if (dy >= props.threshold) {
+      showPullTip.value = false;
       showRefreshTip.value = true;
     } else {
       showRefreshTip.value = false;
