@@ -19,13 +19,13 @@
     <view :class="[clz.body()]" :style="{ minHeight: '81px' }">
       <view class="flex-center ptb-s" v-if="showPullTip && !showRefreshTip">
         <slot name="load_icon">
-          <sl-icon name="loading" className="spin" />
+          <sl-icon name="icon_loading" className="spin" />
         </slot>
         <text class="font-content color-secondary ml-xs">下拉刷新...</text>
       </view>
       <view v-if="showRefreshTip" class="flex-center ptb-s">
         <slot name="load_icon">
-          <sl-icon name="loading" className="spin" />
+          <sl-icon name="icon_loading" className="spin" />
         </slot>
         <text class="font-content color-secondary ml-xs">释放立即刷新...</text>
       </view>
@@ -38,7 +38,7 @@
       </view>
       <view v-if="showAppendTip">
         <slot name="load_icon">
-          <sl-icon name="loading" className="spin" />
+          <sl-icon name="icon_loading" className="spin" />
         </slot>
         <text class="font-content color-secondary ml-xs">更多数据加载中...</text>
       </view>
@@ -48,6 +48,7 @@
       <view v-if="isShowNoMoreTip">
         <view class="text-center color-placeholder">没有更多了~</view>
       </view>
+      <sl-fill-line isBottom />
     </view>
   </scroll-view>
 </template>

@@ -4,7 +4,7 @@
       clz.root(),
       className,
       `bg-${bg}`,
-      { 'safe-bottom': isBottom, [`height-${size}`]: height !== 0 },
+      { 'safe-bottom': isBottom, [`height-${size}`]: size.length > 0 && height !== 0 },
     ]"
     class=""
     :style="height ? { height: typeof height === 'number' ? `${height}rpx` : height } : {}"
