@@ -1024,6 +1024,11 @@
   top: 0;
   bottom: 0;
 }
+.abs-top {
+  left: 0;
+  right: 0;
+  top: 0;
+}
 .abs-bottom {
   left: 0;
   right: 0;
@@ -1052,6 +1057,29 @@
   transition: all 0.3s ease-in-out;
 }
 
+.z-index-content {
+  z-index: 1;
+}
+.z-index-layout {
+  z-index: 9999;
+}
+.z-index-nail {
+  z-index: 99999;
+}
+.z-index-modal {
+  z-index: 9999999;
+}
+.z-index-hide {
+  z-index: -1;
+}
 .z-hide {
   z-index: -1;
+}
+
+.page-root {
+  position: relative;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
 }
