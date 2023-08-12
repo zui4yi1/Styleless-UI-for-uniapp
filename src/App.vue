@@ -1,14 +1,8 @@
 <script setup lang="ts">
   import { onHide, onLaunch, onShow } from '@dcloudio/uni-app';
-  onLaunch(() => {
-    console.log('App Launch');
-  });
-  onShow(() => {
-    console.log('App Show');
-  });
-  onHide(() => {
-    console.log('App Hide');
-  });
+  onLaunch(() => {});
+  onShow(() => {});
+  onHide(() => {});
 </script>
 <style lang="scss">
   @import './assets/icon-font/common.scss';

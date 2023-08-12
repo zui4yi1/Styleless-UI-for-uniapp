@@ -11,7 +11,7 @@ export const props = buildProps({
   },
   iconLib: {
     type: String,
-    default: 'common',
+    default: 'sl-ui-common',
   },
   name: {
     type: String,

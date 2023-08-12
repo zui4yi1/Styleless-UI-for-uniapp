@@ -4,15 +4,6 @@
       <text>bbb</text>
     </view>
 
-    <view
-      :style="{
-        width: '100%',
-        border: 'none',
-        borderBottomWidth: '10rpx',
-        borderBottomStyle: 'solid',
-        borderBottomColor: '#ccc',
-      }"
-    ></view>
     <view class="flex">
       <text>确定</text>
       <sl-icon />

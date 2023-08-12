@@ -12,7 +12,7 @@
     @tap="$emit('click', index)"
   >
     <view
-      :class="[clz.join('body'), `radius-${radius}`, `bg-${bg}`]"
+      :class="[clz.body(), `radius-${radius}`, `bg-${bg}`]"
       class="border"
       :style="{ height: '100%' }"
     >

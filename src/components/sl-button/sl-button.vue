@@ -1,20 +1,20 @@
 <template>
   <view
-    :class="[clz.root(), className, `border-${radius}`]"
+    :class="[clz.root(), className, `radius-${radius}`]"
     class="border-none"
     :style="{ width: width }"
   >
     <button
       :class="[
-        clz.join('body'),
+        clz.body(),
         bodyClazz,
-        `border-${radius}`,
+        `radius-${radius}`,
         `height-${size}`,
         `font-${theme.fontSize}`,
         `color-${theme.color}`,
         disabled ? `bg-${theme.bg}-disabled` : `bg-${theme.bg}`,
       ]"
-      class="border-clear border-none flex-center plr-d"
+      class="border-none flex-center plr-d"
       :hover-start-time="10"
       :hover-stay-time="10"
       :hover-class="hoverClass || `bg-${theme.bg}-hover`"

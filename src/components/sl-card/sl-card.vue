@@ -13,7 +13,7 @@
     class="border border-line-default"
     @click="$emit('click', index)"
   >
-    <view :class="clz.join('body')">
+    <view :class="clz.body()">
       <slot />
     </view>
   </view>

@@ -9,7 +9,7 @@
     @click="$emit('click', index)"
   >
     <view
-      :class="[clz.join('body'), iconLib, `${iconLib}-${name}`, `color-${color}`]"
+      :class="[clz.body(), iconLib, `${iconLib}-${name}`, `color-${color}`]"
       class="flex-center"
       :style="{ fontSize: `${size}rpx` }"
     ></view>

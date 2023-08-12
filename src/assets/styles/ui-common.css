@@ -730,6 +730,13 @@
   height: 256rpx;
 }
 
+.w100 {
+  width: 100%;
+}
+.h100 {
+  width: 100%;
+}
+
 /* width 类, 从4~128, 4的倍数递增 */
 .w-4 {
   width: 4rpx;

@@ -1,7 +1,7 @@
 <template>
   <view :class="[clz.root(), className]">
     <view
-      :class="[clz.join('body')]"
+      :class="[clz.body()]"
       class="float-clear"
       :style="{
         marginRight: `-${gutter}rpx`,

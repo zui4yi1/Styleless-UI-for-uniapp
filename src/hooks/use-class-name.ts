@@ -1,16 +1,21 @@
-export const useClassName = (className: string) => {
-  const root = () => className;
+type IType = 'head' | 'body' | 'foot' | 'left' | 'center' | 'right';
 
-  const head = () => [className, 'head'].join('-');
-  const body = () => [className, 'body'].join('-');
-  const foot = () => [className, 'foot'].join('-');
+export const useClassName = (componentName: string) => {
+  const root = () => componentName;
 
-  const left = () => [className, 'left'].join('-');
-  const center = () => [className, 'center'].join('-');
-  const right = () => [className, 'right'].join('-');
+  // 头身脚布局
+  const head = () => [componentName, 'head'].join('__');
+  const body = () => [componentName, 'body'].join('__');
+  const foot = () => [componentName, 'foot'].join('__');
 
-  const join = (type: string, suffName?: string) =>
-    [className, type, suffName].filter((t) => !!t).join('-');
+  // 左中右布局
+  const left = () => [componentName, 'left'].join('__');
+  const center = () => [componentName, 'center'].join('__');
+  const right = () => [componentName, 'right'].join('__');
+
+  // 通用join, 自动过滤空值参数, 注意第一个参数是type
+  const join = (type: IType, ...suffNames: string[]) =>
+    [componentName, type, ...suffNames].filter((t) => !!t).join('__');
 
   return { root, join, head, body, foot, left, center, right };
 };
