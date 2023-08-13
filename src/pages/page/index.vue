@@ -10,6 +10,11 @@
       width="300rpx"
       height="300rpx"
     />
+    <sl-input v-model:value="text" />
   </sl-page>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { ref } from 'vue';
+
+  const text = ref('aaa');
+</script>

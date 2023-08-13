@@ -1,6 +1,6 @@
 <template>
   <sl-mask :closeOnTab="closeOnTab" mode="bottom" v-model:open="isOpen">
-    <sl-tip-head :title="title" @close="isOpen = false" @confirm="$emit('confirm')" />
+    <sl-popup-head :title="title" @close="isOpen = false" @confirm="$emit('confirm')" />
 
     <view :class="[clz.body()]" class="bg-white">
       <slot />

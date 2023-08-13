@@ -29,7 +29,7 @@
   import { useClassName } from '@/hooks/use-class-name';
   import { props } from './_props';
 
-  const ComponentName = 'sl-tip-head';
+  const ComponentName = 'sl-popup-head';
   const clz = useClassName(ComponentName);
 
   defineProps(props);
