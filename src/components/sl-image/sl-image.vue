@@ -24,7 +24,7 @@
     <view
       v-if="showLoading && isLoading"
       :class="[`radius-${radius}`]"
-      class="absolute abs-full flex-center bg-white"
+      class="absolute abs-cover flex-center bg-white"
     >
       <slot v-if="$slots.loading" name="loading" />
       <sl-icon name="icon_loading" :size="64" className="spin" />

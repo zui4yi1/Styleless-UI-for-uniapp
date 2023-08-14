@@ -1031,6 +1031,12 @@
   top: 0;
   bottom: 0;
 }
+.abs-cover {
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  bottom: -1px;
+}
 .abs-top {
   left: 0;
   right: 0;

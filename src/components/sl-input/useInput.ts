@@ -20,6 +20,7 @@ export const useInput = (props: any, emits: any) => {
     const curVal: string = props.trim ? val.trim() : val;
     emits('update:value', curVal);
     emits('input', curVal);
+    emits('change', curVal);
   };
   const handleClear = () => {
     emits('update:value', '');

@@ -1,0 +1,30 @@
+<template>
+  <view class="flex flex-top" :class="[clz.root(), className]">
+    <!--solve line break problem-->
+    <view
+      :class="[clz.body(), `h-${Math.round(size / 4) * 4 + 8}`]"
+      class="flex-center flex-shrink"
+    >
+      <sl-icon
+        :name="name"
+        :iconLib="iconLib"
+        color="white"
+        :size="size"
+        :className="[clz.join('body', 'icon'), iconClz]"
+      />
+    </view>
+    <view :class="[clz.join('body', 'text'), labelClz]" class="ml-xs mr-xl">
+      {{ label }}
+    </view>
+  </view>
+</template>
+<script setup lang="ts">
+  import { useClassName } from '@/hooks/use-class-name';
+  import { props } from './_props';
+
+  const ComponentName = 'sl-icon-text';
+  const clz = useClassName(ComponentName);
+
+  defineProps(props);
+  // defineEmits(['click']);
+</script>
