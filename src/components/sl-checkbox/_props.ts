@@ -25,6 +25,10 @@ export const props = buildProps({
     type: String as PropType<'circle' | 'square'>,
     default: 'circle',
   },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
   size: {
     type: Number,
     default: 28,

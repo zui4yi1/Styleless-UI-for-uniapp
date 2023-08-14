@@ -3,7 +3,11 @@
     <view
       v-for="(item, inx) in list"
       :key="'checkbox_' + inx"
-      :class="[clz.body(), direction === 'x' ? 'flex-inline' : 'block']"
+      :class="[
+        clz.body(),
+        direction === 'x' ? 'flex-inline' : 'block',
+        { 'opacity-disabled': disabled },
+      ]"
       @click="handleSelect(item.value)"
     >
       <sl-icon-text
@@ -36,6 +40,7 @@
   const _emits = defineEmits(['update:value', 'change']);
 
   const handleSelect = (val: any) => {
+    if (_props.disabled) return;
     const tempVals = [..._props.value];
     let inx = tempVals.findIndex((t) => t === val);
     if (inx === -1) tempVals.push(val);

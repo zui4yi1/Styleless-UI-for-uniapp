@@ -3,7 +3,11 @@
     <view
       v-for="(item, inx) in list"
       :key="'radio_' + inx"
-      :class="[clz.body(), direction === 'x' ? 'flex-inline' : 'block']"
+      :class="[
+        clz.body(),
+        direction === 'x' ? 'flex-inline' : 'block',
+        { 'opacity-disabled': disabled },
+      ]"
       @click="handleSelect(item.value)"
     >
       <sl-icon-text
@@ -29,10 +33,11 @@
   const ComponentName = 'sl-radio';
   const clz = useClassName(ComponentName);
 
-  defineProps(props);
+  const _props = defineProps(props);
   const _emits = defineEmits(['update:value', 'change']);
 
   const handleSelect = (val: any) => {
+    if (_props.disabled) return;
     _emits('update:value', val);
     _emits('change', val);
   };

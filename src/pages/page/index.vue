@@ -13,13 +13,19 @@
     <view>111：{{ text }}</view>
     <sl-input v-model:value="text" /> -->
     <sl-radio :list="list" v-model:value="radioValue" />
-    <sl-checkbox :list="list" v-model:value="chkboxValues" />
+    <sl-radio :list="list" v-model:value="radioValue" disabled />
+    <sl-checkbox :list="list" v-model:value="chkboxValues" disabled />
     <sl-checkbox direction="y" :list="list2" v-model:value="chkboxValues2" />
+    <switch :checked="s" />
+    <sl-switch v-model:value="s" disabled />
+    <sl-switch v-model:value="s" />
+    <view class="shadow-default rect-100 border"></view>
   </sl-page>
 </template>
 <script setup lang="ts">
   import { ref } from 'vue';
 
+  const s = ref(false);
   const radioValue = ref('');
   const chkboxValues = ref([]);
   const chkboxValues2 = ref([]);

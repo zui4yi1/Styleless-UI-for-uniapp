@@ -21,6 +21,10 @@ export const props = buildProps({
     type: Array as PropType<{ label: string; value: any }[]>,
     default: () => [],
   },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
   size: {
     type: Number,
     default: 28,

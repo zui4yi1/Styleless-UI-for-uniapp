@@ -1060,6 +1060,9 @@
 .opacity-0 {
   opacity: 0;
 }
+.opacity-disabled {
+  opacity: 0.5;
+}
 .toppest {
   z-index: 99999;
 }

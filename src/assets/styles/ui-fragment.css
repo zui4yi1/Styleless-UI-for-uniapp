@@ -919,11 +919,11 @@ button[disabled].disabled.color-transparent-light-3 {
 
 /* 字体家族 */
 .family-regular {
-  font-family: "PingFangSC-Regular";
+  font-family: 'PingFangSC-Regular';
 }
 
 .family-medium {
-  font-family: "PingFangSC-Medium";
+  font-family: 'PingFangSC-Medium';
 }
 
 /* 遮罩类 */
@@ -937,7 +937,7 @@ button[disabled].disabled.color-transparent-light-3 {
 
 /* 阴影类 */
 .shadow-default {
-  box-shadow: xxxxxxxx;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 /* 字体尺寸 */
