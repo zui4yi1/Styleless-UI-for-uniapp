@@ -11,7 +11,7 @@ export const props = buildProps({
   },
   color: {
     type: String as PropType<IColor>,
-    default: 'line-default',
+    default: 'line-light',
   },
   length: {
     type: String,

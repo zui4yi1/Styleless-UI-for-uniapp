@@ -1,5 +1,4 @@
 import { buildProps } from '@/utils/element-plus/props';
-import type { PropType } from 'vue';
 
 export const props = buildProps({
   /**
@@ -9,24 +8,28 @@ export const props = buildProps({
     type: [String, Array],
     default: '',
   },
-  bg: {
-    type: String as PropType<IColor>,
-    default: 'white',
+  open: {
+    type: Boolean,
+    default: false,
   },
-  radius: {
-    type: String as PropType<IRadius>,
-    default: 'default',
+  closeOnTab: {
+    type: Boolean,
+    default: false,
   },
-  paddingClz: {
+  title: {
     type: String,
-    default: 'plr-l ptb-d',
+    default: '',
   },
-  hasShadow: {
+  hasClose: {
+    type: Boolean,
+    default: false,
+  },
+  hasCancel: {
     type: Boolean,
     default: true,
   },
-  index: {
-    type: Number,
-    default: 0,
+  hasFoot: {
+    type: Boolean,
+    default: true,
   },
 } as const);

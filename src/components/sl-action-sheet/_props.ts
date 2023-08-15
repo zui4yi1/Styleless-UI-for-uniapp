@@ -9,24 +9,20 @@ export const props = buildProps({
     type: [String, Array],
     default: '',
   },
-  bg: {
-    type: String as PropType<IColor>,
-    default: 'white',
-  },
-  radius: {
-    type: String as PropType<IRadius>,
-    default: 'default',
-  },
-  paddingClz: {
-    type: String,
-    default: 'plr-l ptb-d',
-  },
-  hasShadow: {
+  open: {
     type: Boolean,
-    default: true,
+    default: false,
   },
-  index: {
-    type: Number,
-    default: 0,
+  title: {
+    type: String,
+    default: '',
+  },
+  size: {
+    type: String as PropType<IFont>,
+    default: 'content',
+  },
+  list: {
+    type: Array as PropType<{ text: string; color: IColor; disabled: boolean }[]>,
+    default: () => [],
   },
 } as const);

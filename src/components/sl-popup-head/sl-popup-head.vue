@@ -5,7 +5,7 @@
         <view class="span-6 flex-shrink"></view>
         <view class="flex-grow flex-center font-title bold">{{ title }}</view>
         <view class="span-6 flex-shrink flex-right" @click="$emit('close')">
-          <sl-icon />
+          <sl-icon name="icon_close" color="placeholder" />
         </view>
       </template>
       <template v-else-if="mode === 'text'">

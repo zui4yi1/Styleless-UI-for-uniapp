@@ -3,7 +3,7 @@
     :class="[
       clz.root(),
       className,
-      padding,
+      paddingClz,
       `bg-${bg}`,
       `radius-${radius}`,
       {

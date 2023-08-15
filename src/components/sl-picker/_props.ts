@@ -17,12 +17,16 @@ export const props = buildProps({
     type: String,
     default: '',
   },
-  closeOnTab: {
-    type: Boolean,
-    default: false,
+  value: {
+    type: [String, Number, Boolean, Array],
+    default: '',
   },
-  mode: {
-    type: String as PropType<'icon' | 'text'>,
-    default: 'text',
+  size: {
+    type: String as PropType<IFont>,
+    default: 'content',
+  },
+  list: {
+    type: Array as PropType<{ text: string; color: IColor; disabled: boolean }[]>,
+    default: () => [],
   },
 } as const);
