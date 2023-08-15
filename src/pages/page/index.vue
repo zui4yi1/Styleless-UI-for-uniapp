@@ -12,14 +12,16 @@
     />
     <view>111：{{ text }}</view>
     <sl-input v-model:value="text" /> -->
-    <sl-radio :list="list" v-model:value="radioValue" />
+    <!-- <sl-radio :list="list" v-model:value="radioValue" />
     <sl-radio :list="list" v-model:value="radioValue" disabled />
     <sl-checkbox :list="list" v-model:value="chkboxValues" disabled />
     <sl-checkbox direction="y" :list="list2" v-model:value="chkboxValues2" />
     <switch :checked="s" />
     <sl-switch v-model:value="s" disabled />
-    <sl-switch v-model:value="s" />
+    <sl-switch v-model:value="s" /> -->
     <view class="shadow-default rect-100 border"></view>
+    <sl-tabs :list="listTabs" className="mt-d" />
+    <sl-tabs :list="listTabs" :isScroll="false" className="mt-d" />
   </sl-page>
 </template>
 <script setup lang="ts">
@@ -75,4 +77,10 @@
       value: 'bb',
     },
   ];
+  const listTabs = 'abc'.split('').map((s) => {
+    return {
+      name: s.repeat(4),
+      count: 5,
+    };
+  });
 </script>

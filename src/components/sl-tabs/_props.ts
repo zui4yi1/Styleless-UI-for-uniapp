@@ -1,4 +1,5 @@
 import { buildProps } from '@/utils/element-plus/props';
+import type { PropType } from 'vue';
 
 export const props = buildProps({
   /**
@@ -8,8 +9,20 @@ export const props = buildProps({
     type: [String, Array],
     default: '',
   },
-  xxx: {
-    type: String,
-    default: '',
+  current: {
+    type: Number,
+    default: 0,
+  },
+  list: {
+    type: Array as PropType<{ name: string; count: number }[]>,
+    default: () => [],
+  },
+  isScroll: {
+    type: Boolean,
+    default: true,
+  },
+  showDivider: {
+    type: Boolean,
+    default: true,
   },
 } as const);
