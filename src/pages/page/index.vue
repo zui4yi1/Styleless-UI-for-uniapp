@@ -20,70 +20,106 @@
     <sl-switch v-model:value="s" disabled />
     <sl-switch v-model:value="s" /> -->
     <view class="shadow-default rect-100 border"></view>
-    <sl-tabs :list="listTabs" className="mt-d" />
-    <sl-tabs :list="listTabs" :isScroll="false" className="mt-d" />
+    <!-- <sl-tabs :list="listTabs" className="mt-d" />
+    <sl-tabs :list="listTabs" :isScroll="false" className="mt-d" /> -->
 
     <!-- <sl-select v-model:open="open" title="请选择" :list="list2" /> -->
-    <sl-action-sheet v-model:open="open" title="请选择" :list="actionSheetList" />
+    <!-- <sl-action-sheet v-model:open="open" title="请选择" :list="actionSheetList" />
 
+     -->
     <sl-button @click="open = true">打开</sl-button>
+
+    <sl-table>
+      <sl-tr>
+        <sl-td bg="primary">
+          <view>aaaaa</view>
+          <view>cccc</view>
+          <view>dddd</view>
+        </sl-td>
+        <sl-td bg="white">
+          <view>1111</view>
+          <view>222</view>
+        </sl-td>
+        <sl-td bg="primary">
+          <view>aaaaa</view>
+          <view>cccc</view>
+          <view>dddd</view>
+          <view>eeee</view>
+
+          <view>ffff</view>
+        </sl-td>
+      </sl-tr>
+      <sl-tr>
+        <sl-td bg="disabled">
+          <view>1111</view>
+          <view>222</view>
+        </sl-td>
+        <sl-td bg="primary">
+          <view>aaaaa</view>
+          <view>cccc</view>
+          <view>dddd</view>
+        </sl-td>
+      </sl-tr>
+    </sl-table>
+    <sl-select :list="list" v-model:open="open" title="请选择" v-model:value="value" />
   </sl-page>
 </template>
 <script setup lang="ts">
   import { ref } from 'vue';
 
-  // import { ref } from 'vue';
+  const open = ref(false);
+  const value = ref('');
 
   // const s = ref(false);
   // const radioValue = ref('');
   // const chkboxValues = ref([]);
   // const chkboxValues2 = ref([]);
-  // const list = [
-  //   {
-  //     label: 'aaaa',
-  //     value: 'aa',
-  //   },
-  //   {
-  //     label: '国国国',
-  //     value: 'kk',
-  //   },
-  //   {
-  //     label:
-  //       '国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国',
-  //     value: 'bb',
-  //   },
-  //   {
-  //     label: 'cccc',
-  //     value: 'cc',
-  //   },
-  //   {
-  //     label: 'dddd',
-  //     value: 'dd',
-  //   },
-  //   {
-  //     label: 'eeee',
-  //     value: 'ee',
-  //   },
-  //   {
-  //     label: 'ffff',
-  //     value: 'ff',
-  //   },
-  //   {
-  //     label: 'gggg',
-  //     value: 'gg',
-  //   },
-  // ];
-  const list2 = [
+  const list = [
     {
-      label:
-        '国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国',
+      label: 'aaaa',
       value: 'aa',
     },
     {
-      label: 'bbbb',
+      label: '国国国',
+      value: 'kk',
+    },
+    {
+      label:
+        '国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国',
       value: 'bb',
     },
+    {
+      label: 'cccc',
+      value: 'cc',
+    },
+    {
+      label: 'dddd',
+      value: 'dd',
+    },
+    {
+      label: 'eeee',
+      value: 'ee',
+    },
+    {
+      label: 'ffff',
+      value: 'ff',
+    },
+    {
+      label: 'gggg',
+      value: 'gg',
+    },
   ];
+  // const list2 = [
+  //   {
+  //     label:
+  //       '国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国国国国男国',
+  //     value: 'aa',
+  //   },
+  //   {
+  //     label: 'bbbb',
+  //     value: 'bb',
+  //   },
+  // ];
 
   const actionSheetList = [
     {
@@ -95,11 +131,10 @@
       value: 'error',
     },
   ];
-  const open = ref(false);
-  const listTabs = 'abc'.split('').map((s) => {
-    return {
-      name: s.repeat(4),
-      count: 5,
-    };
-  });
+  // const listTabs = 'abc'.split('').map((s) => {
+  //   return {
+  //     name: s.repeat(4),
+  //     count: 5,
+  //   };
+  // });
 </script>

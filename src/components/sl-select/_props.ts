@@ -1,5 +1,10 @@
 import { buildProps } from '@/utils/element-plus/props';
 import type { PropType } from 'vue';
+export interface ICompSelect {
+  label: string;
+  value: any;
+  disabled?: boolean;
+}
 
 export const props = buildProps({
   /**
@@ -22,7 +27,11 @@ export const props = buildProps({
     default: '',
   },
   list: {
-    type: Array as PropType<{ label: string; value: any }[]>,
+    type: Array as PropType<ICompSelect[]>,
     default: () => [],
+  },
+  multiple: {
+    type: Boolean,
+    default: false,
   },
 } as const);
