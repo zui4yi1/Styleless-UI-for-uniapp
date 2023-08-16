@@ -42,9 +42,15 @@
       </sl-tr>
     </sl-table>
     <sl-table :columns="columns" :list="list" />
+    <sl-mask v-model:open="open" mode="center">
+      <view class="h-120 bg-white">aaaaaa</view>
+    </sl-mask>
+    <sl-button @click="open = true">打开</sl-button>
   </sl-page>
 </template>
 <script setup lang="ts">
+  import { ref } from 'vue';
+
   const columns = [
     {
       value: '名字',
@@ -76,4 +82,6 @@
       gender: '女',
     },
   ];
+
+  const open = ref(false);
 </script>

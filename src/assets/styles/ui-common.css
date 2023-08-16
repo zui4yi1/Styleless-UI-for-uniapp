@@ -1062,8 +1062,17 @@
   right: 0;
   bottom: 0;
 }
+.abs-left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.abs-right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 .abs-center {
-  width: 66%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1085,7 +1094,7 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 .transition-mask {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-out;
 }
 
 .z-index-content {
