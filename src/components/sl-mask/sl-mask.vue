@@ -1,6 +1,6 @@
 <template>
   <view
-    :class="[clz.root(), className, open ? 'toppest  opacity-1' : 'z-hide  opacity-0']"
+    :class="[clz.root(), className, open ? 'z-index-mask  opacity-1' : 'z-index-hide  opacity-0']"
     class="fixed abs-full mask-1 transition-mask"
     hover-stop-propagation
     @tap="closeOnTab && $emit('update:open', false)"

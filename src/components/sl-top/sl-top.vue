@@ -1,7 +1,7 @@
 <template>
   <view
     :class="[clz.root(), className]"
-    class="fix fix_topest"
+    class="fix z-index-layout"
     :style="{
       top: isCustomNavBar ? `${top}px` : 0,
     }"

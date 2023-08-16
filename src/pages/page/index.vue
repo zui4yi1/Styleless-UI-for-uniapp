@@ -47,6 +47,9 @@
     </sl-mask>
     <sl-button @click="open = true">打开</sl-button>
   </sl-page>
+  <sl-bottom>
+    <sl-button>提交</sl-button>
+  </sl-bottom>
 </template>
 <script setup lang="ts">
   import { ref } from 'vue';

@@ -1087,9 +1087,7 @@
 .opacity-disabled {
   opacity: 0.5;
 }
-.toppest {
-  z-index: 99999;
-}
+
 .mask-1 {
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -1106,13 +1104,10 @@
 .z-index-nail {
   z-index: 99999;
 }
-.z-index-modal {
+.z-index-mask {
   z-index: 9999999;
 }
 .z-index-hide {
-  z-index: -1;
-}
-.z-hide {
   z-index: -1;
 }
 
