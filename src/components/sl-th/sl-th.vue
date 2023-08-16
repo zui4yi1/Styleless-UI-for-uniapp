@@ -1,19 +1,14 @@
 <template>
-  <view
-    :class="[clz.root(), className, trClz || tableProps.trClz]"
-    class="display-row border-box h100"
-  >
+  <sl-tr :className="[thClz, className, tableProps.headClz || '', headClz]">
     <slot />
-  </view>
+  </sl-tr>
 </template>
 <script lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { defineComponent, inject } from 'vue';
   import type { ITableProps } from '../sl-table/_props';
   import { props } from './_props';
 
-  const ComponentName = 'sl-tr';
-  const clz = useClassName(ComponentName);
+  const ComponentName = 'sl-th';
 
   export default defineComponent({
     name: ComponentName,
@@ -23,7 +18,7 @@
     },
     setup() {
       const tableProps = inject('tableProps', {} as ITableProps);
-      return { clz, tableProps };
+      return { tableProps };
     },
   });
 </script>

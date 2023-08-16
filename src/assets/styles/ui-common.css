@@ -230,7 +230,18 @@
 .inline-block {
   display: inline-block;
 }
-
+.display-table {
+  display: table;
+}
+.display-th {
+  display: table-cell;
+}
+.display-row {
+  display: table-row;
+}
+.display-cell {
+  display: table-cell;
+}
 /* float 类 */
 .float {
   float: left;

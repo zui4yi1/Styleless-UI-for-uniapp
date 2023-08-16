@@ -13,6 +13,7 @@
     "dev:h5": "uni",
     "dev:h5:ssr": "uni --ssr",
     "dev:mp-weixin": "uni -p mp-weixin",
+    "dev:wx": "uni -p mp-weixin",
     "type-check": "vue-tsc --noEmit",
     "eslint": "eslint . --ext .ts"
   },

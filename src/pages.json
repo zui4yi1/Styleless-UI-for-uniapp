@@ -1,6 +1,12 @@
 {
   "pages": [
     {
+      "path": "pages/page/index",
+      "style": {
+        "navigationBarTitleText": "uni-app"
+      }
+    },
+    {
       "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "uni-app"
@@ -8,12 +14,6 @@
     },
     {
       "path": "pages/sl-scroll-refresher/index",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "pages/page/index",
       "style": {
         "navigationBarTitleText": "uni-app"
       }

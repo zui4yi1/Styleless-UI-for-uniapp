@@ -1,24 +1,42 @@
 <template>
   <view
-    :class="[clz.root(), className, { [`bg-${bg}`]: height !== '' }]"
-    class="h100"
-    :style="height === '' ? { height: '100%' } : { height: height }"
+    :class="[clz.root(), className]"
+    class="display-cell border-box h100"
+    :style="{ width: width || 'auto', 'vertical-align': 'middle' }"
   >
-    <view :class="[`bg-${bg}`]">
+    <view :class="[`bg-${bg}`, `text-${align}`, tdClz || tableProps.tdClz]" class="h100">
       <slot />
     </view>
   </view>
 </template>
-<script setup lang="ts">
+<script lang="ts">
   import { useClassName } from '@/hooks/use-class-name';
-  import { inject } from 'vue';
+  import { defineComponent, inject } from 'vue';
+  import type { ITableProps } from '../sl-table/_props';
   import { props } from './_props';
 
   const ComponentName = 'sl-td';
   const clz = useClassName(ComponentName);
+  export default defineComponent({
+    name: ComponentName,
+    props,
+    options: {
+      virtualHost: true,
+    },
+    setup() {
+      const tableProps = inject('tableProps', {} as ITableProps);
+      return { clz, tableProps };
+    },
+  });
 
-  const height = inject('height', '');
+  // const ComponentName = 'sl-td';
+  // const clz = useClassName(ComponentName);
 
-  defineProps(props);
-  // defineEmits(['click']);
+  // defineProps(props);
+  // // defineEmits(['click']);
+
+  // defineExpose({
+  //   name: ComponentName,
+  //   virtualHost: true,
+  // });
 </script>

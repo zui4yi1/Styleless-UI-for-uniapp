@@ -1,18 +1,60 @@
 <template>
-  <sl-card paddingClz="plr-l" :bg="bg">
-    <view :class="[clz.root(), className]" class="">
-      <slot />
-    </view>
-  </sl-card>
+  <view
+    :class="[clz.root(), className]"
+    class="display-table w100 h100 border-box"
+    :style="
+      cellspacing === ''
+        ? {
+            borderCollapse: 'collapse',
+          }
+        : {
+            borderCollapse: 'separate',
+            borderSpacing: cellspacing,
+          }
+    "
+  >
+    <template v-if="!custom">
+      <sl-th>
+        <sl-td v-for="(item, inx) in columns" :key="'th_' + inx">
+          {{ item.name }}
+        </sl-td>
+      </sl-th>
+      <sl-tr v-for="(rcd, inx) in list" :key="'tr_' + inx">
+        <sl-td v-for="(item, tdInx) in columns" :key="'td_' + inx + '_' + tdInx">
+          {{ rcd[item.name] }}
+        </sl-td>
+      </sl-tr>
+    </template>
+    <slot v-else />
+  </view>
 </template>
-<script setup lang="ts">
+<script lang="ts">
   import { useClassName } from '@/hooks/use-class-name';
-  import { props } from './_props';
+  import { computed, defineComponent, provide } from 'vue';
+  import { props, type ITableProps } from './_props';
 
   const ComponentName = 'sl-table';
   const clz = useClassName(ComponentName);
 
-  // table啥都不用做, 只处理一些通用配置
-  defineProps(props);
-  // defineEmits(['click']);
+  export default defineComponent({
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+    },
+    props,
+    setup(props) {
+      const tableProps = computed<ITableProps>(() => {
+        return Object.assign(
+          {
+            headClz: 'color-white height-cell-default flex-center',
+            trClz: '',
+            tdClz: 'color-base flex-center',
+          },
+          props.tableProps,
+        );
+      });
+      provide('tableProps', tableProps.value);
+      return { clz };
+    },
+  });
 </script>

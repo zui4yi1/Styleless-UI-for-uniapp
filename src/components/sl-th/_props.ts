@@ -8,7 +8,7 @@ export const props = buildProps({
     type: [String, Array],
     default: '',
   },
-  trClz: {
+  thClz: {
     type: String,
     default: '',
   },

@@ -13,4 +13,16 @@ export const props = buildProps({
     type: String as PropType<IColor>,
     default: 'white',
   },
+  width: {
+    type: String,
+    default: '33%',
+  },
+  tdClz: {
+    type: String,
+    default: '',
+  },
+  align: {
+    type: String,
+    default: 'center',
+  },
 } as const);

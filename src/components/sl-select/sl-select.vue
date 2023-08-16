@@ -3,27 +3,29 @@
     <view :class="[clz.root(), className]">
       <scroll-view
         :class="[clz.body()]"
-        class="plr-l border-box w100"
+        class="border-box w100"
         scroll-y
         :style="{ maxHeight: '500rpx' }"
       >
-        <view
-          v-for="(item, inx) in list"
-          :key="clz.join('body', 'item', inx)"
-          class="flex-between height-cell-default"
-          :class="[{ 'border-bottom border-line-light': inx < list.length - 1 }]"
-          @click="handleSelect(item, inx)"
-        >
-          <view class="flex-grow text-ellipsis">
-            {{ item.label }}
-          </view>
-          <view class="flex-shrink ml-l w-80 flex-right">
-            <sl-icon
-              v-if="tempValue.includes(item.value)"
-              name="icon_check"
-              :size="40"
-              color="primary"
-            />
+        <view class="plr-l">
+          <view
+            v-for="(item, inx) in list"
+            :key="clz.join('body', 'item', inx)"
+            class="flex-between height-cell-default"
+            :class="[{ 'border-bottom border-line-light': inx < list.length - 1 }]"
+            @click="handleSelect(item, inx)"
+          >
+            <view class="flex-grow text-ellipsis">
+              {{ item.label }}
+            </view>
+            <view class="flex-shrink ml-l w-80 flex-right">
+              <sl-icon
+                v-if="tempValue.includes(item.value)"
+                name="icon_check"
+                :size="40"
+                color="primary"
+              />
+            </view>
           </view>
         </view>
       </scroll-view>
