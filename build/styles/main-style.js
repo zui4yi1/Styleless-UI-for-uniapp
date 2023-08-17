@@ -39,7 +39,7 @@ conf.list.push({
   summary: '字体家族',
   items: [
     { key: 'regular', value: "'PingFangSC-Regular'" },
-    { key: 'medium', value: "'PingFangSC-Medium' " },
+    { key: 'medium', value: "'PingFangSC-Medium'" },
   ],
 });
 
@@ -50,37 +50,67 @@ conf.list.push({
   items: [
     {
       key: 'primary',
-      value: '#ee22cc',
+      value: '#0088ff',
       extends: [
         {
           key: 'primary-hover',
-          value: '#ff1cdd',
+          value: '#cceeff',
         },
+      ],
+    },
+    {
+      key: 'success',
+      value: '#33bb44',
+      extends: [
         {
-          key: 'primary-disabled',
-          value: '#ff1cdd',
+          key: 'success-hover',
+          value: '#ddeebb',
         },
+      ],
+    },
+    {
+      key: 'warning',
+      value: '#ff7711',
+      extends: [
         {
-          key: 'primary-dark-1',
-          value: '#ff11dd',
+          key: 'warning-hover',
+          value: '#ffeedd',
         },
+      ],
+    },
+    {
+      key: 'error',
+      value: '#ee4444',
+      extends: [
         {
-          key: 'primary-light-1',
-          value: '#ee13dd',
+          key: 'error-hover',
+          value: '#ffdddd',
         },
+      ],
+    },
+    {
+      key: 'pink',
+      value: '#ee3399',
+      extends: [
         {
-          key: 'primary-light-2',
-          value: '#ff1cdd',
+          key: 'pink-hover',
+          value: '#ffddee',
         },
+      ],
+    },
+    {
+      key: 'purple',
+      value: '#6633bb',
+      extends: [
         {
-          key: 'primary-light-3',
-          value: '#ff1fdd',
+          key: 'purple-hover',
+          value: '#eeddff',
         },
       ],
     },
   ],
 });
-// 通用主色
+// 通用主色;
 conf.list.push({
   type: 'color',
   summary: '通用主色',
@@ -91,27 +121,7 @@ conf.list.push({
       extends: [
         {
           key: 'white-hover',
-          value: '#93beff',
-        },
-        {
-          key: 'white-disabled',
-          value: '#93beff',
-        },
-        {
-          key: 'white-dark-1',
-          value: '#e8f3ff',
-        },
-        {
-          key: 'white-light-1',
           value: '#ffffff',
-        },
-        {
-          key: 'white-light-2',
-          value: '#93beff',
-        },
-        {
-          key: 'white-light-3',
-          value: '#f7f7f7',
         },
       ],
     },
@@ -121,26 +131,6 @@ conf.list.push({
       extends: [
         {
           key: 'black-hover',
-          value: '#000000',
-        },
-        {
-          key: 'black-disabled',
-          value: '#000000',
-        },
-        {
-          key: 'black-dark-1',
-          value: '#000000',
-        },
-        {
-          key: 'black-light-1',
-          value: '#000000',
-        },
-        {
-          key: 'black-light-2',
-          value: '#000000',
-        },
-        {
-          key: 'black-light-3',
           value: '#000000',
         },
       ],
@@ -153,26 +143,6 @@ conf.list.push({
           key: 'transparent-hover',
           value: 'transparent',
         },
-        {
-          key: 'transparent-disabled',
-          value: 'transparent',
-        },
-        {
-          key: 'transparent-dark-1',
-          value: 'transparent',
-        },
-        {
-          key: 'transparent-light-1',
-          value: 'transparent',
-        },
-        {
-          key: 'transparent-light-2',
-          value: 'transparent',
-        },
-        {
-          key: 'transparent-light-3',
-          value: 'transparent',
-        },
       ],
     },
   ],
@@ -183,10 +153,10 @@ conf.list.push({
   type: 'color',
   summary: '字体颜色',
   items: [
-    { key: 'base', value: '#1d2129' },
-    { key: 'secondary', value: '#1d2129' },
-    { key: 'placeholder', value: '#1d2129' },
-    { key: 'disabled', value: '#1d2129' },
+    { key: 'content', value: '#303030' },
+    { key: 'secondary', value: '#909090' },
+    { key: 'placeholder', value: '#a0a0a0' },
+    { key: 'disabled', value: '#c0c0c0' },
   ],
 });
 
@@ -197,15 +167,11 @@ conf.list.push({
   items: [
     {
       key: 'line-light',
-      value: '#f3f3f3',
+      value: '#e4e4e4',
     },
     {
       key: 'line-default',
       value: '#c3c3c3',
-    },
-    {
-      key: 'line-deep',
-      value: '#a1a1a1',
     },
   ],
 });
@@ -217,15 +183,15 @@ conf.list.push({
   items: [
     {
       key: 'fill-light',
-      value: '#d1d1d1',
+      value: '#f5f5f5',
     },
     {
       key: 'fill-default',
-      value: '#b1b1b1',
+      value: '#f0f0f0',
     },
     {
       key: 'fill-deep',
-      value: '#919191',
+      value: '#ebebeb',
     },
   ],
 });
@@ -236,7 +202,7 @@ conf.list.push({
   summary: '遮罩颜色',
   items: [
     { key: 'default', value: 'rgba(0,0,0,0.3)' },
-    { key: 'deep', value: 'rgba(0,0,0,0.75)' },
+    { key: 'deep', value: 'rgba(0,0,0,0.5)' },
   ],
 });
 
@@ -244,7 +210,7 @@ conf.list.push({
 conf.list.push({
   type: 'shadow',
   summary: '阴影颜色',
-  items: [{ key: 'default', value: 'xxxxxxxx' }],
+  items: [{ key: 'default', value: '0 2px 2px rgba(0, 0, 0, 0.1)' }],
 });
 
 // 字体尺寸
@@ -255,8 +221,8 @@ conf.list.push({
     { key: 'desc', value: '20rpx' },
     { key: 'secondary', value: '24rpx' },
     { key: 'content', value: '28rpx' },
-    { key: 'header', value: '30rpx' },
-    { key: 'title', value: '34rpx' },
+    { key: 'header', value: '32rpx' },
+    { key: 'title', value: '36rpx' },
     { key: 'xt', value: '40rpx' },
     { key: 'xxt', value: '48rpx' },
   ],
@@ -266,10 +232,11 @@ conf.list.push({
   type: 'gap',
   summary: '间距',
   items: [
+    { key: 'xxs', value: '4rpx' },
     { key: 'xs', value: '8rpx' },
-    { key: 'small', value: '16rpx', abbreviation: 's' },
-    { key: 'default', value: '24rpx', abbreviation: 'd' },
-    { key: 'large', value: '32rpx', abbreviation: 'l' },
+    { key: 's', value: '16rpx' },
+    { key: 'd', value: '24rpx' },
+    { key: 'l', value: '32rpx' },
     { key: 'xl', value: '40rpx' },
   ],
 });
@@ -300,7 +267,5 @@ conf.list.push({
     { key: 'cell-default', value: '44rpx' },
   ],
 });
-
-// 还缺少样式值的js文件
 
 module.exports = conf;

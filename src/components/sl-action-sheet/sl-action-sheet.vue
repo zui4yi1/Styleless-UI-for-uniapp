@@ -12,7 +12,7 @@
           <slot name="item" :item="item" :inx="inx">
             <view
               class="text-ellipsis"
-              :class="[`color-${item.disabled ? 'disabled' : item.color || 'base'}`]"
+              :class="[`color-${item.disabled ? 'disabled' : item.color || 'content'}`]"
             >
               {{ item.text }}
             </view>

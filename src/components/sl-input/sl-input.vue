@@ -3,7 +3,7 @@
     <!--body-->
     <view
       :class="[clz.body(), paddingClz, borderClz, `radius-${radius}`, `bg-${bg}`]"
-      class="flex flex-grow font-title color-base"
+      class="flex flex-grow font-title color-content"
     >
       <sl-icon v-if="leftIcon.name?.length > 0" v-bind="leftIcon" />
       <view

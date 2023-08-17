@@ -27,7 +27,7 @@ export const props = buildProps({
   },
   navBarColor: {
     type: String as PropType<IColor>,
-    default: 'base',
+    default: 'content',
   },
   showTitle: {
     type: Boolean,
@@ -42,7 +42,7 @@ export const props = buildProps({
   },
   iconColor: {
     type: String as PropType<IColor>,
-    default: 'base',
+    default: 'content',
   },
   iconSize: {
     type: Number,

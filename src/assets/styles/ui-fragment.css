@@ -1,7 +1,27 @@
 @charset "UTF-8";
 /* 字体颜色 */
 .color-primary {
-  color: #ee22cc;
+  color: #0088ff;
+}
+
+.color-success {
+  color: #33bb44;
+}
+
+.color-warning {
+  color: #ff7711;
+}
+
+.color-error {
+  color: #ee4444;
+}
+
+.color-pink {
+  color: #ee3399;
+}
+
+.color-purple {
+  color: #6633bb;
 }
 
 .color-white {
@@ -16,115 +36,71 @@
   color: transparent;
 }
 
-.color-base {
-  color: #1d2129;
+.color-content {
+  color: #303030;
 }
 
 .color-secondary {
-  color: #1d2129;
+  color: #909090;
 }
 
 .color-placeholder {
-  color: #1d2129;
+  color: #a0a0a0;
 }
 
 .color-disabled {
-  color: #1d2129;
+  color: #c0c0c0;
 }
 
 .color-line-light {
-  color: #f3f3f3;
+  color: #e4e4e4;
 }
 
 .color-line-default {
   color: #c3c3c3;
 }
 
-.color-line-deep {
-  color: #a1a1a1;
-}
-
 .color-fill-light {
-  color: #d1d1d1;
+  color: #f5f5f5;
 }
 
 .color-fill-default {
-  color: #b1b1b1;
+  color: #f0f0f0;
 }
 
 .color-fill-deep {
-  color: #919191;
+  color: #ebebeb;
 }
 
 .color-primary-hover {
-  color: #ff1cdd;
+  color: #cceeff;
 }
 
-.color-primary-disabled {
-  color: #ff1cdd;
+.color-success-hover {
+  color: #ddeebb;
 }
 
-.color-primary-dark-1 {
-  color: #ff11dd;
+.color-warning-hover {
+  color: #ffeedd;
 }
 
-.color-primary-light-1 {
-  color: #ee13dd;
+.color-error-hover {
+  color: #ffdddd;
 }
 
-.color-primary-light-2 {
-  color: #ff1cdd;
+.color-pink-hover {
+  color: #ffddee;
 }
 
-.color-primary-light-3 {
-  color: #ff1fdd;
+.color-purple-hover {
+  color: #eeddff;
 }
 
 .color-white-hover {
-  color: #93beff;
-}
-
-.color-white-disabled {
-  color: #93beff;
-}
-
-.color-white-dark-1 {
-  color: #e8f3ff;
-}
-
-.color-white-light-1 {
   color: #ffffff;
 }
 
-.color-white-light-2 {
-  color: #93beff;
-}
-
-.color-white-light-3 {
-  color: #f7f7f7;
-}
-
 .color-black-hover {
-  color: #000000;
-}
-
-.color-black-disabled {
-  color: #000000;
-}
-
-.color-black-dark-1 {
-  color: #000000;
-}
-
-.color-black-light-1 {
-  color: #000000;
-}
-
-.color-black-light-2 {
-  color: #000000;
-}
-
-.color-black-light-3 {
   color: #000000;
 }
 
@@ -132,29 +108,29 @@
   color: transparent;
 }
 
-.color-transparent-disabled {
-  color: transparent;
-}
-
-.color-transparent-dark-1 {
-  color: transparent;
-}
-
-.color-transparent-light-1 {
-  color: transparent;
-}
-
-.color-transparent-light-2 {
-  color: transparent;
-}
-
-.color-transparent-light-3 {
-  color: transparent;
-}
-
 /* 边框颜色 */
 .border-primary {
-  border-color: #ee22cc;
+  border-color: #0088ff;
+}
+
+.border-success {
+  border-color: #33bb44;
+}
+
+.border-warning {
+  border-color: #ff7711;
+}
+
+.border-error {
+  border-color: #ee4444;
+}
+
+.border-pink {
+  border-color: #ee3399;
+}
+
+.border-purple {
+  border-color: #6633bb;
 }
 
 .border-white {
@@ -169,115 +145,71 @@
   border-color: transparent;
 }
 
-.border-base {
-  border-color: #1d2129;
+.border-content {
+  border-color: #303030;
 }
 
 .border-secondary {
-  border-color: #1d2129;
+  border-color: #909090;
 }
 
 .border-placeholder {
-  border-color: #1d2129;
+  border-color: #a0a0a0;
 }
 
 .border-disabled {
-  border-color: #1d2129;
+  border-color: #c0c0c0;
 }
 
 .border-line-light {
-  border-color: #f3f3f3;
+  border-color: #e4e4e4;
 }
 
 .border-line-default {
   border-color: #c3c3c3;
 }
 
-.border-line-deep {
-  border-color: #a1a1a1;
-}
-
 .border-fill-light {
-  border-color: #d1d1d1;
+  border-color: #f5f5f5;
 }
 
 .border-fill-default {
-  border-color: #b1b1b1;
+  border-color: #f0f0f0;
 }
 
 .border-fill-deep {
-  border-color: #919191;
+  border-color: #ebebeb;
 }
 
 .border-primary-hover {
-  border-color: #ff1cdd;
+  border-color: #cceeff;
 }
 
-.border-primary-disabled {
-  border-color: #ff1cdd;
+.border-success-hover {
+  border-color: #ddeebb;
 }
 
-.border-primary-dark-1 {
-  border-color: #ff11dd;
+.border-warning-hover {
+  border-color: #ffeedd;
 }
 
-.border-primary-light-1 {
-  border-color: #ee13dd;
+.border-error-hover {
+  border-color: #ffdddd;
 }
 
-.border-primary-light-2 {
-  border-color: #ff1cdd;
+.border-pink-hover {
+  border-color: #ffddee;
 }
 
-.border-primary-light-3 {
-  border-color: #ff1fdd;
+.border-purple-hover {
+  border-color: #eeddff;
 }
 
 .border-white-hover {
-  border-color: #93beff;
-}
-
-.border-white-disabled {
-  border-color: #93beff;
-}
-
-.border-white-dark-1 {
-  border-color: #e8f3ff;
-}
-
-.border-white-light-1 {
   border-color: #ffffff;
 }
 
-.border-white-light-2 {
-  border-color: #93beff;
-}
-
-.border-white-light-3 {
-  border-color: #f7f7f7;
-}
-
 .border-black-hover {
-  border-color: #000000;
-}
-
-.border-black-disabled {
-  border-color: #000000;
-}
-
-.border-black-dark-1 {
-  border-color: #000000;
-}
-
-.border-black-light-1 {
-  border-color: #000000;
-}
-
-.border-black-light-2 {
-  border-color: #000000;
-}
-
-.border-black-light-3 {
   border-color: #000000;
 }
 
@@ -285,29 +217,29 @@
   border-color: transparent;
 }
 
-.border-transparent-disabled {
-  border-color: transparent;
-}
-
-.border-transparent-dark-1 {
-  border-color: transparent;
-}
-
-.border-transparent-light-1 {
-  border-color: transparent;
-}
-
-.border-transparent-light-2 {
-  border-color: transparent;
-}
-
-.border-transparent-light-3 {
-  border-color: transparent;
-}
-
 /* 背景颜色 */
 .bg-primary {
-  background-color: #ee22cc;
+  background-color: #0088ff;
+}
+
+.bg-success {
+  background-color: #33bb44;
+}
+
+.bg-warning {
+  background-color: #ff7711;
+}
+
+.bg-error {
+  background-color: #ee4444;
+}
+
+.bg-pink {
+  background-color: #ee3399;
+}
+
+.bg-purple {
+  background-color: #6633bb;
 }
 
 .bg-white {
@@ -322,115 +254,71 @@
   background-color: transparent;
 }
 
-.bg-base {
-  background-color: #1d2129;
+.bg-content {
+  background-color: #303030;
 }
 
 .bg-secondary {
-  background-color: #1d2129;
+  background-color: #909090;
 }
 
 .bg-placeholder {
-  background-color: #1d2129;
+  background-color: #a0a0a0;
 }
 
 .bg-disabled {
-  background-color: #1d2129;
+  background-color: #c0c0c0;
 }
 
 .bg-line-light {
-  background-color: #f3f3f3;
+  background-color: #e4e4e4;
 }
 
 .bg-line-default {
   background-color: #c3c3c3;
 }
 
-.bg-line-deep {
-  background-color: #a1a1a1;
-}
-
 .bg-fill-light {
-  background-color: #d1d1d1;
+  background-color: #f5f5f5;
 }
 
 .bg-fill-default {
-  background-color: #b1b1b1;
+  background-color: #f0f0f0;
 }
 
 .bg-fill-deep {
-  background-color: #919191;
+  background-color: #ebebeb;
 }
 
 .bg-primary-hover {
-  background-color: #ff1cdd;
+  background-color: #cceeff;
 }
 
-.bg-primary-disabled {
-  background-color: #ff1cdd;
+.bg-success-hover {
+  background-color: #ddeebb;
 }
 
-.bg-primary-dark-1 {
-  background-color: #ff11dd;
+.bg-warning-hover {
+  background-color: #ffeedd;
 }
 
-.bg-primary-light-1 {
-  background-color: #ee13dd;
+.bg-error-hover {
+  background-color: #ffdddd;
 }
 
-.bg-primary-light-2 {
-  background-color: #ff1cdd;
+.bg-pink-hover {
+  background-color: #ffddee;
 }
 
-.bg-primary-light-3 {
-  background-color: #ff1fdd;
+.bg-purple-hover {
+  background-color: #eeddff;
 }
 
 .bg-white-hover {
-  background-color: #93beff;
-}
-
-.bg-white-disabled {
-  background-color: #93beff;
-}
-
-.bg-white-dark-1 {
-  background-color: #e8f3ff;
-}
-
-.bg-white-light-1 {
   background-color: #ffffff;
 }
 
-.bg-white-light-2 {
-  background-color: #93beff;
-}
-
-.bg-white-light-3 {
-  background-color: #f7f7f7;
-}
-
 .bg-black-hover {
-  background-color: #000000;
-}
-
-.bg-black-disabled {
-  background-color: #000000;
-}
-
-.bg-black-dark-1 {
-  background-color: #000000;
-}
-
-.bg-black-light-1 {
-  background-color: #000000;
-}
-
-.bg-black-light-2 {
-  background-color: #000000;
-}
-
-.bg-black-light-3 {
   background-color: #000000;
 }
 
@@ -438,29 +326,29 @@
   background-color: transparent;
 }
 
-.bg-transparent-disabled {
-  background-color: transparent;
-}
-
-.bg-transparent-dark-1 {
-  background-color: transparent;
-}
-
-.bg-transparent-light-1 {
-  background-color: transparent;
-}
-
-.bg-transparent-light-2 {
-  background-color: transparent;
-}
-
-.bg-transparent-light-3 {
-  background-color: transparent;
-}
-
 /* 背景的覆盖cover颜色, 可用于覆盖上面的bg-XXX */
 .bg-primary-cover {
-  background-color: #ee22cc;
+  background-color: #0088ff;
+}
+
+.bg-success-cover {
+  background-color: #33bb44;
+}
+
+.bg-warning-cover {
+  background-color: #ff7711;
+}
+
+.bg-error-cover {
+  background-color: #ee4444;
+}
+
+.bg-pink-cover {
+  background-color: #ee3399;
+}
+
+.bg-purple-cover {
+  background-color: #6633bb;
 }
 
 .bg-white-cover {
@@ -475,115 +363,71 @@
   background-color: transparent;
 }
 
-.bg-base-cover {
-  background-color: #1d2129;
+.bg-content-cover {
+  background-color: #303030;
 }
 
 .bg-secondary-cover {
-  background-color: #1d2129;
+  background-color: #909090;
 }
 
 .bg-placeholder-cover {
-  background-color: #1d2129;
+  background-color: #a0a0a0;
 }
 
 .bg-disabled-cover {
-  background-color: #1d2129;
+  background-color: #c0c0c0;
 }
 
 .bg-line-light-cover {
-  background-color: #f3f3f3;
+  background-color: #e4e4e4;
 }
 
 .bg-line-default-cover {
   background-color: #c3c3c3;
 }
 
-.bg-line-deep-cover {
-  background-color: #a1a1a1;
-}
-
 .bg-fill-light-cover {
-  background-color: #d1d1d1;
+  background-color: #f5f5f5;
 }
 
 .bg-fill-default-cover {
-  background-color: #b1b1b1;
+  background-color: #f0f0f0;
 }
 
 .bg-fill-deep-cover {
-  background-color: #919191;
+  background-color: #ebebeb;
 }
 
 .bg-primary-hover-cover {
-  background-color: #ff1cdd;
+  background-color: #cceeff;
 }
 
-.bg-primary-disabled-cover {
-  background-color: #ff1cdd;
+.bg-success-hover-cover {
+  background-color: #ddeebb;
 }
 
-.bg-primary-dark-1-cover {
-  background-color: #ff11dd;
+.bg-warning-hover-cover {
+  background-color: #ffeedd;
 }
 
-.bg-primary-light-1-cover {
-  background-color: #ee13dd;
+.bg-error-hover-cover {
+  background-color: #ffdddd;
 }
 
-.bg-primary-light-2-cover {
-  background-color: #ff1cdd;
+.bg-pink-hover-cover {
+  background-color: #ffddee;
 }
 
-.bg-primary-light-3-cover {
-  background-color: #ff1fdd;
+.bg-purple-hover-cover {
+  background-color: #eeddff;
 }
 
 .bg-white-hover-cover {
-  background-color: #93beff;
-}
-
-.bg-white-disabled-cover {
-  background-color: #93beff;
-}
-
-.bg-white-dark-1-cover {
-  background-color: #e8f3ff;
-}
-
-.bg-white-light-1-cover {
   background-color: #ffffff;
 }
 
-.bg-white-light-2-cover {
-  background-color: #93beff;
-}
-
-.bg-white-light-3-cover {
-  background-color: #f7f7f7;
-}
-
 .bg-black-hover-cover {
-  background-color: #000000;
-}
-
-.bg-black-disabled-cover {
-  background-color: #000000;
-}
-
-.bg-black-dark-1-cover {
-  background-color: #000000;
-}
-
-.bg-black-light-1-cover {
-  background-color: #000000;
-}
-
-.bg-black-light-2-cover {
-  background-color: #000000;
-}
-
-.bg-black-light-3-cover {
   background-color: #000000;
 }
 
@@ -591,29 +435,29 @@
   background-color: transparent;
 }
 
-.bg-transparent-disabled-cover {
-  background-color: transparent;
-}
-
-.bg-transparent-dark-1-cover {
-  background-color: transparent;
-}
-
-.bg-transparent-light-1-cover {
-  background-color: transparent;
-}
-
-.bg-transparent-light-2-cover {
-  background-color: transparent;
-}
-
-.bg-transparent-light-3-cover {
-  background-color: transparent;
-}
-
 /* 按钮的禁用背景颜色, 使用时类名disabled即可（貌似有问题，使用了平台自带的disabled效果） */
 button[disabled].disabled.bg-primary {
-  background-color: #ee22cc;
+  background-color: #0088ff;
+}
+
+button[disabled].disabled.bg-success {
+  background-color: #33bb44;
+}
+
+button[disabled].disabled.bg-warning {
+  background-color: #ff7711;
+}
+
+button[disabled].disabled.bg-error {
+  background-color: #ee4444;
+}
+
+button[disabled].disabled.bg-pink {
+  background-color: #ee3399;
+}
+
+button[disabled].disabled.bg-purple {
+  background-color: #6633bb;
 }
 
 button[disabled].disabled.bg-white {
@@ -628,115 +472,71 @@ button[disabled].disabled.bg-transparent {
   background-color: transparent;
 }
 
-button[disabled].disabled.bg-base {
-  background-color: #1d2129;
+button[disabled].disabled.bg-content {
+  background-color: #303030;
 }
 
 button[disabled].disabled.bg-secondary {
-  background-color: #1d2129;
+  background-color: #909090;
 }
 
 button[disabled].disabled.bg-placeholder {
-  background-color: #1d2129;
+  background-color: #a0a0a0;
 }
 
 button[disabled].disabled.bg-disabled {
-  background-color: #1d2129;
+  background-color: #c0c0c0;
 }
 
 button[disabled].disabled.bg-line-light {
-  background-color: #f3f3f3;
+  background-color: #e4e4e4;
 }
 
 button[disabled].disabled.bg-line-default {
   background-color: #c3c3c3;
 }
 
-button[disabled].disabled.bg-line-deep {
-  background-color: #a1a1a1;
-}
-
 button[disabled].disabled.bg-fill-light {
-  background-color: #d1d1d1;
+  background-color: #f5f5f5;
 }
 
 button[disabled].disabled.bg-fill-default {
-  background-color: #b1b1b1;
+  background-color: #f0f0f0;
 }
 
 button[disabled].disabled.bg-fill-deep {
-  background-color: #919191;
+  background-color: #ebebeb;
 }
 
 button[disabled].disabled.bg-primary-hover {
-  background-color: #ff1cdd;
+  background-color: #cceeff;
 }
 
-button[disabled].disabled.bg-primary-disabled {
-  background-color: #ff1cdd;
+button[disabled].disabled.bg-success-hover {
+  background-color: #ddeebb;
 }
 
-button[disabled].disabled.bg-primary-dark-1 {
-  background-color: #ff11dd;
+button[disabled].disabled.bg-warning-hover {
+  background-color: #ffeedd;
 }
 
-button[disabled].disabled.bg-primary-light-1 {
-  background-color: #ee13dd;
+button[disabled].disabled.bg-error-hover {
+  background-color: #ffdddd;
 }
 
-button[disabled].disabled.bg-primary-light-2 {
-  background-color: #ff1cdd;
+button[disabled].disabled.bg-pink-hover {
+  background-color: #ffddee;
 }
 
-button[disabled].disabled.bg-primary-light-3 {
-  background-color: #ff1fdd;
+button[disabled].disabled.bg-purple-hover {
+  background-color: #eeddff;
 }
 
 button[disabled].disabled.bg-white-hover {
-  background-color: #93beff;
-}
-
-button[disabled].disabled.bg-white-disabled {
-  background-color: #93beff;
-}
-
-button[disabled].disabled.bg-white-dark-1 {
-  background-color: #e8f3ff;
-}
-
-button[disabled].disabled.bg-white-light-1 {
   background-color: #ffffff;
 }
 
-button[disabled].disabled.bg-white-light-2 {
-  background-color: #93beff;
-}
-
-button[disabled].disabled.bg-white-light-3 {
-  background-color: #f7f7f7;
-}
-
 button[disabled].disabled.bg-black-hover {
-  background-color: #000000;
-}
-
-button[disabled].disabled.bg-black-disabled {
-  background-color: #000000;
-}
-
-button[disabled].disabled.bg-black-dark-1 {
-  background-color: #000000;
-}
-
-button[disabled].disabled.bg-black-light-1 {
-  background-color: #000000;
-}
-
-button[disabled].disabled.bg-black-light-2 {
-  background-color: #000000;
-}
-
-button[disabled].disabled.bg-black-light-3 {
   background-color: #000000;
 }
 
@@ -744,29 +544,29 @@ button[disabled].disabled.bg-transparent-hover {
   background-color: transparent;
 }
 
-button[disabled].disabled.bg-transparent-disabled {
-  background-color: transparent;
-}
-
-button[disabled].disabled.bg-transparent-dark-1 {
-  background-color: transparent;
-}
-
-button[disabled].disabled.bg-transparent-light-1 {
-  background-color: transparent;
-}
-
-button[disabled].disabled.bg-transparent-light-2 {
-  background-color: transparent;
-}
-
-button[disabled].disabled.bg-transparent-light-3 {
-  background-color: transparent;
-}
-
 /* 按钮的禁用文字颜色, 使用时加上类名disabled即可（貌似有问题，使用了平台自带的disabled效果） */
 button[disabled].disabled.color-primary {
-  color: #ee22cc;
+  color: #0088ff;
+}
+
+button[disabled].disabled.color-success {
+  color: #33bb44;
+}
+
+button[disabled].disabled.color-warning {
+  color: #ff7711;
+}
+
+button[disabled].disabled.color-error {
+  color: #ee4444;
+}
+
+button[disabled].disabled.color-pink {
+  color: #ee3399;
+}
+
+button[disabled].disabled.color-purple {
+  color: #6633bb;
 }
 
 button[disabled].disabled.color-white {
@@ -781,139 +581,75 @@ button[disabled].disabled.color-transparent {
   color: transparent;
 }
 
-button[disabled].disabled.color-base {
-  color: #1d2129;
+button[disabled].disabled.color-content {
+  color: #303030;
 }
 
 button[disabled].disabled.color-secondary {
-  color: #1d2129;
+  color: #909090;
 }
 
 button[disabled].disabled.color-placeholder {
-  color: #1d2129;
+  color: #a0a0a0;
 }
 
 button[disabled].disabled.color-disabled {
-  color: #1d2129;
+  color: #c0c0c0;
 }
 
 button[disabled].disabled.color-line-light {
-  color: #f3f3f3;
+  color: #e4e4e4;
 }
 
 button[disabled].disabled.color-line-default {
   color: #c3c3c3;
 }
 
-button[disabled].disabled.color-line-deep {
-  color: #a1a1a1;
-}
-
 button[disabled].disabled.color-fill-light {
-  color: #d1d1d1;
+  color: #f5f5f5;
 }
 
 button[disabled].disabled.color-fill-default {
-  color: #b1b1b1;
+  color: #f0f0f0;
 }
 
 button[disabled].disabled.color-fill-deep {
-  color: #919191;
+  color: #ebebeb;
 }
 
 button[disabled].disabled.color-primary-hover {
-  color: #ff1cdd;
+  color: #cceeff;
 }
 
-button[disabled].disabled.color-primary-disabled {
-  color: #ff1cdd;
+button[disabled].disabled.color-success-hover {
+  color: #ddeebb;
 }
 
-button[disabled].disabled.color-primary-dark-1 {
-  color: #ff11dd;
+button[disabled].disabled.color-warning-hover {
+  color: #ffeedd;
 }
 
-button[disabled].disabled.color-primary-light-1 {
-  color: #ee13dd;
+button[disabled].disabled.color-error-hover {
+  color: #ffdddd;
 }
 
-button[disabled].disabled.color-primary-light-2 {
-  color: #ff1cdd;
+button[disabled].disabled.color-pink-hover {
+  color: #ffddee;
 }
 
-button[disabled].disabled.color-primary-light-3 {
-  color: #ff1fdd;
+button[disabled].disabled.color-purple-hover {
+  color: #eeddff;
 }
 
 button[disabled].disabled.color-white-hover {
-  color: #93beff;
-}
-
-button[disabled].disabled.color-white-disabled {
-  color: #93beff;
-}
-
-button[disabled].disabled.color-white-dark-1 {
-  color: #e8f3ff;
-}
-
-button[disabled].disabled.color-white-light-1 {
   color: #ffffff;
-}
-
-button[disabled].disabled.color-white-light-2 {
-  color: #93beff;
-}
-
-button[disabled].disabled.color-white-light-3 {
-  color: #f7f7f7;
 }
 
 button[disabled].disabled.color-black-hover {
   color: #000000;
 }
 
-button[disabled].disabled.color-black-disabled {
-  color: #000000;
-}
-
-button[disabled].disabled.color-black-dark-1 {
-  color: #000000;
-}
-
-button[disabled].disabled.color-black-light-1 {
-  color: #000000;
-}
-
-button[disabled].disabled.color-black-light-2 {
-  color: #000000;
-}
-
-button[disabled].disabled.color-black-light-3 {
-  color: #000000;
-}
-
 button[disabled].disabled.color-transparent-hover {
-  color: transparent;
-}
-
-button[disabled].disabled.color-transparent-disabled {
-  color: transparent;
-}
-
-button[disabled].disabled.color-transparent-dark-1 {
-  color: transparent;
-}
-
-button[disabled].disabled.color-transparent-light-1 {
-  color: transparent;
-}
-
-button[disabled].disabled.color-transparent-light-2 {
-  color: transparent;
-}
-
-button[disabled].disabled.color-transparent-light-3 {
   color: transparent;
 }
 
@@ -932,12 +668,12 @@ button[disabled].disabled.color-transparent-light-3 {
 }
 
 .mask-deep {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* 阴影类 */
 .shadow-default {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* 字体尺寸 */
@@ -954,11 +690,11 @@ button[disabled].disabled.color-transparent-light-3 {
 }
 
 .font-header {
-  font-size: 30rpx;
+  font-size: 32rpx;
 }
 
 .font-title {
-  font-size: 34rpx;
+  font-size: 36rpx;
 }
 
 .font-xt {
@@ -970,6 +706,10 @@ button[disabled].disabled.color-transparent-light-3 {
 }
 
 /* margin间距类，形如ml-l, mr-l */
+.mt-xxs {
+  margin-top: 4rpx;
+}
+
 .mt-xs {
   margin-top: 8rpx;
 }
@@ -988,6 +728,10 @@ button[disabled].disabled.color-transparent-light-3 {
 
 .mt-xl {
   margin-top: 40rpx;
+}
+
+.mr-xxs {
+  margin-right: 4rpx;
 }
 
 .mr-xs {
@@ -1010,6 +754,10 @@ button[disabled].disabled.color-transparent-light-3 {
   margin-right: 40rpx;
 }
 
+.mb-xxs {
+  margin-bottom: 4rpx;
+}
+
 .mb-xs {
   margin-bottom: 8rpx;
 }
@@ -1028,6 +776,10 @@ button[disabled].disabled.color-transparent-light-3 {
 
 .mb-xl {
   margin-bottom: 40rpx;
+}
+
+.ml-xxs {
+  margin-left: 4rpx;
 }
 
 .ml-xs {
@@ -1051,6 +803,10 @@ button[disabled].disabled.color-transparent-light-3 {
 }
 
 /* padding间距类，形如pl-l, pr-l */
+.pt-xxs {
+  padding-top: 4rpx;
+}
+
 .pt-xs {
   padding-top: 8rpx;
 }
@@ -1074,6 +830,7 @@ button[disabled].disabled.color-transparent-light-3 {
 .pr-xxs {
   padding-right: 4rpx;
 }
+
 .pr-xs {
   padding-right: 8rpx;
 }
@@ -1094,6 +851,10 @@ button[disabled].disabled.color-transparent-light-3 {
   padding-right: 40rpx;
 }
 
+.pb-xxs {
+  padding-bottom: 4rpx;
+}
+
 .pb-xs {
   padding-bottom: 8rpx;
 }
@@ -1112,6 +873,10 @@ button[disabled].disabled.color-transparent-light-3 {
 
 .pb-xl {
   padding-bottom: 40rpx;
+}
+
+.pl-xxs {
+  padding-left: 4rpx;
 }
 
 .pl-xs {
@@ -1135,6 +900,11 @@ button[disabled].disabled.color-transparent-light-3 {
 }
 
 /* margin间距类，形如mlr-l, mtb-l */
+.mlr-xxs {
+  margin-left: 4rpx;
+  margin-right: 4rpx;
+}
+
 .mlr-xs {
   margin-left: 8rpx;
   margin-right: 8rpx;
@@ -1158,6 +928,11 @@ button[disabled].disabled.color-transparent-light-3 {
 .mlr-xl {
   margin-left: 40rpx;
   margin-right: 40rpx;
+}
+
+.mtb-xxs {
+  margin-top: 4rpx;
+  margin-bottom: 4rpx;
 }
 
 .mtb-xs {
@@ -1186,6 +961,11 @@ button[disabled].disabled.color-transparent-light-3 {
 }
 
 /* padding间距类，形如plr-l, ptb-l, p-all-l */
+.plr-xxs {
+  padding-left: 4rpx;
+  padding-right: 4rpx;
+}
+
 .plr-xs {
   padding-left: 8rpx;
   padding-right: 8rpx;
@@ -1211,6 +991,11 @@ button[disabled].disabled.color-transparent-light-3 {
   padding-right: 40rpx;
 }
 
+.ptb-xxs {
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+}
+
 .ptb-xs {
   padding-top: 8rpx;
   padding-bottom: 8rpx;
@@ -1234,6 +1019,10 @@ button[disabled].disabled.color-transparent-light-3 {
 .ptb-xl {
   padding-top: 40rpx;
   padding-bottom: 40rpx;
+}
+
+.p-all-xxs {
+  padding: 4rpx;
 }
 
 .p-all-xs {

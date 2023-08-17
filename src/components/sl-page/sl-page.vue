@@ -1,7 +1,7 @@
 <template>
   <view
     :class="[clz.root(), className, `bg-${bg}`]"
-    class="page-root family-regular font-content color-base lh-6"
+    class="page-root family-regular font-content color-content lh-6"
     :style="{ paddingTop: `${statusBarHeight}px` }"
   >
     <sl-nav-bar

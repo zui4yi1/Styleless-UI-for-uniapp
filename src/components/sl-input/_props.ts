@@ -43,7 +43,7 @@ export const props = buildProps({
   },
   color: {
     type: String as PropType<IColor>,
-    default: 'base',
+    default: 'content',
   },
 
   bg: {

@@ -18,7 +18,7 @@
             </sl-button>
           </view>
           <view class="span-12">
-            <sl-button :theme="{ bg: 'white', color: 'base' }" @click="handleConfirm">
+            <sl-button :theme="{ bg: 'white', color: 'content' }" @click="handleConfirm">
               确定
             </sl-button>
           </view>

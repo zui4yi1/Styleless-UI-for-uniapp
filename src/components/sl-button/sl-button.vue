@@ -12,9 +12,11 @@
         `height-${size}`,
         `font-${_theme.fontSize}`,
         `color-${_theme.color}`,
-        disabled ? `bg-${_theme.bg}-disabled` : `bg-${_theme.bg}`,
+        { 'opacity-disabled disabled': disabled },
+        `bg-${_theme.bg}`,
       ]"
       class="border-none flex-center plr-d"
+      :disabled="disabled"
       :hover-start-time="10"
       :hover-stay-time="10"
       :hover-class="hoverClass || `bg-${_theme.bg}-hover`"
@@ -36,16 +38,12 @@
   const _props = defineProps(props);
   defineEmits(['click']);
 
-  const defaultTheme = {
-    bg: 'primary' as IColor,
-    borderColor: 'none' as IColor,
-    fontSize: 'content' as IFont,
-    color: 'white' as IColor,
-    hasBorder: false,
-    borderThick: false,
-  };
-
   const _theme = computed(() => {
-    return Object.assign({}, defaultTheme, _props.theme);
+    return {
+      bg: _props.theme.bg || _props.bg || 'primary',
+      color: _props.theme.color || _props.color || 'white',
+      fontSize: _props.theme.fontSize || 'content',
+      borderClz: _props.theme.borderClz || 'border-none',
+    };
   });
 </script>

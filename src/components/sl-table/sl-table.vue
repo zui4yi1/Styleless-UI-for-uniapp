@@ -48,7 +48,7 @@
           {
             headClz: 'color-white height-cell-default flex-center',
             trClz: '',
-            tdClz: 'color-base flex-center',
+            tdClz: 'color-content flex-center',
           },
           props.tableProps,
         );

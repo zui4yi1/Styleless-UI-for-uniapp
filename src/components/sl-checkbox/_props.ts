@@ -35,7 +35,7 @@ export const props = buildProps({
   },
   labelClz: {
     type: String,
-    default: 'font-content color-base',
+    default: 'font-content color-content',
   },
   iconName: {
     type: String,

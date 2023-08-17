@@ -36,19 +36,28 @@ export const props = buildProps({
     type: String,
     default: '',
   },
+  bg: {
+    type: String as PropType<IColor>,
+    default: '',
+  },
+  color: {
+    type: String as PropType<IColor>,
+    default: 'white',
+  },
   index: {
     type: Number,
     default: 0,
   },
+  /**
+   * @description 所有主题的配置, 无默认值，若有则优先级最高, 可用于自定义按钮的风格
+   */
   theme: {
     type: Object,
     default: () => ({
-      bg: 'primary' as IColor,
-      borderColor: 'none' as IColor,
-      fontSize: 'content' as IFont,
-      color: 'white' as IColor,
-      hasBorder: false,
-      borderThick: false,
+      bg: '' as IColor,
+      fontSize: '' as IFont,
+      color: '' as IColor,
+      borderClz: '',
     }),
   },
   icon: {
@@ -56,7 +65,7 @@ export const props = buildProps({
     default: () => ({
       name: '',
       className: '',
-      iconLib: 'common',
+      iconLib: 'sl-ui-common',
       bg: 'primary' as IColor,
       size: 'content' as IFont,
       color: 'white' as IColor,

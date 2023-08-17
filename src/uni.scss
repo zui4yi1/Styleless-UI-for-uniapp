@@ -1,5 +1,10 @@
 /* 品牌主色 */
-$ui-color-primary: #ee22cc;
+$ui-color-primary: #0088ff;
+$ui-color-success: #33bb44;
+$ui-color-warning: #ff7711;
+$ui-color-error: #ee4444;
+$ui-color-pink: #ee3399;
+$ui-color-purple: #6633bb;
 
 /* 通用主色 */
 $ui-color-white: #ffffff;
@@ -7,46 +12,30 @@ $ui-color-black: #000000;
 $ui-color-transparent: transparent;
 
 /* 字体颜色 */
-$ui-color-base: #1d2129;
-$ui-color-secondary: #1d2129;
-$ui-color-placeholder: #1d2129;
-$ui-color-disabled: #1d2129;
+$ui-color-content: #303030;
+$ui-color-secondary: #909090;
+$ui-color-placeholder: #a0a0a0;
+$ui-color-disabled: #c0c0c0;
 
 /* 边框颜色 */
-$ui-color-line-light: #f3f3f3;
+$ui-color-line-light: #e4e4e4;
 $ui-color-line-default: #c3c3c3;
-$ui-color-line-deep: #a1a1a1;
 
 /* 背景颜色 */
-$ui-color-fill-light: #d1d1d1;
-$ui-color-fill-default: #b1b1b1;
-$ui-color-fill-deep: #919191;
+$ui-color-fill-light: #f5f5f5;
+$ui-color-fill-default: #f0f0f0;
+$ui-color-fill-deep: #ebebeb;
 
 /* 主色扩展 */
-$ui-color-primary-hover: #ff1cdd;
-$ui-color-primary-disabled: #ff1cdd;
-$ui-color-primary-dark-1: #ff11dd;
-$ui-color-primary-light-1: #ee13dd;
-$ui-color-primary-light-2: #ff1cdd;
-$ui-color-primary-light-3: #ff1fdd;
-$ui-color-white-hover: #93beff;
-$ui-color-white-disabled: #93beff;
-$ui-color-white-dark-1: #e8f3ff;
-$ui-color-white-light-1: #ffffff;
-$ui-color-white-light-2: #93beff;
-$ui-color-white-light-3: #f7f7f7;
+$ui-color-primary-hover: #cceeff;
+$ui-color-success-hover: #ddeebb;
+$ui-color-warning-hover: #ffeedd;
+$ui-color-error-hover: #ffdddd;
+$ui-color-pink-hover: #ffddee;
+$ui-color-purple-hover: #eeddff;
+$ui-color-white-hover: #ffffff;
 $ui-color-black-hover: #000000;
-$ui-color-black-disabled: #000000;
-$ui-color-black-dark-1: #000000;
-$ui-color-black-light-1: #000000;
-$ui-color-black-light-2: #000000;
-$ui-color-black-light-3: #000000;
 $ui-color-transparent-hover: transparent;
-$ui-color-transparent-disabled: transparent;
-$ui-color-transparent-dark-1: transparent;
-$ui-color-transparent-light-1: transparent;
-$ui-color-transparent-light-2: transparent;
-$ui-color-transparent-light-3: transparent;
 
 /* 字体家族 */
 $ui-font-family-regular: 'PingFangSC-Regular';
@@ -54,25 +43,26 @@ $ui-font-family-medium: 'PingFangSC-Medium';
 
 /* 遮罩颜色 */
 $ui-mask-default: rgba(0, 0, 0, 0.3);
-$ui-mask-deep: rgba(0, 0, 0, 0.75);
+$ui-mask-deep: rgba(0, 0, 0, 0.5);
 
 /* 阴影颜色 */
-$ui-shadow-default: xxxxxxxx;
+$ui-shadow-default: 0 2px 2px rgba(0, 0, 0, 0.1);
 
 /* 字体尺寸 */
 $ui-font-size-desc: 20rpx;
 $ui-font-size-secondary: 24rpx;
 $ui-font-size-content: 28rpx;
-$ui-font-size-header: 30rpx;
-$ui-font-size-title: 34rpx;
+$ui-font-size-header: 32rpx;
+$ui-font-size-title: 36rpx;
 $ui-font-size-xt: 40rpx;
 $ui-font-size-xxt: 48rpx;
 
 /* 间距 */
+$ui-gap-xxs: 4rpx;
 $ui-gap-xs: 8rpx;
-$ui-gap-small: 16rpx;
-$ui-gap-default: 24rpx;
-$ui-gap-large: 32rpx;
+$ui-gap-s: 16rpx;
+$ui-gap-d: 24rpx;
+$ui-gap-l: 32rpx;
 $ui-gap-xl: 40rpx;
 
 /* 高度 */
