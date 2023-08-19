@@ -45,7 +45,7 @@
     <sl-mask v-model:open="open" mode="center">
       <view class="h-120 bg-white">aaaaaa</view>
     </sl-mask>
-    <sl-button>打开</sl-button>
+    <sl-button @click="open = true">打开</sl-button>
     <sl-button bg="error">打开</sl-button>
     <sl-button bg="warning">打开</sl-button>
     <sl-button bg="success">打开</sl-button>

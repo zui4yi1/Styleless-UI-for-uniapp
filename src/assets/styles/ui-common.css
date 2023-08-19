@@ -31,11 +31,12 @@
 .flex-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-.flex-column-plain {
+
+.flex-column-center {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .flex-between {
@@ -62,6 +63,7 @@
 }
 
 .flex-left {
+  display: flex;
   justify-content: flex-start;
 }
 
@@ -71,10 +73,12 @@
 }
 
 .flex-top {
+  display: flex;
   align-items: flex-start;
 }
 
 .flex-bottom {
+  display: flex;
   align-items: flex-end;
 }
 
@@ -131,6 +135,75 @@
 
 .text-right {
   text-align: right;
+}
+
+.text-Abc {
+  text-transform: Capitalize;
+}
+
+.text-ABC {
+  text-transform: Uppercase;
+}
+
+.text-abc {
+  text-transform: Lowercase;
+}
+
+/* position */
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.abs-full {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.abs-cover {
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  bottom: -1px;
+}
+
+.abs-top {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.abs-bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.abs-left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.abs-right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.abs-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* border类, 需与颜色配合使用 */
@@ -230,18 +303,23 @@
 .inline-block {
   display: inline-block;
 }
+
 .display-table {
   display: table;
 }
+
 .display-th {
-  display: table-cell;
+  display: table-row;
 }
+
 .display-row {
   display: table-row;
 }
+
 .display-cell {
   display: table-cell;
 }
+
 /* float 类 */
 .float {
   float: left;
@@ -263,6 +341,36 @@
   display: table;
   clear: both;
   content: '';
+}
+
+/* opacity 类 */
+.opacity-1 {
+  opacity: 1;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-disabled {
+  opacity: 0.5;
+}
+
+/* size类 */
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.vw100 {
+  width: 100vw;
+}
+
+.vh100 {
+  height: 100vh;
 }
 
 /* bold 类 */
@@ -291,20 +399,8 @@
   transform: rotate(45deg);
 }
 
-.scale {
-  transform: scale(1);
-}
-.scale-popup {
-  transform: scale(1.2);
-}
 .scale-half {
   transform: scale(0.5);
-}
-.scale-half-x {
-  transform: scaleY(0.5);
-}
-.scale-half-y {
-  transform: scaleX(0.5);
 }
 
 .scale-double {
@@ -325,6 +421,27 @@
 
 .trans-l-b {
   transform: translate(-50%, 50%);
+}
+
+/* z-index 类 */
+.z-index-content {
+  z-index: 1;
+}
+
+.z-index-layout {
+  z-index: 9999;
+}
+
+.z-index-nail {
+  z-index: 99999;
+}
+
+.z-index-mask {
+  z-index: 9999999;
+}
+
+.z-index-hide {
+  z-index: -1;
 }
 
 /* span 类 */
@@ -745,13 +862,6 @@
   height: 256rpx;
 }
 
-.w100 {
-  width: 100%;
-}
-.h100 {
-  height: 100%;
-}
-
 /* width 类, 从4~128, 4的倍数递增 */
 .w-4 {
   width: 4rpx;
@@ -1027,88 +1137,25 @@
   animation: spin 4s linear infinite;
 }
 
-.delayShow {
+.delay-show {
   animation: delayShow 1s ease-out forwords;
 }
 
-.fixed {
-  position: fixed;
-}
-.absolute {
-  position: absolute;
-}
-.relative {
-  position: relative;
-}
-.abs-full {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-.abs-cover {
-  left: -1px;
-  right: -1px;
-  top: -1px;
-  bottom: -1px;
-}
-.abs-top {
-  left: 0;
-  right: 0;
-  top: 0;
-}
-.abs-bottom {
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.abs-left {
-  left: 0;
-  top: 0;
-  bottom: 0;
-}
-.abs-right {
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-.abs-center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.opacity-1 {
-  opacity: 1;
-}
-.opacity-0 {
-  opacity: 0;
-}
-.opacity-disabled {
-  opacity: 0.5;
-}
-
-.mask-1 {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.transition-mask {
+.transition-fast {
   transition: all 0.3s ease-out;
 }
 
-.z-index-content {
-  z-index: 1;
+.transition-normal {
+  transition: all 1s ease-out;
 }
-.z-index-layout {
-  z-index: 9999;
+
+.transition-slow {
+  transition: all 2s ease-out;
 }
-.z-index-nail {
-  z-index: 99999;
-}
-.z-index-mask {
-  z-index: 9999999;
-}
-.z-index-hide {
-  z-index: -1;
+
+/* others 类, 其它不能分类的都放这 */
+.save-bottom {
+  padding-bottom: calc(env(safe-area-inset-bottom));
 }
 
 .page-root {

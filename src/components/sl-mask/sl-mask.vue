@@ -1,7 +1,7 @@
 <template>
   <view
     :class="[clz.root(), className, open ? 'z-index-mask  opacity-1' : 'z-index-hide  opacity-0']"
-    class="fixed abs-full mask-1 transition-mask"
+    class="fixed abs-full mask-default transition-fast"
     hover-stop-propagation
     @tap="closeOnTab && $emit('update:open', false)"
     @touchmove.stop.prevent="() => {}"

@@ -15,7 +15,7 @@
           isScroll ? 'flex-grow' : 'mr-l',
           { 'border-right border-line-light': isScroll && inx < list.length - 1 },
         ]"
-        class="flex-shrink relative flex-column mr-d"
+        class="flex-shrink relative flex-column-center mr-d"
         @click="handleTab(inx)"
       >
         <view :class="[clz.join('body', 'item', 'text')]" class="text-ellipsis">

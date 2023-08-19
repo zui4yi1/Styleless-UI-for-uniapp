@@ -4,10 +4,12 @@
     class=""
     :style="{ paddingTop: type === 'inline' ? 0 : `${top}rpx` }"
   >
-    <view :class="[clz.body(), `bg-${bg}`, type === 'inline' ? 'flex-center' : 'flex-column']">
+    <view
+      :class="[clz.body(), `bg-${bg}`, type === 'inline' ? 'flex-center' : 'flex-column-center']"
+    >
       <sl-icon />
       <slot>
-        <text :class="[clz.join('body-content')]" class="color-placeholder font-title">
+        <text :class="[clz.join('body', 'body-content')]" class="color-placeholder font-title">
           {{ content }}
         </text>
       </slot>
