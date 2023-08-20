@@ -1,0 +1,8 @@
+{
+  "name": "styleless-ui-for-uniapp",
+  "version": "1.0.0",
+  "description": "无样式(styleless)的UI库, 仅限uniapp内使用",
+  "keywords": [],
+  "author": "xiehaihong",
+  "license": "MIT"
+}
