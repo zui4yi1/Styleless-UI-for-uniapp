@@ -16,7 +16,8 @@
     "dev:wx": "uni -p mp-weixin",
     "type-check": "vue-tsc --noEmit",
     "eslint": "eslint . --ext .ts",
-    "pkg:ui": "node ./build/package/index.js ui"
+    "pkg:ui": "node ./build/package/index.js ui",
+    "pkg:typing": "node ./build/package/index.js typing"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-3080720230703001",

@@ -1,8 +1,29 @@
 {
   "name": "styleless-ui-for-uniapp",
-  "version": "1.0.0",
-  "description": "无样式(styleless)的UI库, 仅限uniapp内使用",
-  "keywords": [],
+  "version": "1.0.6",
+  "description": "一款基于“样式组件化”开发的uniapp UI库, 采用UI组件库跟随业务系统的理念, 整套UI没有一个style， 使用时也不用引入样式, 即styleless",
+  "private": false,
+  "keywords": [
+    "styleless",
+    "styleless ui",
+    "uniapp",
+    "uniapp ui"
+  ],
   "author": "xiehaihong",
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "components",
+    "hooks",
+    "types",
+    "utils"
+  ],
+  "peerDependencies": {
+    "lodash-es": "^4.17.21",
+    "lodash-unified": "^1.0.3"
+  },
+  "typings": "types/sl-ui.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zui4yi1/Styleless-UI-for-uniapp.git"
+  }
 }
