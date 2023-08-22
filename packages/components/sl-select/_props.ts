@@ -1,4 +1,3 @@
-import { buildProps } from '@/utils/element-plus/props';
 import type { PropType } from 'vue';
 export interface ICompSelect {
   label: string;
@@ -6,7 +5,7 @@ export interface ICompSelect {
   disabled?: boolean;
 }
 
-export const props = buildProps({
+export const props = {
   /**
    * @description inject global classNames to the component root
    */
@@ -34,4 +33,4 @@ export const props = buildProps({
     type: Boolean,
     default: false,
   },
-} as const);
+};

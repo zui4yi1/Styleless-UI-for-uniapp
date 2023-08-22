@@ -1,6 +1,4 @@
-import { buildProps } from '@/utils/element-plus/props';
-
-export const props = buildProps({
+export const props = {
   /**
    * @description inject global classNames to the component root
    */
@@ -19,6 +17,6 @@ export const props = buildProps({
     type: Number,
     default: 88,
   },
-} as const);
+};
 
 export type IProps = typeof props;

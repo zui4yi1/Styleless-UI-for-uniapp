@@ -1,8 +1,6 @@
-import { buildProps } from '@/utils/element-plus/props';
-
-export const props = buildProps({
+export const props = {
   value: {
     type: String,
     default: '',
   },
-} as const);
+};

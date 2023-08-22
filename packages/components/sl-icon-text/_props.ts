@@ -1,6 +1,4 @@
-import { buildProps } from '@/utils/element-plus/props';
-
-export const props = buildProps({
+export const props = {
   /**
    * @description inject global classNames to the component root
    */
@@ -32,4 +30,4 @@ export const props = buildProps({
     type: String,
     default: 'font-content color-content',
   },
-} as const);
+};
