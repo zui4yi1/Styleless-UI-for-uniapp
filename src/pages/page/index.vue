@@ -6,6 +6,7 @@
       <sl-dropdown-item title="销量" type="text" />
       <sl-dropdown-item title="价格" type="sort" />
     </sl-dropdown>
+    <sl-icon name="icon_arrow_right" />
   </sl-page>
   <sl-bottom>
     <sl-button>提交</sl-button>
