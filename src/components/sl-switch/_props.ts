@@ -11,8 +11,8 @@ export const props = {
     type: Number,
     default: 56,
   },
-  /** 相对高度的偏移，即实际宽度为 height+widthOffset */
-  widthOffset: {
+  /** 中间矩形宽度，即实际宽度为 height+width */
+  width: {
     type: Number,
     default: 40,
   },

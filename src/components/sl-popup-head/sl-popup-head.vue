@@ -3,22 +3,26 @@
     <view :class="[clz.body()]" class="flex height-cell-default">
       <template v-if="mode === 'icon'">
         <view class="span-6 flex-shrink"></view>
-        <view class="flex-grow flex-center font-title bold">{{ title }}</view>
-        <view class="span-6 flex-shrink flex-right" @click="$emit('close')">
-          <sl-icon name="icon_close" color="placeholder" />
+        <view class="flex-grow flex-center">{{ title }}</view>
+        <view class="span-6 flex-shrink flex-right">
+          <sl-icon name="icon_close" color="placeholder" :size="40" @click="$emit('close')" />
         </view>
       </template>
       <template v-else-if="mode === 'text'">
-        <view class="span-6 flex-shrink" @click="$emit('close')">取消</view>
-        <view class="flex-grow flex-center flex-center font-title">{{ title }}</view>
-        <view
-          class="span-6 flex-shrink flex-right"
-          @click="
-            $emit('close');
-            $emit('confirm');
-          "
-        >
-          确定
+        <view class="span-6 flex-shrink">
+          <text class="color-placeholder" @click="$emit('close')">取消</text>
+        </view>
+        <view class="flex-grow flex-center">{{ title }}</view>
+        <view class="span-6 flex-shrink flex-right">
+          <text
+            @click="
+              $emit('close');
+              $emit('confirm');
+            "
+            class="color-primary"
+          >
+            确定
+          </text>
         </view>
       </template>
     </view>

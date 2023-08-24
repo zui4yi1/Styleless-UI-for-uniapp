@@ -49,7 +49,7 @@ export const props = {
   },
   iconLib: {
     type: String,
-    default: 'common',
+    default: 'sl-ui-common',
   },
   /**
    * @description 不需要在左侧显示图标的页面, 一般是登录页及各大首页

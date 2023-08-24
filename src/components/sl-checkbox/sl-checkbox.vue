@@ -11,6 +11,7 @@
       @click="handleSelect(item.value)"
     >
       <sl-icon-text
+        :className="[{ 'mb-xs': direction === 'y' }]"
         :name="iconName"
         :iconLib="iconLib"
         :label="item.label"

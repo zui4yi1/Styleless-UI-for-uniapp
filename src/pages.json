@@ -1,6 +1,36 @@
 {
   "pages": [
     {
+      "path": "examples/index/index"
+    },
+    {
+      "path": "examples/button/index"
+    },
+    {
+      "path": "examples/mask/index"
+    },
+    {
+      "path": "examples/popup/index"
+    },
+    {
+      "path": "examples/modal/index"
+    },
+    {
+      "path": "examples/input/index"
+    },
+    {
+      "path": "examples/checkbox/index"
+    },
+    {
+      "path": "examples/radio/index"
+    },
+    {
+      "path": "examples/switch/index"
+    },
+    {
+      "path": "examples/table/index"
+    },
+    {
       "path": "pages/page/index",
       "style": {
         "navigationBarTitleText": "uni-app"

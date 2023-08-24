@@ -2,14 +2,15 @@ import type { PropType } from 'vue';
 
 export interface ITableColumn {
   name: string;
-  value?: string;
+  value: string;
+  width?: string;
 }
 export interface ITableList {
   [k: string]: any;
 }
 
 export interface ITableProps {
-  headClz: string;
+  thClz: string;
   trClz: string;
   tdClz: string;
 }

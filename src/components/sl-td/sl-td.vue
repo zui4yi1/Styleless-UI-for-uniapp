@@ -4,7 +4,7 @@
     class="display-cell border-box h100"
     :style="{ width: width || 'auto', 'vertical-align': 'middle' }"
   >
-    <view :class="[`bg-${bg}`, `text-${align}`, tdClz || tableProps.tdClz]" class="h100">
+    <view :class="[`flex-${align}`, tdClz || tableProps.tdClz]" class="h100">
       <slot />
     </view>
   </view>
@@ -25,6 +25,7 @@
     },
     setup() {
       const tableProps = inject('tableProps', {} as ITableProps);
+
       return { clz, tableProps };
     },
   });

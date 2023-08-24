@@ -10,6 +10,7 @@ export const useNavBar = (props: any) => {
     uni.navigateBack();
   };
   const handleClickHome = () => {
+    console.log('🚀 ~ file: useNavBar.ts:15 ~ handleClickHome ~ props.homePath:', props.homePath);
     uni.reLaunch({
       url: props.homePath,
     });

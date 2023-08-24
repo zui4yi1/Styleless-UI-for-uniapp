@@ -32,5 +32,14 @@
       "$2"
     ],
     "description": "snippets for base components props"
+  },
+  "vue-examples": {
+    "scope": "vue",
+    "prefix": "vue-examples",
+    "body": [
+      "<template>\r  <s-page title=\"XXXX\" className=\"plr-l\">\r    <Brief desc=\"XXXX\" />\r    <Tip title=\"测试\" />\r  </s-page>\r</template>\r<script setup lang=\"ts\">\r  import Brief from '../_components/brief/index.vue';\r  import SPage from '../_components/s-page/index.vue';\r  import Tip from '../_components/tip/index.vue';\r\r  // eslint-disable-next-line @typescript-eslint/no-unused-vars\r  const themes = ['primary', 'success', 'error'];\r</script>\r",
+      "$2"
+    ],
+    "description": "snippets for base components props"
   }
 }
