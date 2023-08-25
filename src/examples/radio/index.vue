@@ -13,11 +13,7 @@
     <Tip title="disabled" desc="disabled=true" className="mt-d" />
     <sl-radio v-model:value="val" :list="list" disabled className="mt-d" />
 
-    <Tip
-      title="文字换行, 使用垂直模式"
-      desc="文字太多时, 会自动换行。但因换行后, 行间距不容易控制, 故请直接使用垂直模式"
-      className="mt-d"
-    />
+    <Tip title="文字换行" desc="文字太多时, 会自动换行, 当然最好使用垂直模式" className="mt-d" />
     <sl-radio v-model:value="val" :list="list2" direction="y" className="mt-d" />
   </s-page>
 </template>

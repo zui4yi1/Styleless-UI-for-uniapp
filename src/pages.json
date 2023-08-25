@@ -16,6 +16,9 @@
       "path": "examples/modal/index"
     },
     {
+      "path": "examples/select/index"
+    },
+    {
       "path": "examples/input/index"
     },
     {

@@ -19,7 +19,7 @@ export const props = {
   },
   title: {
     type: String,
-    default: '',
+    default: '请选择',
   },
   value: {
     type: [String, Number, Boolean, Array],

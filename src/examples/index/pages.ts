@@ -17,6 +17,7 @@ const pages = [
       { componentName: 'sl-mask', url: '/examples/mask/index' },
       { componentName: 'sl-popup', url: '/examples/popup/index' },
       { componentName: 'sl-modal', url: '/examples/modal/index' },
+      { componentName: 'sl-select', url: '/examples/select/index' },
     ],
   },
   {
