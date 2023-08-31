@@ -1,6 +1,6 @@
 <template>
   <sl-mask :closeOnTab="closeOnTab" mode="bottom" v-model:open="isOpen">
-    <view :class="[clz.root()]">
+    <view :class="[clz.root()]" class="bg-white">
       <sl-popup-head
         :title="title"
         :mode="mode"
@@ -8,7 +8,7 @@
         @confirm="$emit('confirm')"
       />
 
-      <view :class="[clz.body()]" class="bg-white">
+      <view :class="[clz.body()]">
         <slot />
         <sl-fill-line isBottom className="pt-xs" />
       </view>

@@ -11,7 +11,6 @@
   </s-page>
 </template>
 <script setup lang="ts">
-  import { uni } from '@dcloudio/uni-h5';
   import SPage from '../_components/s-page/index.vue';
   import Tip from '../_components/tip/index.vue';
 

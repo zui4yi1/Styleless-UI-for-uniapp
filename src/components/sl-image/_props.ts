@@ -22,7 +22,7 @@ export const props = {
   },
   height: {
     type: [String, Number],
-    default: 'auto',
+    default: '100%',
   },
   radius: {
     type: String as PropType<IRadius>,
@@ -66,7 +66,7 @@ export const props = {
     type: Number,
     default: 0,
   },
-  previewImage: {
+  preview: {
     type: Boolean,
     default: false,
   },

@@ -19,6 +19,12 @@
       "path": "examples/select/index"
     },
     {
+      "path": "examples/action-sheet/index"
+    },
+    {
+      "path": "examples/dropdown/index"
+    },
+    {
       "path": "examples/input/index"
     },
     {
@@ -34,16 +40,25 @@
       "path": "examples/table/index"
     },
     {
-      "path": "pages/page/index",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
+      "path": "examples/grid/index"
     },
     {
-      "path": "pages/index/index",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
+      "path": "examples/space/index"
+    },
+    {
+      "path": "examples/image/index"
+    },
+    {
+      "path": "examples/icon/index"
+    },
+    {
+      "path": "examples/navbar/index"
+    },
+    {
+      "path": "examples/page/index"
+    },
+    {
+      "path": "examples/tabs/index"
     },
     {
       "path": "pages/sl-scroll-refresher/index",

@@ -16,12 +16,12 @@ export const props = {
     type: Array as PropType<{ name: string; count: number }[]>,
     default: () => [],
   },
-  isScroll: {
+  scroll: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   showDivider: {
     type: Boolean,
-    default: true,
+    default: false,
   },
 };

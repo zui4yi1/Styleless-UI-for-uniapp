@@ -1,14 +1,25 @@
 <template>
   <view
-    :class="[clz.root(), className, isScroll ? 'flex-grow' : 'ml-l']"
+    :class="[clz.root(), className, isScroll ? 'flex-grow' : 'mr-l']"
     class="flex-shrink relative flex-center"
     @click="handleDropdown(selfIndex)"
   >
     <view :style="{ maxWidth: maxWidth }" class="flex-center scroll-hidden">
       <template v-if="type === 'select'">
-        <view class="text-ellipsis">{{ title }}</view>
-        <sl-icon name="icon_arrow_up" v-if="selfIndex === activeInx" />
-        <sl-icon v-else name="icon_arrow_down" />
+        <view class="scroll-hidden">
+          <template v-if="labels.length > 0">
+            <view class="text-ellipsis color-primary">
+              <slot name="customSelect" :labels="labels">
+                {{ labels.join(',') }}
+              </slot>
+            </view>
+          </template>
+          <template v-else>
+            <view>{{ title }}</view>
+          </template>
+        </view>
+        <sl-icon name="icon_arrow_up" v-if="selfIndex === activeInx" :size="32" />
+        <sl-icon v-else name="icon_arrow_down" :size="32" />
       </template>
       <template v-else-if="type === 'text'">
         <view class="text-ellipsis" :class="[{ 'color-primary': isActive }]">{{ title }}</view>
@@ -24,7 +35,7 @@
       </template>
       <template v-else-if="type === 'custom'">
         <view class="text-ellipsis">
-          <slot name="custom_time" :isActive="isActive" />
+          <slot name="custom_item" :isActive="isActive" />
         </view>
       </template>
     </view>
@@ -47,7 +58,11 @@
       @touchmove.stop.prevent="() => {}"
       @click="handleDropdown(-1)"
     >
-      <view class="bg-white scroll plr-l ptb-d" @click.stop="" :style="{ maxHeight: '30%' }">
+      <view
+        class="bg-white scroll plr-l ptb-d"
+        @click.stop=""
+        :style="{ maxHeight: '30%', marginTop: '-2px' }"
+      >
         <template v-if="type === 'select'">
           <view v-for="(item, inx) in list" :key="'item_' + inx" @click="handleSelect(item.value)">
             <view class="flex height-button-small">
@@ -55,7 +70,12 @@
                 {{ item.label }}
               </view>
               <view class="span-3 flex-shrink flex-right">
-                <sl-icon v-if="values.includes(item.value)" color="primary" name="icon_check" />
+                <sl-icon
+                  v-if="values.includes(item.value)"
+                  color="primary"
+                  name="icon_check"
+                  :size="40"
+                />
               </view>
             </view>
             <sl-line v-if="inx <= list.length - 2" />
@@ -99,6 +119,9 @@
   const values = computed(() => {
     return _props.value instanceof Array ? [..._props.value] : [_props.value];
   });
+  const labels = computed(() => {
+    return _props.list.filter((t) => values.value.includes(t.value)).map((t) => t.label);
+  });
 
   onBeforeMount(() => {
     addItem(_props.title);
@@ -124,6 +147,7 @@
     updateActiveInx(val);
   };
   const handleSelect = (val: any) => {
+    console.log('🚀 ~ file: sl-dropdown-item.vue:138 ~ handleSelect ~ val:', val);
     if (!_props.mutilple) {
       _emits('select', val);
       _emits('update:value', val);

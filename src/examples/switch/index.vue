@@ -11,7 +11,7 @@
 
     <Tip
       title="其它任意尺寸"
-      desc="高度height, 矩形宽度width(即实际宽度为height+widthOffset)"
+      desc="高度height, 矩形宽度width(即实际宽度为height+width)"
       className="mt-d"
     />
     <sl-switch v-model:value="val" :height="40" :width="20" className="mt-d" />

@@ -291,6 +291,13 @@
   overflow: hidden;
 }
 
+.scroll-transparent::-webkit-scrollbar,
+.scroll-transparent view::-webkit-scrollbar {
+  color: transparent;
+  width: 0;
+  height: 0;
+}
+
 /* display类 */
 .block {
   display: block;

@@ -14,7 +14,7 @@ export const props = {
   },
   maxWidth: {
     type: String,
-    default: '140rpx',
+    default: '160rpx',
   },
   isMask: {
     type: Boolean,

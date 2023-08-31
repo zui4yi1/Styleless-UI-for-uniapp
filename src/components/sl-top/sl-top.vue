@@ -12,7 +12,6 @@
 </template>
 <script setup lang="ts">
   import { useClassName } from '@/hooks/use-class-name';
-  import { getCurrentInstance } from 'vue';
   import { props } from './_props';
   import { useTop } from './useTop';
 
@@ -20,7 +19,6 @@
   const clz = useClassName(ComponentName);
 
   const _props = defineProps(props);
-  const instance = getCurrentInstance();
 
-  const { top, height } = useTop(_props, instance);
+  const { top, height } = useTop(_props);
 </script>

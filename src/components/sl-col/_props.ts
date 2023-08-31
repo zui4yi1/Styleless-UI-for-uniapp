@@ -24,7 +24,10 @@ export const props = {
     type: Number,
     default: 0,
   },
-
+  bodyClz: {
+    type: String,
+    default: '',
+  },
   bg: {
     type: String as PropType<IColor>,
     default: 'white',
