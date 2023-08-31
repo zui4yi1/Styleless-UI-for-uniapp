@@ -1,17 +1,17 @@
 <template>
   <s-page title="sl-nav-bar" className="plr-l" :autoHomeOrLeftIcon="autoHomeOrLeftIcon">
-    <template #navBarLeft v-if="customLeft">
-      <view>左侧...</view>
+    <template #navBarLeft>
+      <view v-if="customLeft">左侧...</view>
     </template>
-    <template #navBarRight v-if="customRight">
-      <view>右侧...</view>
+    <template #navBarRight>
+      <view v-if="customRight">右侧...</view>
     </template>
     <Brief
       desc="自定义导航栏组件, 默认与sl-page集成一起, 也可独立使用。可自动显示返回按钮/主页按钮, 也可自定义左右侧内容与事件"
     />
     <Tip
       title="自定义左右侧"
-      desc="需关闭自动显示图标功能, autoHomeOrLeftIcon=false, 再设置左右插糟即可"
+      desc="左右插糟navBarLeft和navBarRight. 自动显示图标功能也可以单独关闭, autoHomeOrLeftIcon=false"
     />
     <view class="flex-between mt-d">
       <sl-button

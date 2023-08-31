@@ -11,7 +11,10 @@
     <sl-icon color="error" name="icon_check" />
     <Tip title="大尺寸" desc="size=40" />
     <sl-icon color="success" name="icon_check" :size="40" />
-    <Tip title="做成复选框" desc="name=icon_check, color=white, 再套个背景或边框就可以了" />
+    <Tip
+      title="做成复选框"
+      desc="name=icon_check, color=white, 再套个背景及边框就可以了. sl-checkbox组件就是这么玩的"
+    />
     <sl-checkbox v-model:value="val" :list="list" className="mt-d" />
     <sl-checkbox v-model:value="val" :list="list" className="mt-d" type="square" />
   </s-page>

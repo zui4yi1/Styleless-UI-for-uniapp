@@ -16,7 +16,7 @@
     />
     <sl-switch v-model:value="val" :height="40" :width="20" className="mt-d" />
     <sl-switch v-model:value="val" :height="40" :width="40" className="mt-d" />
-    <sl-switch v-model:value="val" :height="40" :width="60" className="mt-d" />
+    <sl-switch v-model:value="val" :height="60" :width="60" className="mt-d" />
   </s-page>
 </template>
 <script setup lang="ts">

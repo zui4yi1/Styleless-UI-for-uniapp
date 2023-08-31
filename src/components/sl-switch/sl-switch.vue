@@ -9,7 +9,7 @@
       value ? `bg-primary` : 'bg-white',
       { 'opacity-disabled': disabled },
     ]"
-    class="relative bg-primary border shadow-default"
+    class="relative bg-primary border shadow-default border-box"
     :style="{
       borderRadius: `${height / 2}rpx`,
     }"
@@ -21,7 +21,7 @@
         `rect-${height - 4}`,
         value ? `border-transparent` : 'border-line-default',
       ]"
-      class="absolute radius-round bg-white border shadow-default"
+      class="absolute radius-round bg-white border shadow-default border-box"
       :style="{
         left: `${value ? width : 0}rpx`,
         transition: 'left 0.2s',

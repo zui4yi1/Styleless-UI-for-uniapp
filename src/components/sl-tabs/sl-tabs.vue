@@ -4,9 +4,11 @@
     scroll-x
     :scrollLeft="scrollLeft"
     scroll-with-animation
-    class="w100 border-box scroll-transparent"
+    :show-scrollbar="false"
+    :enhanced="true"
+    class="w100 border-box"
   >
-    <view :id="id" :class="[clz.body()]" class="flex relative pb-s scroll-transparent">
+    <view :id="id" :class="[clz.body()]" class="flex relative pb-s">
       <view
         v-for="(item, inx) in list"
         :key="'tab-item' + inx"
@@ -23,7 +25,9 @@
         </view>
         <template v-if="item.count">
           <slot name="count" :count="item.count">
-            <view class="radius-round bg-error color-white font-desc p-all-xxs">
+            <view
+              class="radius-round bg-error color-white font-desc flex-shrink rect-28 flex-center"
+            >
               {{ item.count }}
             </view>
           </slot>

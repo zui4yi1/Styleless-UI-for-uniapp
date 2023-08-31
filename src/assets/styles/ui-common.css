@@ -290,12 +290,12 @@
 .scroll-hidden {
   overflow: hidden;
 }
-
 .scroll-transparent::-webkit-scrollbar,
 .scroll-transparent view::-webkit-scrollbar {
   color: transparent;
   width: 0;
   height: 0;
+  display: none;
 }
 
 /* display类 */
@@ -1161,7 +1161,7 @@
 }
 
 /* others 类, 其它不能分类的都放这 */
-.save-bottom {
+.safe-bottom {
   padding-bottom: calc(env(safe-area-inset-bottom));
 }
 

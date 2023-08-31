@@ -45,7 +45,7 @@ export const props = {
   },
   iconSize: {
     type: Number,
-    default: 40,
+    default: 48,
   },
   iconLib: {
     type: String,

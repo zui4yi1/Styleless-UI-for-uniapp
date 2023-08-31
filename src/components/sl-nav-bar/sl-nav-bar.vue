@@ -9,7 +9,6 @@
     <view :class="[clz.body(), `color-${color}`]" class="height-cell-default flex plr-l">
       <!--左侧-->
       <view
-        v-if="autoHomeOrLeftIcon || $slots.left"
         :class="[clz.left(), { 'flex-glow': !showTitle }]"
         class="span-6 flex-inline flex-shrink"
       >

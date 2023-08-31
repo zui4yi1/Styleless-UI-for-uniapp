@@ -2,7 +2,7 @@
   <s-page title="sl-row/sl-col" className="plr-l">
     <Brief desc="通过row/col实现grid, 需设置高度" />
     <Tip title="四列应用列表" desc="height=160" />
-    <sl-row :height="160" radius="default">
+    <sl-row :height="160" radius="default" className="mt-d">
       <sl-col v-for="color in themes" :key="color" :bg="color" bodyClz="p-all-d color-white">
         {{ color }}
       </sl-col>
