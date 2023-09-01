@@ -33,15 +33,7 @@
       >
         还原
       </sl-button>
-      <sl-button
-        width="200rpx"
-        @click="
-          autoHomeOrLeftIcon = false;
-          customRight = true;
-        "
-      >
-        自定义右侧
-      </sl-button>
+      <sl-button width="200rpx" @click="customRight = true">自定义右侧</sl-button>
     </view>
   </s-page>
 </template>
