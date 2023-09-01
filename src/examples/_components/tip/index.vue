@@ -4,7 +4,11 @@
       <text class="bold font-title ml-s">{{ title }}</text>
     </view>
   </view>
-  <view v-if="desc" class="font-secondary color-placeholder">{{ desc }}</view>
+  <view class="font-secondary color-placeholder">
+    <slot>
+      {{ desc }}
+    </slot>
+  </view>
 </template>
 <script setup lang="ts">
   interface IProps {

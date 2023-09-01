@@ -10,7 +10,7 @@ export const props = {
     type: String,
     default: '',
   },
-  isScroll: {
+  scroll: {
     type: Boolean,
     default: true,
   },

@@ -3,11 +3,10 @@
     <Brief desc="tabs标签页, 滚动和居中二种模式, 可带角标(可自定义)" />
     <Tip title="居中(默认)" desc="各项均占剩余空间，注意如果数量太多会挤在一起" />
     <sl-tabs :list="list.slice(0, 3)" className="mt-d" />
-    <Tip
-      title="滚动模式"
-      desc="scroll=true. 如果不喜欢居中, 或者数量多, 可用滚动模式"
-      className="mt-d"
-    />
+    <Tip title="滚动模式" className="mt-d">
+      <view>scroll=true. 如果不喜欢居中, 或者数量多, 可采用滚动模式</view>
+      <view>滚动模式时, 具有动画效果, 且选中项会尽量处于居中位置</view>
+    </Tip>
     <sl-tabs :list="list.slice(0, 3)" className="mt-d" scroll />
     <sl-tabs :list="list" scroll className="mt-d" />
     <Tip title="初始指定选中某项" desc="v-model:current=current" className="mt-d" />

@@ -1,6 +1,6 @@
 <template>
   <view
-    :class="[clz.root(), className, isScroll ? 'flex-grow' : 'mr-l']"
+    :class="[clz.root(), className, scroll ? 'flex-grow' : 'mr-l']"
     class="flex-shrink relative flex-center"
     @click="handleDropdown(selfIndex)"
   >
@@ -107,9 +107,9 @@
     setup(_props, ctx) {
       const sortCount = ref(0);
 
-      const { isScroll, dropdownItems, activeInx, topPos, addItem, updateActiveInx, onChange } =
+      const { scroll, dropdownItems, activeInx, topPos, addItem, updateActiveInx, onChange } =
         inject('dropdownParent', {
-          isScroll: false,
+          scroll: false,
           dropdownItems: [],
           activeInx: -1,
           topPos: 0,
@@ -173,7 +173,7 @@
       };
       return {
         clz,
-        isScroll,
+        scroll,
         onChange,
         selfIndex,
         activeInx,

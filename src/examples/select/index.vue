@@ -1,10 +1,10 @@
 <template>
   <s-page title="sl-select" className="plr-l">
-    <Brief desc="默认单选" />
-    <Tip title="默认" />
-    <view class="flex">
-      <sl-button @click="open1 = true" className="mr-l flex-grow">单选</sl-button>
-      <sl-button @click="open2 = true" className=" flex-grow">多选</sl-button>
+    <Brief desc="下拉弹窗组件, 可单选或多选, 下拉选项可使用插糟自定义" />
+    <Tip title="点击查看效果" />
+    <view class="flex mt-d">
+      <sl-button @click="open1 = true" className="mr-l" width="200rpx">单选</sl-button>
+      <sl-button @click="open2 = true" width="200rpx">多选</sl-button>
     </view>
   </s-page>
   <sl-select v-model:open="open1" v-model:value="val" :list="list"></sl-select>

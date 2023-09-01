@@ -1,21 +1,24 @@
 <template>
   <s-page title="sl-dropdown" className="plr-l">
-    <Brief desc="暂时支持下拉、排序、文字及自定义" />
-    <Tip title="默认" desc="默认居中" />
-
+    <Brief desc="组合筛选组件. 暂时仅支持下拉、排序、文字" />
+    <Tip title="默认" desc="默认居中, 各项均占剩余空间" />
     <sl-dropdown className="mt-d">
       <sl-dropdown-item title="类型" :list="list" v-model:value="val" />
       <sl-dropdown-item title="价格" type="sort" />
       <sl-dropdown-item title="销售" type="text" />
     </sl-dropdown>
-    <Tip title="左对齐" desc="isScroll=false" className="mt-d" />
-    <sl-dropdown :isScroll="false" className="mt-d">
+    <Tip
+      title="左对齐"
+      desc="scroll=false, 如果不喜欢居中或项比较多可使用此方式"
+      className="mt-d"
+    />
+    <sl-dropdown :scroll="false" className="mt-d">
       <sl-dropdown-item title="类型" :list="list" v-model:value="val" />
       <sl-dropdown-item title="价格" type="sort" />
       <sl-dropdown-item title="销售" type="text" />
     </sl-dropdown>
     <Tip title="下拉多选" className="mt-d" />
-    <sl-dropdown :isScroll="false" className="mt-d">
+    <sl-dropdown :scroll="false" className="mt-d">
       <sl-dropdown-item title="类型" :list="list" mutilple v-model:value="vals" />
       <sl-dropdown-item title="价格" type="sort" />
       <sl-dropdown-item title="销售" type="text" />

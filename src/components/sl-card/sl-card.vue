@@ -4,13 +4,13 @@
       clz.root(),
       className,
       paddingClz,
+      borderClz,
       `bg-${bg}`,
       `radius-${radius}`,
       {
         shadow: hasShadow,
       },
     ]"
-    class="border border-line-default"
     @click="$emit('click', index)"
   >
     <view :class="clz.body()">

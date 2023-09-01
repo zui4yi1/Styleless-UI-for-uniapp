@@ -1,7 +1,12 @@
 <template>
   <s-page title="sl-row/sl-col" className="plr-l">
-    <Brief desc="通过row/col实现grid, 需设置高度" />
-    <Tip title="四列应用列表" desc="height=160" />
+    <Brief
+      desc="栅格组件, 通过sl-row/sl-col组件来实现grid. (注: 由于css grid本身的兼容性问题, 本组件是通过float来实现的, 为确保布局不会乱, 使用时需设置固定高度)"
+    />
+    <Tip title="四列应用列表">
+      <view>sl-row: height=160, radius=default</view>
+      <view>sl-col: bg=$theme, bodyClz='p-all-d color-white'</view>
+    </Tip>
     <sl-row :height="160" radius="default" className="mt-d">
       <sl-col v-for="color in themes" :key="color" :bg="color" bodyClz="p-all-d color-white">
         {{ color }}

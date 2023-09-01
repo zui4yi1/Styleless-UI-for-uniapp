@@ -1,10 +1,12 @@
 <template>
   <s-page title="sl-popup" className="plr-l">
-    <Brief desc="内容区都是插糟自定义，主要是标题的区别，有文字和简洁图标二种" />
-    <Tip title="默认" />
+    <Brief
+      desc="底部弹窗组件, 其实就是带标题和操作区域的mask组件. 内容区则由插糟自定义，用法的话主要是操作区域的区别，有文字和图标二种"
+    />
+    <Tip title="点击查看两种标题的效果" />
     <view class="flex">
-      <sl-button @click="open1 = true" className="mr-l flex-grow">文字</sl-button>
-      <sl-button @click="open2 = true" className=" flex-grow">图标</sl-button>
+      <sl-button @click="open1 = true" className="mr-l " width="200rpx">文字</sl-button>
+      <sl-button @click="open2 = true" width="200rpx">图标</sl-button>
     </view>
   </s-page>
   <sl-popup v-model:open="open1" mode="text" title="标题标题">

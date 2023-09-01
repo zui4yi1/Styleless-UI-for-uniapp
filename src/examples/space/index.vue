@@ -1,6 +1,8 @@
 <template>
   <s-page title="sl-space-group" className="plr-l">
-    <Brief desc="具有inline及自动换行效果的容器, 特点是块与块之间可定义间隙" />
+    <Brief
+      desc="具有inline及自动换行效果的容器, 特点是块与块之间可定义间隙, 有点类似栅格组件的效果"
+    />
     <Tip title="块之块之间具有间隙" desc="注意高度都必须相同" />
     <sl-space-group className="mt-d">
       <sl-space-item>

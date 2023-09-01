@@ -1,21 +1,50 @@
 <template>
   <s-page title="sl-input" className="plr-l">
-    <Brief desc="除了尺寸和字体外, 还提供了 borderClz, radius, bg等属性, 可任意定制样式" />
+    <Brief
+      desc="通用输入框组件. 除了尺寸和字体外, 还提供了 borderClz, radius, bg, color等属性, 从而可以定制任意风格的输入框"
+    />
 
-    <Tip title="默认" desc="默认带下边框" className="mt-d" />
+    <Tip
+      title="默认"
+      desc="默认带下边框、无圆角. borderClz='border-bottom border-line-default'(默认), 及无圆角radius=none(默认)"
+      className="mt-d"
+    />
     <sl-input v-model:value="inputVal" />
 
-    <Tip title="换背景" className="mt-d" />
-    <sl-input v-model:value="inputVal" radius="default" bg="fill-default" borderClz="border-none" />
+    <Tip
+      title="灰色背景风格"
+      desc="背景bg=fill-default, 圆角radius=default, 去边框borderClz='border-none'"
+      className="mt-d"
+    />
+    <sl-input
+      v-model:value="inputVal"
+      radius="default"
+      bg="fill-default"
+      borderClz="border-none"
+      className="mt-d"
+    />
 
-    <Tip title="四周边框" className="mt-d" />
-    <sl-input v-model:value="inputVal" borderClz="border" />
+    <Tip title="四周边框风格" desc="borderClz=border" className="mt-d" />
+    <sl-input v-model:value="inputVal" borderClz="border" className="mt-d" />
 
-    <Tip title="四周边框、圆角" className="mt-d" />
-    <sl-input v-model:value="inputVal" borderClz="border" radius="default" />
+    <Tip
+      title="四周边框风格, 蓝边、带圆角"
+      desc="borderClz='border border-primary',radius=default "
+      className="mt-d"
+    />
+    <sl-input
+      v-model:value="inputVal"
+      borderClz="border border-primary"
+      radius="default"
+      className="mt-d"
+    />
 
-    <Tip title="无边框、周围带背景" desc="四周有背景区分, 主要是去边框" className="mt-d" />
-    <view class="bg-fill-default p-all-xl">
+    <Tip
+      title="一些特殊场景, 如灰色背景"
+      desc="去边框+加圆角即可: borderClz=border-none, radius=default"
+      className="mt-d"
+    />
+    <view class="bg-fill-default p-all-xl mt-d">
       <sl-input v-model:value="inputVal" borderClz="border-none" radius="default" />
     </view>
   </s-page>

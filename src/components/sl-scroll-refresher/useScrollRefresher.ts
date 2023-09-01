@@ -165,6 +165,7 @@ export const useScrollRefresher = (props: any, instance: any) => {
     showRefreshTip,
     showAppendTip,
     showErrorTip,
+    isSucc,
     isShowNoMoreTip,
     initPager,
     fetchData,

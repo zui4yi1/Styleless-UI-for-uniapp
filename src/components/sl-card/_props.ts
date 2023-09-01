@@ -20,6 +20,10 @@ export const props = {
     type: String,
     default: 'plr-l ptb-d',
   },
+  borderClz: {
+    type: String,
+    default: 'border border-line-default',
+  },
   hasShadow: {
     type: Boolean,
     default: true,

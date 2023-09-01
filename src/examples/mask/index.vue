@@ -1,13 +1,16 @@
 <template>
   <s-page title="sl-mask" className="plr-l">
-    <Tip title="选择模式" desc="因弹出层有动效, 每个模式需分别定义mask" />
+    <Brief
+      desc="遮罩层组件, 自带各种模式mode, 是其它所有弹窗组件的底层组件. mode可定义左右上下中五种方向, 默认下"
+    />
+    <Tip title="点击查看五种模式的效果" desc="因弹出层有动效, 故若有多个模式时, 需分别定义mask" />
 
     <view class="flex-between mt-d">
-      <sl-button @click="openLeft = true" size="button-small">左</sl-button>
-      <sl-button @click="openRight = true" size="button-small">右</sl-button>
-      <sl-button @click="openTop = true" size="button-small">上</sl-button>
-      <sl-button @click="openBottom = true" size="button-small">下</sl-button>
-      <sl-button @click="openCenter = true" size="button-small">中</sl-button>
+      <sl-button @click="openLeft = true" size="button-small" width="100rpx">左侧</sl-button>
+      <sl-button @click="openRight = true" size="button-small" width="100rpx">右侧</sl-button>
+      <sl-button @click="openTop = true" size="button-small" width="100rpx">顶部</sl-button>
+      <sl-button @click="openBottom = true" size="button-small" width="100rpx">底部</sl-button>
+      <sl-button @click="openCenter = true" size="button-small" width="100rpx">居中</sl-button>
     </view>
 
     <sl-mask mode="left" v-model:open="openLeft" closeOnTab>
@@ -29,6 +32,7 @@
 </template>
 <script setup lang="ts">
   import { ref } from 'vue';
+  import Brief from '../_components/brief/index.vue';
   import SPage from '../_components/s-page/index.vue';
   import Tip from '../_components/tip/index.vue';
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

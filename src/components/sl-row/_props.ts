@@ -9,15 +9,15 @@ export const props = {
     default: '',
   },
   gutter: {
-    type: [String, Array],
+    type: [String, Number],
     default: 16,
   },
   rowGutter: {
-    type: [String, Array],
+    type: [String, Number],
     default: 0,
   },
   height: {
-    type: [String, Array],
+    type: [String, Number],
     default: 88,
   },
   radius: {

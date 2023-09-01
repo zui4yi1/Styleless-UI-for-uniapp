@@ -3,7 +3,7 @@
     <view :class="[clz.root(), className]">
       <sl-card paddingClz="p-all-none">
         <view class="plr-l">
-          <view :class="[clz.head()]" class="height-cell-default flex">
+          <view v-if="hasTitle" :class="[clz.head()]" class="height-cell-default flex">
             <view class="font-title flex-grow">{{ title }}</view>
             <view v-if="hasClose" class="flex-shrink flex flex-right w-80" @click="isOpen = false">
               <sl-icon name="icon_close" :size="40" />

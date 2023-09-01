@@ -9,11 +9,11 @@ export const props = {
     default: '',
   },
   span: {
-    type: [String, Array],
+    type: [String, Number],
     default: 6,
   },
   offset: {
-    type: [String, Array],
+    type: [String, Number],
     default: 0,
   },
   align: {

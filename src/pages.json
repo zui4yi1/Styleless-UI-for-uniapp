@@ -58,6 +58,9 @@
       "path": "examples/page/index"
     },
     {
+      "path": "examples/scroll-refresher/index"
+    },
+    {
       "path": "examples/tabs/index"
     },
     {

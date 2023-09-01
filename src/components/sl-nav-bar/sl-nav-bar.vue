@@ -12,15 +12,26 @@
         :class="[clz.left(), { 'flex-glow': !showTitle }]"
         class="span-6 flex-inline flex-shrink"
       >
-        <view v-if="autoHomeOrLeftIcon && showHome" @click="handleClickHome">
-          <sl-icon name="icon_back_home" :color="iconColor" :size="iconSize" :iconLib="iconLib" />
-        </view>
-        <view v-if="autoHomeOrLeftIcon && showGoBack" @click="handleClickBack">
-          <sl-icon name="icon_arrow_left" :color="iconColor" :size="iconSize" :iconLib="iconLib" />
-        </view>
+        <sl-icon
+          v-if="autoHomeOrLeftIcon && showHome"
+          name="icon_back_home"
+          :color="iconColor"
+          :size="iconSize"
+          :iconLib="iconLib"
+          @click="handleClickHome"
+        />
+
+        <sl-icon
+          v-if="autoHomeOrLeftIcon && showGoBack"
+          name="icon_arrow_left"
+          :color="iconColor"
+          :size="iconSize"
+          :iconLib="iconLib"
+          @click="handleClickBack"
+        />
         <slot name="left" />
       </view>
-      <!--中间标签-->
+      <!--中间标题-->
       <view
         v-if="showTitle"
         :class="[clz.center()]"
@@ -28,7 +39,7 @@
         @click="$emit('onClickTitle')"
       >
         <slot>
-          <text class="text-ellipsis bold font-xt">{{ title }}</text>
+          <view class="text-ellipsis bold font-xt">{{ title }}</view>
         </slot>
       </view>
       <!--右侧-->

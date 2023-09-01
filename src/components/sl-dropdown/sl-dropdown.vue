@@ -32,7 +32,7 @@
       });
 
       provide('dropdownParent', {
-        isScroll: props.isScroll,
+        scroll: props.scroll,
         dropdownItems,
         activeInx,
         topPos,

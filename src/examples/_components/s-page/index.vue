@@ -10,6 +10,7 @@
     <template #navBarLeft><slot name="navBarLeft" /></template>
     <template #navBarRight><slot name="navBarRight" /></template>
     <slot />
+    <sl-fill-line size="button-default" />
   </sl-page>
 </template>
 <script setup lang="ts">
@@ -20,7 +21,7 @@
     title: string;
     className?: string | string[];
     theme?: IThemeType;
-    autoHomeOrLeftIcon: boolean;
+    autoHomeOrLeftIcon?: boolean;
   }
   withDefaults(defineProps<IProps>(), {
     title: '',
