@@ -1,10 +1,7 @@
 <template>
-  <view class="flex flex-top" :class="[clz.root(), className]">
+  <view class="flex-top" :class="[clz.root(), className]">
     <!--solve line break problem-->
-    <view
-      :class="[clz.body(), `h-${Math.round(size / 4) * 4 + 8}`]"
-      class="flex-center flex-shrink"
-    >
+    <view :class="[clz.body()]" class="flex-center flex-shrink">
       <sl-icon
         :name="name"
         :iconLib="iconLib"
@@ -12,12 +9,10 @@
         :size="size"
         :className="[clz.join('body', 'icon'), iconClz]"
       />
+      <!--确保与右侧label同高-->
+      <text>&nbsp;</text>
     </view>
-    <view
-      v-if="label.length > 0"
-      :class="[clz.join('body', 'text'), labelClz]"
-      class="ml-xs mr-xl mb-xs"
-    >
+    <view v-if="label.length > 0" :class="[clz.join('body', 'text'), labelClz]" class="ml-xs mr-xl">
       {{ label }}
     </view>
   </view>

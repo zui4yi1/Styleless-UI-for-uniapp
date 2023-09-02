@@ -21,7 +21,7 @@
       <view v-for="(item, inx) in cata.list" :key="'item_' + inx">
         <view @click="handleJump(item.url)" class="h-64 flex">
           <view>{{ item.componentName }}</view>
-          <view class="ml-d color-placeholder font-secondary">{{ item.componentDesc }}</view>
+          <view class="ml-d color-placeholder">{{ item.componentDesc }}</view>
         </view>
       </view>
     </template>
