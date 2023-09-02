@@ -41,7 +41,7 @@ export const props = {
   },
   threshold: {
     type: Number,
-    default: 60,
+    default: 50,
   },
 
   fetchDataFunc: {

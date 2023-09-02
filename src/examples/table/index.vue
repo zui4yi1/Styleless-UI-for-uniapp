@@ -4,15 +4,15 @@
       desc="支持两种模式, 标签及json, 默认为json, custom为true则为标签模式。可任意自定义表头和单元格的样式"
     />
     <Tip title="标签模式" desc="custom=true, 使用sl-th,sl-tr,sl-td进行布局" />
-    <sl-table cellspacing="2rpx" custom :tableProps="tableProps" className="mt-d">
+    <sl-table custom cellspacing="2rpx" :tableProps="tableProps" className="mt-d">
       <sl-th>
-        <sl-td v-for="item in columns" :key="item.value">
+        <sl-td v-for="item in columns" :key="item.value" :tdClz="tableProps.thClz">
           {{ item.name }}
         </sl-td>
       </sl-th>
       <sl-tr v-for="(ls, inx) in list" :key="'tr_' + inx">
         <sl-td v-for="item in columns" :key="`${ls.id}${item.value}`">
-          {{ ls[item.value] }}
+          {{ (ls as any)[item.value] }}
         </sl-td>
       </sl-tr>
     </sl-table>
@@ -28,13 +28,13 @@
 
     <Tip
       title="跨行与跨列"
-      desc="只能使用custom模式, 且只能采用td内嵌table的方式实现"
+      desc="只能使用custom模式, 且只能采用td内嵌table的方式实现, 并且最好不要有单元格间距及边框"
       className="mt-d"
     />
-    <sl-table :tableProps="tableProps" cellspacing="2rpx" custom className="mt-d">
+    <sl-table :tableProps="tableProps" custom className="mt-d">
       <sl-tr>
         <sl-td>aaaa</sl-td>
-        <sl-td>bbbb</sl-td>
+        <sl-td :tdClz="spanClz">bbbb</sl-td>
       </sl-tr>
       <sl-tr>
         <sl-td>cccc</sl-td>
@@ -49,10 +49,10 @@
       </sl-tr>
       <sl-tr>
         <sl-td>aaaa</sl-td>
-        <sl-td>bbbb</sl-td>
+        <sl-td :tdClz="spanClz2">bbbb</sl-td>
       </sl-tr>
     </sl-table>
-    <sl-table :tableProps="tableProps" cellspacing="2rpx" custom className="mt-d">
+    <sl-table :tableProps="tableProps" custom className="mt-d">
       <sl-tr>
         <sl-td>aaaa</sl-td>
         <sl-td>bbbb</sl-td>
@@ -69,8 +69,8 @@
             </sl-tr>
           </sl-table>
         </sl-td>
-        <sl-td tdClz="border">bbbb</sl-td>
-        <sl-td tdClz="border">cccc</sl-td>
+        <sl-td :tdClz="spanClz">bbbb</sl-td>
+        <sl-td :tdClz="spanClz2">cccc</sl-td>
       </sl-tr>
       <sl-tr>
         <sl-td>aaaa</sl-td>
@@ -89,9 +89,12 @@
   const themes = ['primary', 'success', 'error'];
 
   const tableProps = {
-    thClz: 'bg-primary',
-    tdClz: 'border h-60',
+    thClz: 'bg-primary h-72',
+    tdClz: 'border-none bg-fill-default h-60',
   };
+
+  const spanClz = 'bg-success h100';
+  const spanClz2 = 'bg-error h100';
 
   const columns = [
     { name: '姓名', value: 'name' },

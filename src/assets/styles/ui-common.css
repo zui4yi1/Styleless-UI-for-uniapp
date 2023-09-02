@@ -290,6 +290,7 @@
 .scroll-hidden {
   overflow: hidden;
 }
+
 .scroll-transparent::-webkit-scrollbar,
 .scroll-transparent view::-webkit-scrollbar {
   color: transparent;

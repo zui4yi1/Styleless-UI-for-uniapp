@@ -15,7 +15,12 @@
   >
     <template v-if="!custom">
       <sl-th>
-        <sl-td v-for="(item, inx) in columns" :key="'th_' + inx" :width="item.width">
+        <sl-td
+          v-for="(item, inx) in columns"
+          :key="'th_' + inx"
+          :width="item.width"
+          :tdClz="tableProps.thClz"
+        >
           {{ item.name }}
         </sl-td>
       </sl-th>

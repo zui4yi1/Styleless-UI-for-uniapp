@@ -1,21 +1,20 @@
 <template>
-  <s-page title="sl-scroll-refresher">
+  <s-page title="sl-scroll-refresher" :hasBottom="false">
     <sl-scroll-refresher autoLoadData :fetchDataFunc="fetchDataFunc" :pageSize="20">
-      <view class="plr-l">
-        <Brief
-          desc="基于scroll-view的下拉刷新+触底加载的列表组件, 内部集成了分页、提示、进入页面自动加载等功能"
-        />
-        <Tip
-          title="试试按住页面, 往下拉"
-          desc="由于内部集成了分页, 故取数的api接口需返回一个async的包含total属性的对象"
-        />
-        <sl-card v-for="item in list" :key="item.age" borderClz="" bg="fill-light" className="mt-d">
-          <view class="flex-between">
-            <view>{{ item.name }}</view>
-            <view>{{ item.age }}</view>
-          </view>
-        </sl-card>
-      </view>
+      <Brief
+        desc="基于scroll-view的下拉刷新+触底加载的列表组件, 内部集成了分页、提示、进入页面自动加载等功能"
+      />
+      <Tip
+        title="试试按住页面, 往下拉"
+        desc="由于内部集成了分页, 故取数的api接口需返回一个async的包含total属性的对象"
+      />
+
+      <sl-card v-for="item in list" :key="item.age" borderClz="" bg="fill-light" className="mt-d">
+        <view class="flex-between">
+          <view>{{ item.name }}</view>
+          <view>{{ item.age }}</view>
+        </view>
+      </sl-card>
     </sl-scroll-refresher>
   </s-page>
 </template>
@@ -37,7 +36,10 @@
 
   const strs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
-  const fetchDataFunc = async (pager, type) => {
+  const fetchDataFunc = async (
+    pager: { pageNum: number; pageSize: number; total: number },
+    type: string,
+  ) => {
     const tmp = [] as IList[];
 
     const { pageNum, pageSize, total } = pager;

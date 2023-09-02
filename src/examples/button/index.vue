@@ -10,7 +10,7 @@
     <Tip
       className="mt-d"
       title="plain风格, 白底蓝字蓝边"
-      desc="color=primary, bg=white, bodyClazz='border border-primary border-thick'"
+      desc="bg=white, color=primary, bodyClazz='border border-primary border-thick'"
     />
     <sl-button
       className="mt-d"

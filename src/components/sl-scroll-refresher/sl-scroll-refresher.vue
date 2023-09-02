@@ -4,9 +4,11 @@
   </view>
   <scroll-view
     :class="[clz.root(), className]"
-    class=""
+    class="scroll-transparent"
     :style="{ height: bodyHeight, minHeight: bodyHeight }"
     scroll-y
+    :show-scrollbar="false"
+    enhanced
     :refresherEnabled="refresherEnabled"
     :refresherThreshold="threshold"
     refresherDefaultStyle="none"
@@ -33,7 +35,7 @@
         <sl-icon name="icon_check" color="white" />
         <text class="color-white ml-xs">刷新成功</text>
       </view>
-      <view v-if="showList">
+      <view v-if="showList" class="plr-l">
         <slot></slot>
       </view>
       <!--这块没啥用-->
