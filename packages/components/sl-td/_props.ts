@@ -14,7 +14,7 @@ export const props = {
   },
   width: {
     type: String,
-    default: '33%',
+    default: 'auto',
   },
   tdClz: {
     type: String,

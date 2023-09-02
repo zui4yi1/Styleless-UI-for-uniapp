@@ -4,9 +4,11 @@
   </view>
   <scroll-view
     :class="[clz.root(), className]"
-    class=""
+    class="scroll-transparent"
     :style="{ height: bodyHeight, minHeight: bodyHeight }"
     scroll-y
+    :show-scrollbar="false"
+    enhanced
     :refresherEnabled="refresherEnabled"
     :refresherThreshold="threshold"
     refresherDefaultStyle="none"
@@ -21,32 +23,33 @@
         <slot name="load_icon">
           <sl-icon name="icon_loading" className="spin" />
         </slot>
-        <text class="font-content color-secondary ml-xs">下拉刷新...</text>
+        <text class="font-content color-secondary ml-xs font-secondary">下拉刷新</text>
       </view>
       <view v-if="showRefreshTip" class="flex-center ptb-s">
         <slot name="load_icon">
           <sl-icon name="icon_loading" className="spin" />
         </slot>
-        <text class="font-content color-secondary ml-xs">释放立即刷新...</text>
+        <text class="font-content color-secondary ml-xs font-secondary">释放立即刷新</text>
       </view>
-      <view v-if="refresherTriggered" class="flex-center height-cell-default bg-primary">
-        <sl-icon name="icon_check" />
+      <view v-if="isSucc" class="flex-center height-cell-default bg-primary">
+        <sl-icon name="icon_check" color="white" />
         <text class="color-white ml-xs">刷新成功</text>
       </view>
-      <view v-if="showList">
+      <view v-if="showList" class="plr-l">
         <slot></slot>
       </view>
-      <view v-if="showAppendTip">
+      <!--这块没啥用-->
+      <!-- <view v-if="showAppendTip">
         <slot name="load_icon">
           <sl-icon name="icon_loading" className="spin" />
         </slot>
         <text class="font-content color-secondary ml-xs">更多数据加载中...</text>
-      </view>
+      </view> -->
       <view v-if="showErrorTip && !refresherTriggered">
         <view class="text-center color-placeholder">{{ showErrorTip }}</view>
       </view>
       <view v-if="isShowNoMoreTip">
-        <view class="text-center color-placeholder">没有更多了~</view>
+        <view class="text-center color-placeholder font-secondary">--没有更多了--</view>
       </view>
       <sl-fill-line isBottom />
     </view>
@@ -71,10 +74,11 @@
     refresherTriggered,
     showPullTip,
     showRefreshTip,
-    showAppendTip,
+    // showAppendTip,
     showErrorTip,
     isShowNoMoreTip,
     showList,
+    isSucc,
     initPager,
     // fetchData,
     refreshData,

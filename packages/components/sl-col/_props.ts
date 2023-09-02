@@ -9,11 +9,11 @@ export const props = {
     default: '',
   },
   span: {
-    type: [String, Array],
+    type: [String, Number],
     default: 6,
   },
   offset: {
-    type: [String, Array],
+    type: [String, Number],
     default: 0,
   },
   align: {
@@ -24,7 +24,10 @@ export const props = {
     type: Number,
     default: 0,
   },
-
+  bodyClz: {
+    type: String,
+    default: '',
+  },
   bg: {
     type: String as PropType<IColor>,
     default: 'white',

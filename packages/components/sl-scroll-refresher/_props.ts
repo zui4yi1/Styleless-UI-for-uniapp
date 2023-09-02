@@ -17,6 +17,11 @@ export const props = {
     default: true,
   },
 
+  pageSize: {
+    type: Number,
+    default: 10,
+  },
+
   autoLoadData: {
     type: Boolean,
     default: false,
@@ -24,7 +29,7 @@ export const props = {
 
   isLoadMore: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   showSuccTip: {
     type: Boolean,
@@ -36,7 +41,7 @@ export const props = {
   },
   threshold: {
     type: Number,
-    default: 80,
+    default: 50,
   },
 
   fetchDataFunc: {

@@ -45,11 +45,11 @@ export const props = {
   },
   iconSize: {
     type: Number,
-    default: 40,
+    default: 48,
   },
   iconLib: {
     type: String,
-    default: 'common',
+    default: 'sl-ui-common',
   },
   /**
    * @description 不需要在左侧显示图标的页面, 一般是登录页及各大首页

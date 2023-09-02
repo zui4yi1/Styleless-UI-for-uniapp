@@ -18,6 +18,18 @@ export const props = {
     type: String,
     default: '',
   },
+  hasTitle: {
+    type: Boolean,
+    default: true,
+  },
+  cancelText: {
+    type: String,
+    default: '取消',
+  },
+  confirmText: {
+    type: String,
+    default: '确定',
+  },
   hasClose: {
     type: Boolean,
     default: false,

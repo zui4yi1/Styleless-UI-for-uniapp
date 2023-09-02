@@ -4,12 +4,12 @@
       clz.root(),
       className,
       `h-${height}`,
-      `w-${height + widthOffset}`,
+      `w-${height + width}`,
       value ? `border-transparent` : 'border-line-default',
       value ? `bg-primary` : 'bg-white',
       { 'opacity-disabled': disabled },
     ]"
-    class="relative bg-primary border shadow-default"
+    class="relative bg-primary border shadow-default border-box"
     :style="{
       borderRadius: `${height / 2}rpx`,
     }"
@@ -21,14 +21,13 @@
         `rect-${height - 4}`,
         value ? `border-transparent` : 'border-line-default',
       ]"
-      class="absolute radius-round bg-white border shadow-default"
+      class="absolute radius-round bg-white border shadow-default border-box"
       :style="{
-        left: `${value ? widthOffset : 0}rpx`,
+        left: `${value ? width : 0}rpx`,
         transition: 'left 0.2s',
       }"
     ></view>
   </view>
-  <view>{{ value }}</view>
 </template>
 <script setup lang="ts">
   import { useClassName } from '@/hooks/use-class-name';

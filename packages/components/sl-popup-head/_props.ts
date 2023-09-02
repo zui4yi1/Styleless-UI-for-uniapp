@@ -13,7 +13,7 @@ export const props = {
     default: '',
   },
   mode: {
-    type: String as PropType<'icon' | 'text'>,
+    type: String as PropType<'icon' | 'text' | 'none'>,
     default: 'text',
   },
 };

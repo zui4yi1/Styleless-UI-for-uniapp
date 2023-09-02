@@ -9,15 +9,15 @@ export const props = {
     default: '',
   },
   gutter: {
-    type: [String, Array],
+    type: [String, Number],
     default: 16,
+  },
+  rowGutter: {
+    type: [String, Number],
+    default: 0,
   },
   layout: {
     type: String as PropType<'float' | 'inline-block'>,
     default: 'float',
-  },
-  rowGutter: {
-    type: [String, Array],
-    default: 0,
   },
 };

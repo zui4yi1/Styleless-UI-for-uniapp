@@ -33,7 +33,7 @@ export const props = {
    */
   bodyClazz: {
     type: String,
-    default: '',
+    default: 'border-none',
   },
   bg: {
     type: String as PropType<IColor>,
@@ -63,10 +63,10 @@ export const props = {
     type: Object,
     default: () => ({
       name: '',
-      className: '',
+      className: 'mr-xs',
       iconLib: 'sl-ui-common',
       bg: 'primary' as IColor,
-      size: 'content' as IFont,
+      size: 32,
       color: 'white' as IColor,
     }),
   },

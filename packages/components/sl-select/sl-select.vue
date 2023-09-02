@@ -8,25 +8,22 @@
         :style="{ maxHeight: '500rpx' }"
       >
         <view class="plr-l">
-          <view
-            v-for="(item, inx) in list"
-            :key="clz.join('body', 'item', inx)"
-            class="flex-between height-cell-default"
-            :class="[{ 'border-bottom border-line-light': inx < list.length - 1 }]"
-            @click="handleSelect(item, inx)"
-          >
-            <view class="flex-grow text-ellipsis">
-              {{ item.label }}
+          <template v-for="(item, inx) in list" :key="clz.join('body', 'item', inx)">
+            <view class="flex-between height-cell-default" @click="handleSelect(item, inx)">
+              <view class="flex-grow text-ellipsis">
+                {{ item.label }}
+              </view>
+              <view class="flex-shrink ml-l w-80 flex-right">
+                <sl-icon
+                  v-if="tempValue.includes(item.value)"
+                  name="icon_check"
+                  :size="40"
+                  color="primary"
+                />
+              </view>
             </view>
-            <view class="flex-shrink ml-l w-80 flex-right">
-              <sl-icon
-                v-if="tempValue.includes(item.value)"
-                name="icon_check"
-                :size="40"
-                color="primary"
-              />
-            </view>
-          </view>
+            <sl-line v-if="inx < list.length - 1" />
+          </template>
         </view>
       </scroll-view>
     </view>

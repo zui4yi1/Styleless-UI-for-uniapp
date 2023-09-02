@@ -16,7 +16,7 @@ export const useImage = (props: any, emits: any) => {
   };
 
   const handleClick = () => {
-    if (props.previewImage) {
+    if (props.preview) {
       uni.previewImage({
         urls: [props.src],
       });

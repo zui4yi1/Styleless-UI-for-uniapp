@@ -15,14 +15,14 @@
         { 'opacity-disabled disabled': disabled },
         `bg-${_theme.bg}`,
       ]"
-      class="border-none flex-center plr-d"
+      class="flex-center plr-s"
       :disabled="disabled"
       :hover-start-time="10"
       :hover-stay-time="10"
       :hover-class="hoverClass || `bg-${_theme.bg}-hover`"
       @click="$emit('click', index)"
     >
-      <sl-icon v-if="icon.name" v-bind="icon" className="pr-xxs" />
+      <sl-icon v-if="_icon.name" v-bind="_icon" />
       <slot />
     </button>
   </view>
@@ -45,5 +45,18 @@
       fontSize: _props.theme.fontSize || 'content',
       borderClz: _props.theme.borderClz || 'border-none',
     };
+  });
+
+  const _icon = computed(() => {
+    return Object.assign(
+      {
+        className: 'mr-xs',
+        iconLib: 'sl-ui-common',
+        bg: 'primary' as IColor,
+        size: 32,
+        color: 'white' as IColor,
+      },
+      _props.icon,
+    );
   });
 </script>

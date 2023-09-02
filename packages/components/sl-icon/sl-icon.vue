@@ -1,7 +1,7 @@
 <template>
   <view
     :class="[clz.root(), className]"
-    class="flex-inline lh-0"
+    class="flex-inline lh-0 border-box"
     :style="styleProps"
     :hover-start-time="10"
     :hover-stay-time="10"
@@ -15,13 +15,26 @@
     ></view>
   </view>
 </template>
-<script setup lang="ts">
+<script lang="ts">
   import { useClassName } from '@/hooks/use-class-name';
+  import { defineComponent } from 'vue';
   import { props } from './_props';
 
   const ComponentName = 'sl-icon';
   const clz = useClassName(ComponentName);
 
-  defineProps(props);
-  defineEmits(['click']);
+  // defineProps(props);
+  // defineEmits(['click']);
+
+  export default defineComponent({
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+    },
+    props,
+    emits: ['click'],
+    setup() {
+      return { clz };
+    },
+  });
 </script>

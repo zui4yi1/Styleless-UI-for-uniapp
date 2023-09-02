@@ -12,8 +12,8 @@
     @tap="$emit('click', index)"
   >
     <view
-      :class="[clz.body(), `radius-${radius}`, `bg-${bg}`]"
-      class="border"
+      :class="[clz.body(), bodyClz, `radius-${radius}`, `bg-${bg}`]"
+      class="border-box"
       :style="{ height: '100%' }"
     >
       <slot />

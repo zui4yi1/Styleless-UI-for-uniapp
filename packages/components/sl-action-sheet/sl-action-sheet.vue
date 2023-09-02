@@ -1,29 +1,42 @@
 <template>
-  <sl-popup v-model:open="isOpen" :title="title" mode="icon">
-    <view :class="[clz.root(), className]">
-      <view :class="[clz.body()]" class="plr-l">
-        <view
-          v-for="(item, inx) in list"
-          :key="clz.join('body', 'item', inx)"
-          class="flex-center height-cell-default w100"
-          :class="[{ 'border-bottom border-line-light': inx < list.length - 1 }]"
-          @click="handleClick(item, inx)"
-        >
-          <slot name="item" :item="item" :inx="inx">
-            <view
-              class="text-ellipsis"
-              :class="[`color-${item.disabled ? 'disabled' : item.color || 'content'}`]"
-            >
-              {{ item.text }}
+  <sl-mask mode="bottom" v-model:open="isOpen" :closeOnTab="false">
+    <view :class="[clz.root(), className]" class="mlr-d">
+      <view :class="[clz.body()]" class="bg-white radius-default">
+        <sl-popup-head
+          :title="title"
+          mode="none"
+          @close="isOpen = false"
+          @confirm="$emit('confirm')"
+        />
+        <scroll-view scroll-y :style="{ maxHeight: `${5.6 * 88}rpx` }">
+          <view
+            v-for="(item, inx) in list"
+            :key="clz.join('body', 'item', inx)"
+            @click="handleClick(item, inx)"
+          >
+            <view class="flex-center height-cell-default w100 plr-l border-box">
+              <slot name="item" :item="item" :inx="inx">
+                <view
+                  class="text-ellipsis"
+                  :class="[`color-${item.disabled ? 'disabled' : item.color || 'content'}`]"
+                >
+                  {{ item.text }}
+                </view>
+              </slot>
             </view>
-          </slot>
-        </view>
+            <sl-line v-if="inx < list.length - 1" />
+          </view>
+        </scroll-view>
       </view>
-      <view :class="[clz.foot()]" class="flex-center height-cell-default" @click="isOpen = false">
-        <view class="color-placeholder">取消</view>
+      <view
+        :class="[clz.foot()]"
+        class="flex-center height-cell-default bg-white radius-default mtb-d"
+        @click="isOpen = false"
+      >
+        <view class="color-secondary">取消</view>
       </view>
     </view>
-  </sl-popup>
+  </sl-mask>
 </template>
 <script setup lang="ts">
   import { useClassName } from '@/hooks/use-class-name';

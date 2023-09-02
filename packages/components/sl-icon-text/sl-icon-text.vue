@@ -13,7 +13,11 @@
         :className="[clz.join('body', 'icon'), iconClz]"
       />
     </view>
-    <view v-if="label.length > 0" :class="[clz.join('body', 'text'), labelClz]" class="ml-xs mr-xl">
+    <view
+      v-if="label.length > 0"
+      :class="[clz.join('body', 'text'), labelClz]"
+      class="ml-xs mr-xl mb-xs"
+    >
       {{ label }}
     </view>
   </view>
