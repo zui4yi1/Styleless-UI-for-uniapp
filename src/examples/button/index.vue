@@ -71,5 +71,5 @@
   import Brief from '../_components/brief/index.vue';
   import SPage from '../_components/s-page/index.vue';
   import Tip from '../_components/tip/index.vue';
-  const themes = ['primary', 'success', 'error'];
+  const themes = ['primary', 'success', 'error', 'warning', 'pink', 'blue'];
 </script>

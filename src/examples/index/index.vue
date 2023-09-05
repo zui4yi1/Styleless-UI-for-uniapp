@@ -6,6 +6,7 @@
         styleless, 顾名思义, 就是指这款UI库, 她没有自己的样式, 一点点都没有! 但导入后,
         她就会自动追随你的工程, 你的工程长啥样, 她就长啥样.
       </view>
+      <view class="mt-s">你若想要修改UI库的属性默认值, 她能轻易实现.</view>
       <view class="mt-s">你若想要"定制UI库", 她也能轻易实现.</view>
     </view>
     <view class="bold ptb-xs mt-d font-title" @click="handleJump('/examples/quick-start/index')">
@@ -28,12 +29,17 @@
   </s-page>
 </template>
 <script setup lang="ts">
+  import { getCurrentInstance } from 'vue';
   import SPage from '../_components/s-page/index.vue';
   import Tip from '../_components/tip/index.vue';
 
   import pages from './pages';
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themes = ['primary', 'success', 'error'];
+
+  const instance = getCurrentInstance();
+  const data = instance?.appContext.config.globalProperties;
+  console.log('🚀 ~ file: index.vue:41 ~ data:', data);
 
   const handleJump = (url: string) => {
     uni.navigateTo({

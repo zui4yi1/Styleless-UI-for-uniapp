@@ -67,10 +67,16 @@
       "path": "examples/tabs/index"
     },
     {
-      "path": "pages/sl-scroll-refresher/index",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
+      "path": "examples/card/index"
+    },
+    {
+      "path": "pages/sl-scroll-refresher/index"
+    },
+    {
+      "path": "examples/line/index"
+    },
+    {
+      "path": "examples/empty/index"
     }
   ],
   "globalStyle": {

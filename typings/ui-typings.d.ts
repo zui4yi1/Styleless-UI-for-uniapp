@@ -4,7 +4,7 @@ type IColor =
   | 'warning'
   | 'error'
   | 'pink'
-  | 'purple'
+  | 'blue'
   | 'white'
   | 'black'
   | 'transparent'
@@ -22,7 +22,7 @@ type IColor =
   | 'warning-hover'
   | 'error-hover'
   | 'pink-hover'
-  | 'purple-hover'
+  | 'blue-hover'
   | 'white-hover'
   | 'black-hover'
   | 'transparent-hover';

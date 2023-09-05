@@ -1,27 +1,27 @@
 @charset "UTF-8";
 /* 字体颜色 */
 .color-primary {
-  color: #0088ff;
+  color: #3433e6;
 }
 
 .color-success {
-  color: #33bb44;
+  color: #02ca33;
 }
 
 .color-warning {
-  color: #ff7711;
+  color: #feea31;
 }
 
 .color-error {
-  color: #ee4444;
+  color: #f81409;
 }
 
 .color-pink {
-  color: #ee3399;
+  color: #e87a7a;
 }
 
-.color-purple {
-  color: #6633bb;
+.color-blue {
+  color: #2f9eca;
 }
 
 .color-white {
@@ -73,27 +73,27 @@
 }
 
 .color-primary-hover {
-  color: #cceeff;
+  color: #8585f0;
 }
 
 .color-success-hover {
-  color: #ddeebb;
+  color: #67df85;
 }
 
 .color-warning-hover {
-  color: #ffeedd;
+  color: #fef283;
 }
 
 .color-error-hover {
-  color: #ffdddd;
+  color: #fb726b;
 }
 
 .color-pink-hover {
-  color: #ffddee;
+  color: #f1afaf;
 }
 
-.color-purple-hover {
-  color: #eeddff;
+.color-blue-hover {
+  color: #82c5df;
 }
 
 .color-white-hover {
@@ -110,27 +110,27 @@
 
 /* 边框颜色 */
 .border-primary {
-  border-color: #0088ff;
+  border-color: #3433e6;
 }
 
 .border-success {
-  border-color: #33bb44;
+  border-color: #02ca33;
 }
 
 .border-warning {
-  border-color: #ff7711;
+  border-color: #feea31;
 }
 
 .border-error {
-  border-color: #ee4444;
+  border-color: #f81409;
 }
 
 .border-pink {
-  border-color: #ee3399;
+  border-color: #e87a7a;
 }
 
-.border-purple {
-  border-color: #6633bb;
+.border-blue {
+  border-color: #2f9eca;
 }
 
 .border-white {
@@ -182,27 +182,27 @@
 }
 
 .border-primary-hover {
-  border-color: #cceeff;
+  border-color: #8585f0;
 }
 
 .border-success-hover {
-  border-color: #ddeebb;
+  border-color: #67df85;
 }
 
 .border-warning-hover {
-  border-color: #ffeedd;
+  border-color: #fef283;
 }
 
 .border-error-hover {
-  border-color: #ffdddd;
+  border-color: #fb726b;
 }
 
 .border-pink-hover {
-  border-color: #ffddee;
+  border-color: #f1afaf;
 }
 
-.border-purple-hover {
-  border-color: #eeddff;
+.border-blue-hover {
+  border-color: #82c5df;
 }
 
 .border-white-hover {
@@ -219,27 +219,27 @@
 
 /* 背景颜色 */
 .bg-primary {
-  background-color: #0088ff;
+  background-color: #3433e6;
 }
 
 .bg-success {
-  background-color: #33bb44;
+  background-color: #02ca33;
 }
 
 .bg-warning {
-  background-color: #ff7711;
+  background-color: #feea31;
 }
 
 .bg-error {
-  background-color: #ee4444;
+  background-color: #f81409;
 }
 
 .bg-pink {
-  background-color: #ee3399;
+  background-color: #e87a7a;
 }
 
-.bg-purple {
-  background-color: #6633bb;
+.bg-blue {
+  background-color: #2f9eca;
 }
 
 .bg-white {
@@ -291,27 +291,27 @@
 }
 
 .bg-primary-hover {
-  background-color: #cceeff;
+  background-color: #8585f0;
 }
 
 .bg-success-hover {
-  background-color: #ddeebb;
+  background-color: #67df85;
 }
 
 .bg-warning-hover {
-  background-color: #ffeedd;
+  background-color: #fef283;
 }
 
 .bg-error-hover {
-  background-color: #ffdddd;
+  background-color: #fb726b;
 }
 
 .bg-pink-hover {
-  background-color: #ffddee;
+  background-color: #f1afaf;
 }
 
-.bg-purple-hover {
-  background-color: #eeddff;
+.bg-blue-hover {
+  background-color: #82c5df;
 }
 
 .bg-white-hover {
@@ -328,27 +328,27 @@
 
 /* 背景的覆盖cover颜色, 可用于覆盖上面的bg-XXX */
 .bg-primary-cover {
-  background-color: #0088ff;
+  background-color: #3433e6;
 }
 
 .bg-success-cover {
-  background-color: #33bb44;
+  background-color: #02ca33;
 }
 
 .bg-warning-cover {
-  background-color: #ff7711;
+  background-color: #feea31;
 }
 
 .bg-error-cover {
-  background-color: #ee4444;
+  background-color: #f81409;
 }
 
 .bg-pink-cover {
-  background-color: #ee3399;
+  background-color: #e87a7a;
 }
 
-.bg-purple-cover {
-  background-color: #6633bb;
+.bg-blue-cover {
+  background-color: #2f9eca;
 }
 
 .bg-white-cover {
@@ -400,27 +400,27 @@
 }
 
 .bg-primary-hover-cover {
-  background-color: #cceeff;
+  background-color: #8585f0;
 }
 
 .bg-success-hover-cover {
-  background-color: #ddeebb;
+  background-color: #67df85;
 }
 
 .bg-warning-hover-cover {
-  background-color: #ffeedd;
+  background-color: #fef283;
 }
 
 .bg-error-hover-cover {
-  background-color: #ffdddd;
+  background-color: #fb726b;
 }
 
 .bg-pink-hover-cover {
-  background-color: #ffddee;
+  background-color: #f1afaf;
 }
 
-.bg-purple-hover-cover {
-  background-color: #eeddff;
+.bg-blue-hover-cover {
+  background-color: #82c5df;
 }
 
 .bg-white-hover-cover {
@@ -437,27 +437,27 @@
 
 /* 按钮的禁用背景颜色, 使用时类名disabled即可（貌似有问题，使用了平台自带的disabled效果） */
 button[disabled].disabled.bg-primary {
-  background-color: #0088ff;
+  background-color: #3433e6;
 }
 
 button[disabled].disabled.bg-success {
-  background-color: #33bb44;
+  background-color: #02ca33;
 }
 
 button[disabled].disabled.bg-warning {
-  background-color: #ff7711;
+  background-color: #feea31;
 }
 
 button[disabled].disabled.bg-error {
-  background-color: #ee4444;
+  background-color: #f81409;
 }
 
 button[disabled].disabled.bg-pink {
-  background-color: #ee3399;
+  background-color: #e87a7a;
 }
 
-button[disabled].disabled.bg-purple {
-  background-color: #6633bb;
+button[disabled].disabled.bg-blue {
+  background-color: #2f9eca;
 }
 
 button[disabled].disabled.bg-white {
@@ -509,27 +509,27 @@ button[disabled].disabled.bg-fill-deep {
 }
 
 button[disabled].disabled.bg-primary-hover {
-  background-color: #cceeff;
+  background-color: #8585f0;
 }
 
 button[disabled].disabled.bg-success-hover {
-  background-color: #ddeebb;
+  background-color: #67df85;
 }
 
 button[disabled].disabled.bg-warning-hover {
-  background-color: #ffeedd;
+  background-color: #fef283;
 }
 
 button[disabled].disabled.bg-error-hover {
-  background-color: #ffdddd;
+  background-color: #fb726b;
 }
 
 button[disabled].disabled.bg-pink-hover {
-  background-color: #ffddee;
+  background-color: #f1afaf;
 }
 
-button[disabled].disabled.bg-purple-hover {
-  background-color: #eeddff;
+button[disabled].disabled.bg-blue-hover {
+  background-color: #82c5df;
 }
 
 button[disabled].disabled.bg-white-hover {
@@ -546,27 +546,27 @@ button[disabled].disabled.bg-transparent-hover {
 
 /* 按钮的禁用文字颜色, 使用时加上类名disabled即可（貌似有问题，使用了平台自带的disabled效果） */
 button[disabled].disabled.color-primary {
-  color: #0088ff;
+  color: #3433e6;
 }
 
 button[disabled].disabled.color-success {
-  color: #33bb44;
+  color: #02ca33;
 }
 
 button[disabled].disabled.color-warning {
-  color: #ff7711;
+  color: #feea31;
 }
 
 button[disabled].disabled.color-error {
-  color: #ee4444;
+  color: #f81409;
 }
 
 button[disabled].disabled.color-pink {
-  color: #ee3399;
+  color: #e87a7a;
 }
 
-button[disabled].disabled.color-purple {
-  color: #6633bb;
+button[disabled].disabled.color-blue {
+  color: #2f9eca;
 }
 
 button[disabled].disabled.color-white {
@@ -618,27 +618,27 @@ button[disabled].disabled.color-fill-deep {
 }
 
 button[disabled].disabled.color-primary-hover {
-  color: #cceeff;
+  color: #8585f0;
 }
 
 button[disabled].disabled.color-success-hover {
-  color: #ddeebb;
+  color: #67df85;
 }
 
 button[disabled].disabled.color-warning-hover {
-  color: #ffeedd;
+  color: #fef283;
 }
 
 button[disabled].disabled.color-error-hover {
-  color: #ffdddd;
+  color: #fb726b;
 }
 
 button[disabled].disabled.color-pink-hover {
-  color: #ffddee;
+  color: #f1afaf;
 }
 
-button[disabled].disabled.color-purple-hover {
-  color: #eeddff;
+button[disabled].disabled.color-blue-hover {
+  color: #82c5df;
 }
 
 button[disabled].disabled.color-white-hover {

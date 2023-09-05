@@ -47,7 +47,7 @@ const pages = [
     ],
   },
   {
-    title: '布局类',
+    title: '布局/容器类',
     type: 'layout',
     list: [
       { componentName: 'sl-table', componentDesc: '表格', url: '/examples/table/index' },
@@ -55,6 +55,15 @@ const pages = [
       { componentName: 'sl-space', componentDesc: '空间', url: '/examples/space/index' },
       { componentName: 'sl-dropdown', componentDesc: '组合筛选', url: '/examples/dropdown/index' },
       { componentName: 'sl-tabs', componentDesc: '标签页', url: '/examples/tabs/index' },
+      { componentName: 'sl-card', componentDesc: '卡片', url: '/examples/card/index' },
+    ],
+  },
+  {
+    title: '其它',
+    type: 'other',
+    list: [
+      { componentName: 'sl-line', componentDesc: '线', url: '/examples/line/index' },
+      { componentName: 'sl-empty', componentDesc: '无数据提示', url: '/examples/empty/index' },
     ],
   },
 ];

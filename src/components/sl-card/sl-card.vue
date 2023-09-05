@@ -8,7 +8,7 @@
       `bg-${bg}`,
       `radius-${radius}`,
       {
-        shadow: hasShadow,
+        'shadow-default': hasShadow,
       },
     ]"
     @click="$emit('click', index)"

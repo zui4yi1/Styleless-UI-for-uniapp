@@ -9,30 +9,27 @@ export const props = {
     default: '',
   },
   type: {
-    type: String as PropType<'inline' | 'column'>,
-    default: 'column',
+    type: String as PropType<'x' | 'y'>,
+    default: 'x',
   },
   top: {
     type: Number,
-    default: 320,
-  },
-  url: {
-    type: String,
-    default: 'XXXXXXXXXXXXX',
+    default: 300,
   },
   bg: {
     type: String as PropType<IColor>,
     default: 'white',
   },
-  sizes: {
-    type: Object,
-    default: () => ({
-      width: '140rpx',
-      height: '100rpx',
-    }),
+  color: {
+    type: String as PropType<IColor>,
+    default: 'disabled',
+  },
+  size: {
+    type: Number,
+    default: 60,
   },
   content: {
     type: String,
-    default: '',
+    default: '暂无数据',
   },
 };

@@ -50,61 +50,61 @@ conf.list.push({
   items: [
     {
       key: 'primary',
-      value: '#0088ff',
+      value: '#3433e6',
       extends: [
         {
           key: 'primary-hover',
-          value: '#cceeff',
+          value: '#8585f0',
         },
       ],
     },
     {
       key: 'success',
-      value: '#33bb44',
+      value: '#02ca33',
       extends: [
         {
           key: 'success-hover',
-          value: '#ddeebb',
+          value: '#67df85',
         },
       ],
     },
     {
       key: 'warning',
-      value: '#ff7711',
+      value: '#feea31',
       extends: [
         {
           key: 'warning-hover',
-          value: '#ffeedd',
+          value: '#fef283',
         },
       ],
     },
     {
       key: 'error',
-      value: '#ee4444',
+      value: '#f81409',
       extends: [
         {
           key: 'error-hover',
-          value: '#ffdddd',
+          value: '#fb726b',
         },
       ],
     },
     {
       key: 'pink',
-      value: '#ee3399',
+      value: '#e87a7a',
       extends: [
         {
           key: 'pink-hover',
-          value: '#ffddee',
+          value: '#f1afaf',
         },
       ],
     },
     {
-      key: 'purple',
-      value: '#6633bb',
+      key: 'blue',
+      value: '#2f9eca',
       extends: [
         {
-          key: 'purple-hover',
-          value: '#eeddff',
+          key: 'blue-hover',
+          value: '#82c5df',
         },
       ],
     },
