@@ -21,6 +21,11 @@ const pages = [
       { componentName: 'sl-checkbox', componentDesc: '复选框', url: '/examples/checkbox/index' },
       { componentName: 'sl-radio', componentDesc: '单选框', url: '/examples/radio/index' },
       { componentName: 'sl-switch', componentDesc: '开关', url: '/examples/switch/index' },
+      {
+        componentName: 'sl-field',
+        componentDesc: '无渲染的表单统一封装组件',
+        url: '/examples/switch/index',
+      },
     ],
   },
   {
@@ -56,6 +61,16 @@ const pages = [
       { componentName: 'sl-dropdown', componentDesc: '组合筛选', url: '/examples/dropdown/index' },
       { componentName: 'sl-tabs', componentDesc: '标签页', url: '/examples/tabs/index' },
       { componentName: 'sl-card', componentDesc: '卡片', url: '/examples/card/index' },
+      {
+        componentName: 'sl-address-book',
+        componentDesc: '通讯录',
+        url: '/examples/address-book/index',
+      },
+      {
+        componentName: 'sl-top/sl-bottom',
+        componentDesc: '固定顶部/底部',
+        url: '/examples/top/index',
+      },
     ],
   },
   {
@@ -64,6 +79,7 @@ const pages = [
     list: [
       { componentName: 'sl-line', componentDesc: '线', url: '/examples/line/index' },
       { componentName: 'sl-empty', componentDesc: '无数据提示', url: '/examples/empty/index' },
+      { componentName: 'sl-fill-line', componentDesc: '无数据提示', url: '/examples/empty/index' },
     ],
   },
 ];
