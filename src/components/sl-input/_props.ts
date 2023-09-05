@@ -123,11 +123,17 @@ export const props = {
   clearIcon: {
     type: Object,
     default: () => ({
+      // iconLib: 'sl-ui-common',
+      // name: 'icon_close',
+      // size: 32,
+      // color: 'white',
+      // className: 'bg-placeholder radius-round',
+
       iconLib: 'sl-ui-common',
-      name: 'icon_close',
+      name: 'icon_close_fill',
       size: 32,
-      color: 'white',
-      className: 'bg-placeholder radius-round',
+      color: 'placeholder' as IColor,
+      className: 'bg-white',
     }),
   },
 };
