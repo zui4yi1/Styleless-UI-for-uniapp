@@ -70,6 +70,9 @@
       "path": "examples/card/index"
     },
     {
+      "path": "examples/top/index"
+    },
+    {
       "path": "pages/sl-scroll-refresher/index"
     },
     {
@@ -77,6 +80,9 @@
     },
     {
       "path": "examples/empty/index"
+    },
+    {
+      "path": "examples/fill-line/index"
     }
   ],
   "globalStyle": {

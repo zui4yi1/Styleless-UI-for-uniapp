@@ -51,7 +51,7 @@
   <sl-fill-line size="cell-default" />
 </template>
 <script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
+  import { useClassName } from '../../hooks/use-class-name';
   import { props } from './_props';
   import { useNavBar } from './useNavBar';
 

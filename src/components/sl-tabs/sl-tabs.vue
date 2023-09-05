@@ -38,7 +38,7 @@
   </scroll-view>
 </template>
 <script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
+  import { useClassName } from '../../hooks/use-class-name';
 
   import { getCurrentInstance } from 'vue';
   import { props } from './_props';

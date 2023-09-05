@@ -1,8 +1,8 @@
 <template>
   <s-page title="sl-empty" className="plr-l">
     <Brief desc="无数据提示组件, 可定义方向、尺寸、颜色、背景等" />
-    <Tip title="横向" desc="默认type=x, 为显示位置加了个边框className=border" />
-    <sl-empty className="mt-d border" />
+    <Tip title="横向" desc="默认type=x" />
+    <sl-empty className="mt-d" />
     <Tip title="横向, 蓝底白字" desc="bg=primary-hover, color=white" className="mt-d" />
     <view class="h-120 mt-d">
       <sl-empty bg="blue" color="white" />

@@ -24,7 +24,8 @@ const pages = [
       {
         componentName: 'sl-field',
         componentDesc: '无渲染的表单统一封装组件',
-        url: '/examples/switch/index',
+        url: '/examples/field/index',
+        undo: true,
       },
     ],
   },
@@ -65,6 +66,7 @@ const pages = [
         componentName: 'sl-address-book',
         componentDesc: '通讯录',
         url: '/examples/address-book/index',
+        undo: true,
       },
       {
         componentName: 'sl-top/sl-bottom',
@@ -79,7 +81,11 @@ const pages = [
     list: [
       { componentName: 'sl-line', componentDesc: '线', url: '/examples/line/index' },
       { componentName: 'sl-empty', componentDesc: '无数据提示', url: '/examples/empty/index' },
-      { componentName: 'sl-fill-line', componentDesc: '无数据提示', url: '/examples/empty/index' },
+      {
+        componentName: 'sl-fill-line',
+        componentDesc: '填充行',
+        url: '/examples/fill-line/index',
+      },
     ],
   },
 ];

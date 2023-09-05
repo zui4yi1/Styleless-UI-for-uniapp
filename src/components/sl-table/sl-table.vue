@@ -34,8 +34,8 @@
   </view>
 </template>
 <script lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { computed, defineComponent, provide } from 'vue';
+  import { useClassName } from '../../hooks/use-class-name';
   import { props, type ITableProps } from './_props';
 
   const ComponentName = 'sl-table';

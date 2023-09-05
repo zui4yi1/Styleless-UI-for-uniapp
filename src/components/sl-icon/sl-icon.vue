@@ -16,8 +16,8 @@
   </view>
 </template>
 <script lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { defineComponent } from 'vue';
+  import { useClassName } from '../../hooks/use-class-name';
   import { props } from './_props';
 
   const ComponentName = 'sl-icon';

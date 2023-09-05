@@ -1178,7 +1178,7 @@
 }
 
 .delay-show {
-  animation: delayShow 1s ease-out forwords;
+  animation: delayShow 1s ease-out forwards;
 }
 
 .transition-fast {

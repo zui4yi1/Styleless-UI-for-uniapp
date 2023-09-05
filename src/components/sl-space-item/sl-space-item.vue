@@ -12,8 +12,8 @@
   </view>
 </template>
 <script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { inject } from 'vue';
+  import { useClassName } from '../../hooks/use-class-name';
   import { props } from './_props';
 
   const ComponentName = 'sl-space-item';

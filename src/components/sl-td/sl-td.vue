@@ -10,8 +10,8 @@
   </view>
 </template>
 <script lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { defineComponent, inject } from 'vue';
+  import { useClassName } from '../../hooks/use-class-name';
   import type { ITableProps } from '../sl-table/_props';
   import { props } from './_props';
 

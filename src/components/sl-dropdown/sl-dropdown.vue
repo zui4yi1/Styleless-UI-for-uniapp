@@ -4,9 +4,9 @@
   </view>
 </template>
 <script lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { getDom } from '@/utils/dom';
   import { defineComponent, getCurrentInstance, onMounted, provide, ref } from 'vue';
+  import { useClassName } from '../../hooks/use-class-name';
   import { props } from './_props';
 
   const ComponentName = 'sl-dropdown';

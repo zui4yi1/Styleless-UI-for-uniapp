@@ -1,7 +1,7 @@
 <template>
   <sl-mask v-model:open="isOpen" :closeOnTab="closeOnTab" mode="center">
     <view :class="[clz.root(), className]">
-      <sl-card paddingClz="p-all-none">
+      <sl-card paddingClz="p-all-none" :hasShadow="false">
         <view class="plr-l">
           <view v-if="hasTitle" :class="[clz.head()]" class="height-cell-default flex">
             <view class="font-title flex-grow">{{ title }}</view>
@@ -14,8 +14,8 @@
           </view>
         </view>
 
-        <view v-if="hasFoot" :class="[clz.foot()]" class="flex-center">
-          <view v-if="hasCancel" class="span-12">
+        <view v-if="hasFoot" :class="[clz.foot()]" class="flex-center pb-xs">
+          <view v-if="hasCancel" class="flex-grow">
             <sl-button
               radius="none"
               :theme="{ bg: 'white', color: 'placeholder' }"
@@ -24,7 +24,7 @@
               {{ cancelText }}
             </sl-button>
           </view>
-          <view class="flex-grow">
+          <view v-if="hasConfirm" class="flex-grow">
             <sl-button
               radius="none"
               :theme="{ bg: 'white', color: 'content' }"
@@ -39,8 +39,8 @@
   </sl-mask>
 </template>
 <script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { computed } from 'vue';
+  import { useClassName } from '../../hooks/use-class-name';
   import { props } from './_props';
 
   const ComponentName = 'sl-modal';

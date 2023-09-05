@@ -87,8 +87,8 @@
   </template>
 </template>
 <script lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { computed, defineComponent, inject, onBeforeMount, ref, watchEffect } from 'vue';
+  import { useClassName } from '../../hooks/use-class-name';
   import { props } from './_props';
 
   const ComponentName = 'sl-dropdown-item';

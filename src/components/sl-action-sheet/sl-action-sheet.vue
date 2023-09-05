@@ -39,8 +39,8 @@
   </sl-mask>
 </template>
 <script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { computed } from 'vue';
+  import { useClassName } from '../../hooks/use-class-name';
   import { props } from './_props';
 
   const ComponentName = 'sl-action-sheet';

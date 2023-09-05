@@ -30,8 +30,8 @@
   </sl-popup>
 </template>
 <script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { computed, ref, toRaw, watchEffect } from 'vue';
+  import { useClassName } from '../../hooks/use-class-name';
   import { props, type ICompSelect } from './_props';
 
   const ComponentName = 'sl-select';

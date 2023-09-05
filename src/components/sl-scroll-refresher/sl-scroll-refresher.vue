@@ -56,8 +56,8 @@
   </scroll-view>
 </template>
 <script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { getCurrentInstance } from 'vue';
+  import { useClassName } from '../../hooks/use-class-name';
   import { props } from './_props';
   import { useScrollRefresher } from './useScrollRefresher';
 
