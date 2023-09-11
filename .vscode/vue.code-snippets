@@ -10,7 +10,7 @@
     "scope": "vue",
     "prefix": "vue-base-component",
     "body": [
-      "<template>\r  <view :class=\"[clz.root(), className]\" class=\"\"></view>\r</template>\r<script setup lang=\"ts\">\r  import { useClassName } from '@/hooks/use-class-name';\r  import { props } from './_props';\r\r  const ComponentName = 'sl-$1';\r  const clz = useClassName(ComponentName);\r\r  defineProps(props);\r  // defineEmits(['click']);\r</script>\r",
+      "<template>\r  <view :class=\"[clz.root(), className]\" class=\"\"></view>\r</template>\r<script setup lang=\"ts\">\r  import { useClassName } from '../../hooks/use-class-name';\r  import { props } from './_props';\r\r  const ComponentName = 'sl-';\r  const clz = useClassName(ComponentName);\r\r  defineProps(props);\r  // defineEmits(['click']);\r</script>\r",
       "$2"
     ],
     "description": "snippets for base components"
@@ -19,7 +19,7 @@
     "scope": "typescript",
     "prefix": "vue-base-component-props",
     "body": [
-      "import { buildProps } from '@/utils/element-plus/props';\r\rexport const props = buildProps({\r  /**\r   * @description inject global classNames to the component root\r   */\r  className: {\r    type: [String, Array],\r    default: '',\r  },\r  xxx: {\r    type: String,\r    default: '',\r  },\r} as const);",
+      "export const props = {\r  /**\r   * @description inject global classNames to the component root\r   */\r  className: {\r    type: [String, Array],\r    default: '',\r  },\r  xxx: {\r    type: String,\r    default: '',\r  },\r};\r",
       "$2"
     ],
     "description": "snippets for base components props"

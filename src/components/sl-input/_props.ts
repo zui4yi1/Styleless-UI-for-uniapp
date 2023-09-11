@@ -72,7 +72,7 @@ export const props = {
   },
   placeholderStyle: {
     type: Object as PropType<CSSProperties>,
-    default: () => ({}),
+    default: () => {},
   },
 
   disabled: {
