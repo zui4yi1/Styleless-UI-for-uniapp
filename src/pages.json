@@ -70,6 +70,9 @@
       "path": "examples/card/index"
     },
     {
+      "path": "examples/address-book/index"
+    },
+    {
       "path": "examples/top/index"
     },
     {

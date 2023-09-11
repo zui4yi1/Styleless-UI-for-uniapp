@@ -20,8 +20,8 @@
     <template v-for="cata in pages" :key="cata.type">
       <Tip :title="cata.title" />
       <view v-for="(item, inx) in cata.list" :key="'item_' + inx">
-        <view @click="handleJump(item.url)" class="h-64 flex">
-          <view>{{ item.componentName }}</view>
+        <view @click="handleJump(item.url)" class="flex-top ptb-xs">
+          <view class="flex-shrink">{{ item.componentName }}</view>
           <view class="ml-d" :class="[`color-${item.undo ? 'error' : 'placeholder'}`]">
             {{ item.componentDesc }}
           </view>
@@ -31,17 +31,12 @@
   </s-page>
 </template>
 <script setup lang="ts">
-  import { getCurrentInstance } from 'vue';
   import SPage from '../_components/s-page/index.vue';
   import Tip from '../_components/tip/index.vue';
 
   import pages from './pages';
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const themes = ['primary', 'success', 'error'];
-
-  const instance = getCurrentInstance();
-  const data = instance?.appContext.config.globalProperties;
-  console.log('🚀 ~ file: index.vue:41 ~ data:', data);
 
   const handleJump = (url: string) => {
     uni.navigateTo({

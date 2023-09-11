@@ -1,2 +1,13 @@
 @import '/src/assets/styles/ui-common.css';
 @import '/src/assets/styles/ui-fragment.css';
+
+//
+/* #ifndef MP-WEIXIN */
+.scroll-transparent::-webkit-scrollbar,
+.scroll-transparent > * ::-webkit-scrollbar {
+  color: transparent;
+  width: 0;
+  height: 0;
+  display: none;
+}
+/* #endif */

@@ -38,6 +38,11 @@
       radius="default"
       className="mt-d"
     />
+    <Tip title="修改padding" desc="paddingClz='' (默认是plr-d)" className="mt-d" />
+    <sl-input v-model:value="inputVal" paddingClz="" className="mt-d" />
+
+    <Tip title="密码" desc="type=password" className="mt-d" />
+    <sl-input v-model:value="inputVal" paddingClz="" type="password" className="mt-d" />
 
     <Tip
       title="一些特殊场景, 如灰色背景"

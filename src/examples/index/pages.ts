@@ -23,7 +23,13 @@ const pages = [
       { componentName: 'sl-switch', componentDesc: '开关', url: '/examples/switch/index' },
       {
         componentName: 'sl-field',
-        componentDesc: '无渲染的表单统一封装组件',
+        componentDesc: '无渲染表单组件, 传递组件的value与change',
+        url: '/examples/field/index',
+        undo: true,
+      },
+      {
+        componentName: 'sl-form',
+        componentDesc: '表单容器, 适用json数据格式, 支持自定义组件',
         url: '/examples/field/index',
         undo: true,
       },
@@ -66,7 +72,6 @@ const pages = [
         componentName: 'sl-address-book',
         componentDesc: '通讯录',
         url: '/examples/address-book/index',
-        undo: true,
       },
       {
         componentName: 'sl-top/sl-bottom',

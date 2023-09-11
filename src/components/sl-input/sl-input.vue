@@ -67,9 +67,9 @@
             :value="value"
             :password="type === 'password' && !showPassword"
             :placeholder="placeholder"
+            :placeholderStyle="placeholderStyle"
             :disabled="disabled"
             :maxlength="maxlength"
-            :focus="focus"
             :confirmType="confirmType"
             :cursorSpacing="cursorSpacing"
             :SelectionStart="SelectionStart"
@@ -80,8 +80,19 @@
             @input="handleInput"
             @confirm="$emit('confirm', ($event as any).detail.value)"
           />
-          <view v-if="showClear && focus && value.length > 0" @tap="handleClear">
+          <view
+            v-if="showClear && focus && value.length > 0"
+            class="flex-inline"
+            @tap="handleClear"
+          >
             <sl-icon v-bind="clearIcon" />
+          </view>
+          <view v-if="type === 'password'" class="ml-xs flex-inline">
+            <sl-icon
+              :name="showPassword ? eyeIcon.showEye : eyeIcon.closeEye"
+              v-bind="eyeIcon"
+              @tap="showPassword = !showPassword"
+            />
           </view>
         </view>
       </view>

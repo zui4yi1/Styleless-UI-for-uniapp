@@ -1,3 +1,5 @@
+import type { PropType } from 'vue';
+
 export interface IAddressBookList {
   firstLetter: string;
   list: any[];
@@ -12,7 +14,15 @@ export const props = {
     default: '',
   },
   list: {
-    type: Array,
-    default: () => [] as IAddressBookList[],
+    type: Array as PropType<IAddressBookList[]>,
+    default: () => [],
+  },
+  headClz: {
+    type: String,
+    default: 'bold bg-fill-light',
+  },
+  height: {
+    type: String,
+    default: '',
   },
 };

@@ -87,25 +87,21 @@ export const props = {
     type: Boolean,
     default: true,
   },
-  trim: {
-    type: Boolean,
-    default: true,
-  },
   confirmType: {
     type: String,
     default: '完成',
   },
   cursorSpacing: {
     type: Number,
-    default: 0,
+    default: 6,
   },
   SelectionStart: {
-    type: String,
-    default: '完成',
+    type: Number,
+    default: -1,
   },
   SelectionEnd: {
-    type: String,
-    default: '完成',
+    type: Number,
+    default: -1,
   },
   styleObj: {
     type: Object as PropType<CSSProperties>,
@@ -123,17 +119,22 @@ export const props = {
   clearIcon: {
     type: Object,
     default: () => ({
-      // iconLib: 'sl-ui-common',
-      // name: 'icon_close',
-      // size: 32,
-      // color: 'white',
-      // className: 'bg-placeholder radius-round',
-
       iconLib: 'sl-ui-common',
       name: 'icon_close_fill',
       size: 32,
       color: 'placeholder' as IColor,
       className: 'bg-white',
+    }),
+  },
+  eyeIcon: {
+    type: Object,
+    default: () => ({
+      iconLib: 'sl-ui-common',
+      showEye: 'icon_eye_fill',
+      closeEye: 'icon_eye',
+      size: 40,
+      color: 'placeholder' as IColor,
+      className: 'bg-white border-round',
     }),
   },
 };

@@ -10,7 +10,7 @@
   interface IProps {
     className?: string;
     title?: string;
-    desc: string;
+    desc?: string;
   }
   withDefaults(defineProps<IProps>(), {
     className: '',
