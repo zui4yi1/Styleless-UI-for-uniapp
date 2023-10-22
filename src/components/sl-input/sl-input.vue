@@ -81,7 +81,7 @@
             @confirm="$emit('confirm', ($event as any).detail.value)"
           />
           <view
-            v-if="showClear && focus && value.length > 0"
+            v-if="showClear && focus && value.toString().length > 0"
             class="flex-inline"
             @tap="handleClear"
           >

@@ -30,7 +30,7 @@ const pages = [
       {
         componentName: 'sl-form',
         componentDesc: '表单容器, 适用json数据格式, 支持自定义组件',
-        url: '/examples/field/index',
+        url: '/examples/form/index',
         undo: true,
       },
     ],

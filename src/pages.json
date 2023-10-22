@@ -40,6 +40,9 @@
       "path": "examples/switch/index"
     },
     {
+      "path": "examples/form/index"
+    },
+    {
       "path": "examples/table/index"
     },
     {

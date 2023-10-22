@@ -1,32 +1,34 @@
 <template>
   <view :class="[clz.root(), className]" class="">
-    <view
-      v-for="(item, inx) in list"
-      :key="'checkbox_' + inx"
-      :class="[
-        clz.body(),
-        direction === 'x' ? 'flex-inline' : 'block',
-        { 'opacity-disabled': disabled },
-      ]"
-      @click="handleSelect(item.value)"
-    >
-      <sl-icon-text
-        :name="iconName"
-        :iconLib="iconLib"
-        :label="item.label"
-        :size="size"
-        :labelClz="labelClz"
-        :iconClz="
-          [
-            'border',
-            type === 'circle' ? 'radius-round' : '',
-            value.includes(item.value)
-              ? 'bg-primary border-transparent'
-              : 'bg-white border-line-default',
-          ].join(' ')
-        "
-      />
-    </view>
+    <sl-space-group :gutter="32" :rowGutter="12">
+      <sl-space-item
+        v-for="(item, inx) in list"
+        :key="'checkbox_' + inx"
+        :class="[
+          clz.body(),
+          direction === 'x' ? 'flex-inline' : 'block',
+          { 'opacity-disabled': disabled },
+        ]"
+        @click="handleSelect(item.value)"
+      >
+        <sl-icon-text
+          :name="iconName"
+          :iconLib="iconLib"
+          :label="item.label"
+          :size="size"
+          :labelClz="labelClz"
+          :iconClz="
+            [
+              'border',
+              type === 'circle' ? 'radius-round' : '',
+              value.includes(item.value)
+                ? 'bg-primary border-transparent'
+                : 'bg-white border-line-default',
+            ].join(' ')
+          "
+        />
+      </sl-space-item>
+    </sl-space-group>
   </view>
 </template>
 <script setup lang="ts">

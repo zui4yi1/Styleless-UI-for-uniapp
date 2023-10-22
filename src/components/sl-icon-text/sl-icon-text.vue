@@ -12,7 +12,7 @@
       <!--确保与右侧label同高-->
       <text>&nbsp;</text>
     </view>
-    <view v-if="label.length > 0" :class="[clz.join('body', 'text'), labelClz]" class="ml-xs mr-xl">
+    <view v-if="label.length > 0" :class="[clz.join('body', 'text'), labelClz]" class="ml-xxs">
       {{ label }}
     </view>
   </view>

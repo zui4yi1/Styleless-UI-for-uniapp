@@ -13,6 +13,7 @@
       class="flex-center"
       :style="{ fontSize: `${size}rpx` }"
     ></view>
+    <!-- <text>&nbsp;</text> -->
   </view>
 </template>
 <script lang="ts">
