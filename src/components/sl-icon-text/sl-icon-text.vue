@@ -17,13 +17,22 @@
     </view>
   </view>
 </template>
-<script setup lang="ts">
-  import { useClassName } from '../../hooks/use-class-name';
-  import { props } from './_props';
 
+<script lang="ts">
+  import { useClassName } from '../../hooks/use-class-name';
   const ComponentName = 'sl-icon-text';
   const clz = useClassName(ComponentName);
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
+
+<script setup lang="ts">
+  import { props } from './_props';
 
   defineProps(props);
-  // defineEmits(['click']);
 </script>

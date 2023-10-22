@@ -7,23 +7,23 @@
   </view>
 </template>
 <script lang="ts">
-  import { defineComponent, inject } from 'vue';
   import { useClassName } from '../../hooks/use-class-name';
+  const ComponentName = 'sl-tr';
+  const clz = useClassName(ComponentName);
+  export default defineComponent({
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  });
+</script>
+
+<script setup lang="ts">
+  import { defineComponent, inject } from 'vue';
   import type { ITableProps } from '../sl-table/_props';
   import { props } from './_props';
 
-  const ComponentName = 'sl-tr';
-  const clz = useClassName(ComponentName);
-
-  export default defineComponent({
-    name: ComponentName,
-    props,
-    options: {
-      virtualHost: true,
-    },
-    setup() {
-      const tableProps = inject('tableProps', {} as ITableProps);
-      return { clz, tableProps };
-    },
-  });
+  defineProps(props);
+  const tableProps = inject('tableProps', {} as ITableProps);
 </script>

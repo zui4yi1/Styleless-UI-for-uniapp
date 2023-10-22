@@ -23,7 +23,7 @@ const pages = [
       { componentName: 'sl-switch', componentDesc: '开关', url: '/examples/switch/index' },
       {
         componentName: 'sl-form',
-        componentDesc: '加强版form表单组件',
+        componentDesc: 'form表单组件, 加强版',
         url: '/examples/form/index',
       },
     ],

@@ -10,14 +10,24 @@
   </view>
   <sl-fill-line :height="height" />
 </template>
+
+<script lang="ts">
+  import { useClassName } from '../../hooks/use-class-name';
+  const ComponentName = 'sl-top';
+  const clz = useClassName(ComponentName);
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
+
 <script setup lang="ts">
   import { getDom } from '@/utils/dom';
   import { getCurrentInstance, onMounted, ref } from 'vue';
-  import { useClassName } from '../../hooks/use-class-name';
   import { props } from './_props';
-
-  const ComponentName = 'sl-top';
-  const clz = useClassName(ComponentName);
 
   const _props = defineProps(props);
 

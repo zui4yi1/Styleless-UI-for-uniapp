@@ -13,6 +13,16 @@
     <sl-fill-line v-if="hasBottom" size="button-default" />
   </sl-page>
 </template>
+<script lang="ts">
+  const ComponentName = 's-page';
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
 <script setup lang="ts">
   import type { IThemeType } from './themes';
 
@@ -33,6 +43,4 @@
   });
   const filterPages = ['/examples/index/index'];
   const homePath = '/examples/index/index';
-
-  // const theme = ref('default' as IThemeType);
 </script>

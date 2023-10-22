@@ -34,32 +34,34 @@
   </view>
 </template>
 <script lang="ts">
-  import { computed, defineComponent, provide } from 'vue';
   import { useClassName } from '../../hooks/use-class-name';
-  import { props, type ITableProps } from './_props';
-
   const ComponentName = 'sl-table';
   const clz = useClassName(ComponentName);
-
-  export default defineComponent({
+  export default {
     name: ComponentName,
     options: {
       virtualHost: true,
+      inheritAttrs: false,
     },
-    props,
-    setup(props) {
-      const tableProps = computed<ITableProps>(() => {
-        return Object.assign(
-          {
-            thClz: 'color-white height-cell-default flex-center',
-            trClz: '',
-            tdClz: 'color-content flex-center',
-          },
-          props.tableProps,
-        );
-      });
-      provide('tableProps', tableProps.value);
-      return { clz };
-    },
+  };
+</script>
+
+<script setup lang="ts">
+  import { computed, provide } from 'vue';
+  import { props, type ITableProps } from './_props';
+
+  const _props = defineProps(props);
+  defineEmits(['click']);
+
+  const tableProps = computed<ITableProps>(() => {
+    return Object.assign(
+      {
+        thClz: 'color-white height-cell-default flex-center',
+        trClz: '',
+        tdClz: 'color-content flex-center',
+      },
+      _props.tableProps,
+    );
   });
+  provide('tableProps', tableProps.value);
 </script>

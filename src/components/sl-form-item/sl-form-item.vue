@@ -71,17 +71,27 @@
     <sl-line />
   </view>
 </template>
+
+<script lang="ts">
+  import { useClassName } from '../../hooks/use-class-name';
+  const ComponentName = 'sl-form-item';
+  const clz = useClassName(ComponentName);
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
+
 <script setup lang="ts">
   import { props } from './_props';
 
   import { computed, inject, isRef, ref, watchEffect } from 'vue';
-  import { useClassName } from '../../hooks/use-class-name';
   import { injectPropHook } from './_useInjectPropHook';
   import { getInitVal } from './_util';
   import { validatorExecutor } from './_validate';
-
-  const ComponentName = 'sl-form-item';
-  const clz = useClassName(ComponentName);
 
   const _props = defineProps(props);
   const _emits = defineEmits(['change', 'update:value']);

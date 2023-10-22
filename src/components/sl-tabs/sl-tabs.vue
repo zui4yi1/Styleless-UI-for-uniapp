@@ -37,15 +37,24 @@
     </view>
   </scroll-view>
 </template>
-<script setup lang="ts">
-  import { useClassName } from '../../hooks/use-class-name';
 
+<script lang="ts">
+  import { useClassName } from '../../hooks/use-class-name';
+  const ComponentName = 'sl-tabs';
+  const clz = useClassName(ComponentName);
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
+
+<script setup lang="ts">
   import { getCurrentInstance } from 'vue';
   import { props } from './_props';
   import { useTabs } from './useTabs';
-
-  const ComponentName = 'sl-tabs';
-  const clz = useClassName(ComponentName);
 
   const _props = defineProps(props);
   const _emits = defineEmits(['change', 'update:current']);

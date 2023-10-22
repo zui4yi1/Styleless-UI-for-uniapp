@@ -73,14 +73,24 @@
     </view>
   </view>
 </template>
-<script setup lang="ts">
-  import { getCurrentInstance, onMounted, ref } from 'vue';
-  import { useClassName } from '../../hooks/use-class-name';
-  import { getDom, getDoms } from '../../utils/dom';
-  import { props } from './_props';
 
+<script lang="ts">
+  import { useClassName } from '../../hooks/use-class-name';
   const ComponentName = 'sl-address-book';
   const clz = useClassName(ComponentName);
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
+
+<script setup lang="ts">
+  import { getCurrentInstance, onMounted, ref } from 'vue';
+  import { getDom, getDoms } from '../../utils/dom';
+  import { props } from './_props';
 
   const _props = defineProps(props);
 

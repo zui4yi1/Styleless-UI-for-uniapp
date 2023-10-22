@@ -13,29 +13,24 @@
       class="flex-center"
       :style="{ fontSize: `${size}rpx` }"
     ></view>
-    <!-- <text>&nbsp;</text> -->
   </view>
 </template>
 <script lang="ts">
-  import { defineComponent } from 'vue';
   import { useClassName } from '../../hooks/use-class-name';
-  import { props } from './_props';
-
   const ComponentName = 'sl-icon';
   const clz = useClassName(ComponentName);
-
-  // defineProps(props);
-  // defineEmits(['click']);
-
-  export default defineComponent({
+  export default {
     name: ComponentName,
     options: {
       virtualHost: true,
+      inheritAttrs: false,
     },
-    props,
-    emits: ['click'],
-    setup() {
-      return { clz };
-    },
-  });
+  };
+</script>
+
+<script setup lang="ts">
+  import { props } from './_props';
+
+  defineProps(props);
+  defineEmits(['click']);
 </script>

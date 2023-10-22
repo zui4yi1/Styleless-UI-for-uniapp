@@ -4,21 +4,19 @@
   </view>
 </template>
 <script lang="ts">
-  import { defineComponent } from 'vue';
   import { useClassName } from '../../hooks/use-class-name';
-  import { props } from './_props';
-
   const ComponentName = 'sl-th';
   const clz = useClassName(ComponentName);
-
-  export default defineComponent({
+  export default {
     name: ComponentName,
-    props,
     options: {
       virtualHost: true,
+      inheritAttrs: false,
     },
-    setup() {
-      return { clz };
-    },
-  });
+  };
+</script>
+
+<script setup lang="ts">
+  import { props } from './_props';
+  defineProps(props);
 </script>
