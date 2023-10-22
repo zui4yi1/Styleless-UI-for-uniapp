@@ -22,16 +22,9 @@ const pages = [
       { componentName: 'sl-radio', componentDesc: '单选框', url: '/examples/radio/index' },
       { componentName: 'sl-switch', componentDesc: '开关', url: '/examples/switch/index' },
       {
-        componentName: 'sl-field',
-        componentDesc: '无渲染表单组件, 传递组件的value与change',
-        url: '/examples/field/index',
-        undo: true,
-      },
-      {
         componentName: 'sl-form',
-        componentDesc: '表单容器, 适用json数据格式, 支持自定义组件',
+        componentDesc: '加强版form表单组件',
         url: '/examples/form/index',
-        undo: true,
       },
     ],
   },
