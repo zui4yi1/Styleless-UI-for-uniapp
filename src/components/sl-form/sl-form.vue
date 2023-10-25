@@ -55,7 +55,10 @@
   const initData = ref<any>({});
 
   watchEffect(() => {
-    initData.value = _props.detail;
+    initData.value = _props.detail || {};
+    Object.keys(initData.value).forEach((key) => {
+      _props.useEffect(key, initData.value[key]);
+    });
   });
 
   const handleChange = (field: string, val: any) => {
@@ -81,6 +84,7 @@
     childRefs.value.forEach((k: any) => {
       const prop = k.prop;
       k.reset(initData.value[prop]);
+      _props.useEffect(prop, initData.value[prop]);
     });
   };
 
@@ -89,5 +93,6 @@
     getForm,
     reset,
     setPropValue,
+    initData: toRaw(initData.value),
   });
 </script>
