@@ -8,19 +8,21 @@
       <view>4. 完善的reset机制, 响应式数据也可初始化, 编辑时可用</view>
       <view>5. 更简洁的validtor与rules设计</view>
       <view>6. 支持副作用useEffect, 即change勾子, 可用于处理联动</view>
+      <view>7. 支持detail与form两种机制, 一份代码, 即可达成详情与表单的操作</view>
     </Brief>
     <Tip title="加强版form组件" desc="性别与爱好是联动的, 提交后可观察表单值的差异" />
     <sl-form
       ref="formRef"
-      mode="form"
+      :mode="mode"
       :scheme="scheme"
       :detail="detail"
       :dicts="dicts"
       :useEffect="useEffect"
     />
     <div class="flex-right">
-      <sl-button width="160rpx" @click="handleSubmit" className=" mr-l">提交</sl-button>
-      <sl-button width="160rpx" bg="error" @click="handleReset">重置</sl-button>
+      <sl-button width="160rpx" className="mr-l" @click="handleSubmit">提交</sl-button>
+      <sl-button width="160rpx" className="mr-l" bg="error" @click="handleReset">重置</sl-button>
+      <sl-button width="200rpx" bg="success" @click="handleToggle">详情/表单</sl-button>
     </div>
     <sl-card className="mt-d">
       <div>表单值:</div>
@@ -40,6 +42,7 @@
   import { useDetail, useDicts } from './_useDataHook';
 
   const formRef = ref<any>(null);
+  const mode = ref('form');
 
   const scheme = ref<IFormGroup[]>([]);
   const dicts = useDicts();
@@ -62,6 +65,10 @@
 
   const handleReset = () => {
     formRef.value.reset();
+  };
+
+  const handleToggle = () => {
+    mode.value = mode.value === 'form' ? 'detail' : 'form';
   };
 
   onMounted(async () => {
