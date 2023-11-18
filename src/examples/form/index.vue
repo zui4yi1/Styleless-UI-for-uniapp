@@ -52,7 +52,20 @@
 
   const useEffect = async (field: string, val: any) => {
     if (field === 'gender') {
-      scheme.value[0].list[3].isRemove = val === 2;
+      // 移除节点
+      // scheme.value[0].list[3].isRemove = val === 2;
+      if (val === 2) {
+        formRef.value.setPropValue('advantage', 1);
+      } else {
+        formRef.value.setPropValue('advantage', 0);
+      }
+    }
+    if (field === 'advantage') {
+      if (val === 0) {
+        formRef.value.setPropValue('hobits', [0, 3]);
+      } else {
+        formRef.value.setPropValue('hobits', [1, 2]);
+      }
     }
   };
 

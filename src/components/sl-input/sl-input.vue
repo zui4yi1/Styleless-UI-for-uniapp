@@ -128,7 +128,7 @@
   import { useInput } from './useInput';
 
   const _props = defineProps(props);
-  const _emits = defineEmits(['update:value', 'input', 'focus', 'blur', 'change']);
+  const _emits = defineEmits(['update:value', 'input', 'focus', 'blur', 'change', 'confirm']);
   const { showPassword, focus, handleFocus, handleBlur, handleInput, handleClear } = useInput(
     _props,
     _emits,

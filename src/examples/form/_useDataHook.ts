@@ -29,6 +29,23 @@ const getHobits = () => {
   });
 };
 
+const getAdvantages = () => {
+  return new Promise<any[]>((resolve) => {
+    setTimeout(() => {
+      resolve([
+        {
+          label: '理科',
+          value: 0,
+        },
+        {
+          label: '文科',
+          value: 1,
+        },
+      ]);
+    }, 500);
+  });
+};
+
 const getDetail = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -36,8 +53,9 @@ const getDetail = () => {
         name: 'abc',
         age: '10',
         gender: 1,
-        hobits: [1, 2],
+        hobits: [1],
         agree: true,
+        advantage: 0,
       });
     }, 1000);
   });
@@ -45,17 +63,21 @@ const getDetail = () => {
 
 export const useDicts = () => {
   const hobits = ref([] as any[]);
+  const advantage = ref([] as any[]);
 
   onBeforeMount(() => {
     getHobits().then((res) => {
       hobits.value = res;
+    });
+    getAdvantages().then((res) => {
+      advantage.value = res;
     });
   });
 
   return {
     gender,
     hobits,
-    choice: hobits,
+    advantage,
   };
 };
 

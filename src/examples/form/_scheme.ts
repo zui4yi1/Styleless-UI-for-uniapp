@@ -58,6 +58,17 @@ export const formScheme = (): IFormGroup[] => [
         ],
       },
       {
+        type: 'sl-select',
+        prop: 'advantage',
+        label: '擅长',
+        rules: [
+          {
+            required: true,
+            text: '擅长不能为空',
+          },
+        ],
+      },
+      {
         type: 'sl-checkbox',
         prop: 'hobits',
         label: '爱好',
@@ -73,18 +84,6 @@ export const formScheme = (): IFormGroup[] => [
         type: 'sl-switch',
         prop: 'agree',
         label: '同意',
-      },
-
-      {
-        type: 'sl-select',
-        prop: 'choice',
-        label: '擅长',
-        rules: [
-          {
-            required: true,
-            text: '擅长不能为空',
-          },
-        ],
       },
     ],
   },

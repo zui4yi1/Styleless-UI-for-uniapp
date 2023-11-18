@@ -151,9 +151,10 @@
   const reset = (val: any) => {
     itemVal.value = val;
   };
-  const setValue = (val: any) => {
+  const setValue = async (val: any) => {
     itemVal.value = val;
-    validator();
+    await validator();
+    change(val);
   };
 
   defineExpose({

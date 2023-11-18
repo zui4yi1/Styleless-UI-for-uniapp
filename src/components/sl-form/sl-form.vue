@@ -40,7 +40,7 @@
 </script>
 
 <script setup lang="ts">
-  import { computed, provide, reactive, ref, toRaw, watchEffect } from 'vue';
+  import { computed, nextTick, provide, reactive, ref, toRaw, watch, watchEffect } from 'vue';
   import { props } from './_props';
 
   const childRefs = ref([]);
@@ -54,20 +54,31 @@
 
   const initData = ref<any>({});
 
+  /** 监听初始值, 并处理useEffect */
   watchEffect(() => {
-    initData.value = _props.detail || {};
-    Object.keys(initData.value).forEach((key) => {
-      _props.useEffect(key, initData.value[key]);
-    });
+    const _detail = JSON.parse(JSON.stringify(_props.detail || {}));
+    initData.value = _detail;
   });
+
+  /** 见鬼的, 要转为watch来监听initData */
+  watch(
+    () => initData.value,
+    (val) => {
+      Object.keys(val).forEach((key) => {
+        _props.useEffect(key, val[key]);
+      });
+    },
+  );
 
   const handleChange = (field: string, val: any) => {
     _props.useEffect(field, val, form);
   };
 
-  const setPropValue = (field: string, val: any) => {
-    const target: any = childRefs.value.find((t: any) => t.prop === field);
-    target.setValue(val);
+  const setPropValue = (prop: string, val: any) => {
+    const targetRef: any = childRefs.value.find((t: any) => t.prop === prop);
+    nextTick(() => {
+      targetRef.setValue(val);
+    });
   };
 
   const validateForm = async () => {

@@ -4,7 +4,7 @@
       <sl-space-item
         v-for="(item, inx) in list"
         :key="'checkbox_' + inx"
-        :class="[
+        :className="[
           clz.body(),
           direction === 'x' ? 'flex-inline' : 'block',
           { 'opacity-disabled': disabled },
