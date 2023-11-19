@@ -38,7 +38,7 @@ export const props = {
   },
   fontSize: {
     type: String as PropType<IFont>,
-    default: 'title',
+    default: 'content',
   },
   color: {
     type: String as PropType<IColor>,
@@ -72,7 +72,7 @@ export const props = {
   },
   placeholderStyle: {
     type: Object as PropType<CSSProperties>,
-    default: () => {},
+    default: () => ({ 'font-size': '28rpx' }),
   },
 
   disabled: {
