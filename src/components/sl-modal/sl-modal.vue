@@ -1,7 +1,7 @@
 <template>
   <sl-mask v-model:open="isOpen" :closeOnTab="closeOnTab" mode="center">
     <view :class="[clz.root(), className]">
-      <sl-card paddingClz="p-all-none" :hasShadow="false">
+      <sl-card paddingClz="p-all-none" :hasShadow="false" className="scroll-hidden">
         <view class="plr-l">
           <view v-if="hasTitle" :class="[clz.head()]" class="height-cell-default flex">
             <view class="font-title flex-grow">{{ title }}</view>
@@ -14,7 +14,7 @@
           </view>
         </view>
 
-        <view v-if="hasFoot" :class="[clz.foot()]" class="flex-center pb-xs">
+        <view v-if="hasFoot" :class="[clz.foot()]" class="flex-center">
           <view v-if="hasCancel" class="flex-grow">
             <sl-button
               radius="none"
