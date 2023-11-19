@@ -1,14 +1,10 @@
 <template>
   <view :class="[clz.root(), className]" class="">
-    <sl-space-group :gutter="32" :rowGutter="12">
+    <sl-space-group :gutter="32" :rowGutter="12" :layout="direction === 'x' ? 'float' : 'block'">
       <sl-space-item
         v-for="(item, inx) in list"
         :key="'checkbox_' + inx"
-        :className="[
-          clz.body(),
-          direction === 'x' ? 'flex-inline' : 'block',
-          { 'opacity-disabled': disabled },
-        ]"
+        :className="[clz.body(), { 'opacity-disabled': disabled }]"
         @click="handleSelect(item.value)"
       >
         <sl-icon-text

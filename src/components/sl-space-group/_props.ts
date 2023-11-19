@@ -17,7 +17,7 @@ export const props = {
     default: 0,
   },
   layout: {
-    type: String as PropType<'float' | 'inline-block'>,
+    type: String as PropType<'float' | 'block'>, // block纵向
     default: 'float',
   },
 };
