@@ -82,16 +82,15 @@
           />
           <view
             v-if="showClear && focus && value.toString().length > 0"
-            class="flex-inline"
-            @tap="handleClear"
+            class="ml-xs abs-centerflex-inline"
           >
-            <sl-icon v-bind="clearIcon" />
+            <sl-icon v-bind="clearIcon" className="radius-round" @click="handleClear" />
           </view>
           <view v-if="type === 'password'" class="ml-xs flex-inline">
             <sl-icon
               :name="showPassword ? eyeIcon.showEye : eyeIcon.closeEye"
               v-bind="eyeIcon"
-              @tap="showPassword = !showPassword"
+              @click="showPassword = !showPassword"
             />
           </view>
         </view>

@@ -13,7 +13,7 @@ export const useInput = (props: any, emits: any) => {
     setTimeout(() => {
       focus.value = false;
       emits('blur', isClear ? '' : event.detail.value);
-    }, 50);
+    }, 300);
   };
   const handleInput = (event: any) => {
     const val = event.detail.value || '';
