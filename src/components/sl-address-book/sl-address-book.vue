@@ -39,28 +39,24 @@
       </view>
     </scroll-view>
     <!--索引条-->
-    <view
-      :class="[clz.right()]"
-      class="flex-shrink flex-column-center pt-xl"
-      :style="{ height: height ? `calc(${height} - 80px)` : `${calcHeight - 80}px` }"
-    >
+    <view :class="[clz.right()]" class="flex-shrink flex-column-center">
       <scroll-view
         scroll-y
         :scroll-into-view="letterId"
         :show-scrollbar="false"
         :enhanced="true"
-        class="h100 scroll-transparent delay-show"
+        :style="{ height: height ? `calc(${height} - 80px)` : `${calcHeight - 60}px` }"
+        class="scroll-transparent delay-show"
       >
         <view
-          v-for="cata in list"
+          v-for="(cata, inx) in list"
           :key="'index_' + cata.firstLetter"
           :id="'index_' + cata.firstLetter"
-          class="rect-32 flex-center radius-round mb-xxs"
+          class="rect-32 flex-center radius-round"
           :class="[
             'index_' + cata.firstLetter,
-            activeLetter === cata.firstLetter
-              ? 'color-white bg-primary radius-round'
-              : 'color-primary',
+            activeLetter === cata.firstLetter ? 'color-white bg-primary' : 'color-primary',
+            { 'mb-xxs': inx < list.length - 1 },
           ]"
           :data-letter="cata.firstLetter"
           @click="handleLetter"
