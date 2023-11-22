@@ -22,7 +22,7 @@ export const props = {
   },
   type: {
     type: String as PropType<'circle' | 'square'>,
-    default: 'circle',
+    default: 'square',
   },
   disabled: {
     type: Boolean,

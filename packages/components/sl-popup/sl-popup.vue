@@ -15,13 +15,23 @@
     </view>
   </sl-mask>
 </template>
-<script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
-  import { computed } from 'vue';
-  import { props } from './_props';
 
+<script lang="ts">
+  import { useClassName } from '../../hooks/use-class-name';
   const ComponentName = 'sl-popup';
   const clz = useClassName(ComponentName);
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
+
+<script setup lang="ts">
+  import { computed } from 'vue';
+  import { props } from './_props';
 
   const _props = defineProps(props);
   const _emits = defineEmits(['update:open', 'confirm']);

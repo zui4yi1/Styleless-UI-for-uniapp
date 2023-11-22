@@ -20,13 +20,23 @@
     </view>
   </view>
 </template>
-<script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
-  import { inject } from 'vue';
-  import { props } from './_props';
 
+<script lang="ts">
+  import { useClassName } from '../../hooks/use-class-name';
   const ComponentName = 'sl-col';
   const clz = useClassName(ComponentName);
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
+
+<script setup lang="ts">
+  import { inject } from 'vue';
+  import { props } from './_props';
 
   defineProps(props);
   defineEmits(['click']);

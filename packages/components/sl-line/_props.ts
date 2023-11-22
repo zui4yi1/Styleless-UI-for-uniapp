@@ -12,6 +12,10 @@ export const props = {
     type: String as PropType<IColor>,
     default: 'line-light',
   },
+  size: {
+    type: String,
+    default: '1px',
+  },
   length: {
     type: String,
     default: '100%',

@@ -9,7 +9,7 @@
       >
         <view class="plr-l">
           <template v-for="(item, inx) in list" :key="clz.join('body', 'item', inx)">
-            <view class="flex-between height-cell-default" @click="handleSelect(item, inx)">
+            <view class="flex-between height-cell-default" @click="handleSelect(item)">
               <view class="flex-grow text-ellipsis">
                 {{ item.label }}
               </view>
@@ -29,16 +29,26 @@
     </view>
   </sl-popup>
 </template>
+
+<script lang="ts">
+  import { useClassName } from '../../hooks/use-class-name';
+  const ComponentName = 'sl-select';
+  const clz = useClassName(ComponentName);
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
+
 <script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { computed, ref, toRaw, watchEffect } from 'vue';
   import { props, type ICompSelect } from './_props';
 
-  const ComponentName = 'sl-select';
-  const clz = useClassName(ComponentName);
-
   const _props = defineProps(props);
-  const _emits = defineEmits(['update:open', 'change', 'update:value', 'confirm']);
+  const _emits = defineEmits(['update:open', 'update:value', 'change']);
 
   const tempValue = ref([] as any[]);
 
@@ -51,17 +61,15 @@
     },
   });
 
-  const handleSelect = (item: ICompSelect, index: number) => {
+  const handleSelect = (item: ICompSelect) => {
     if (item.disabled) return;
 
     if (_props.multiple) {
       let inx = tempValue.value.findIndex((t) => t === item.value);
       if (inx === -1) tempValue.value.push(item.value);
       else tempValue.value.splice(inx, 1);
-      _emits('change', { value: tempValue.value, index });
     } else {
       tempValue.value = [item.value];
-      _emits('change', { value: tempValue.value[0], index });
     }
   };
 
@@ -77,11 +85,11 @@
     if (_props.multiple) {
       const vals = [...toRaw(tempValue.value)];
       _emits('update:value', vals);
-      _emits('confirm', vals);
+      _emits('change', vals);
     } else {
       _emits('update:value', tempValue.value[0]);
 
-      _emits('confirm', tempValue.value[0]);
+      _emits('change', tempValue.value[0]);
     }
   };
 </script>

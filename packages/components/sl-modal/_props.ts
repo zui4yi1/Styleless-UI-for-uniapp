@@ -38,6 +38,10 @@ export const props = {
     type: Boolean,
     default: true,
   },
+  hasConfirm: {
+    type: Boolean,
+    default: true,
+  },
   hasFoot: {
     type: Boolean,
     default: true,

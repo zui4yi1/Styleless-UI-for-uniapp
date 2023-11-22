@@ -6,12 +6,12 @@ export const props = {
     type: [String, Array],
     default: '',
   },
-  /** 高度的尺寸 should be times of 4 */
+  /** 高度的尺寸 */
   height: {
     type: Number,
     default: 56,
   },
-  /** 中间矩形宽度，即实际宽度为 height+width */
+  /** 中间矩形宽度，实际的switch宽度为 height+width */
   width: {
     type: Number,
     default: 40,

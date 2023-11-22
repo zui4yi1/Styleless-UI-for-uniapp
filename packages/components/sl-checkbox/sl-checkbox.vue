@@ -1,40 +1,48 @@
 <template>
   <view :class="[clz.root(), className]" class="">
-    <view
-      v-for="(item, inx) in list"
-      :key="'checkbox_' + inx"
-      :class="[
-        clz.body(),
-        direction === 'x' ? 'flex-inline' : 'block',
-        { 'opacity-disabled': disabled },
-      ]"
-      @click="handleSelect(item.value)"
-    >
-      <sl-icon-text
-        :name="iconName"
-        :iconLib="iconLib"
-        :label="item.label"
-        :size="size"
-        :labelClz="labelClz"
-        :iconClz="
-          [
-            'border',
-            type === 'circle' ? 'radius-round' : '',
-            value.includes(item.value)
-              ? 'bg-primary border-transparent'
-              : 'bg-white border-line-default',
-          ].join(' ')
-        "
-      />
-    </view>
+    <sl-space-group :gutter="32" :rowGutter="12" :layout="direction === 'x' ? 'float' : 'block'">
+      <sl-space-item
+        v-for="(item, inx) in list"
+        :key="'checkbox_' + inx"
+        :className="[clz.body(), { 'opacity-disabled': disabled }]"
+        @click="handleSelect(item.value)"
+      >
+        <sl-icon-text
+          :name="iconName"
+          :iconLib="iconLib"
+          :label="item.label"
+          :size="size"
+          :labelClz="labelClz"
+          :iconClz="
+            [
+              'border',
+              type === 'circle' ? 'radius-round' : '',
+              value.includes(item.value)
+                ? 'bg-primary border-transparent'
+                : 'bg-white border-line-default',
+            ].join(' ')
+          "
+        />
+      </sl-space-item>
+    </sl-space-group>
   </view>
 </template>
-<script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
-  import { props } from './_props';
 
+<script lang="ts">
+  import { useClassName } from '../../hooks/use-class-name';
   const ComponentName = 'sl-checkbox';
   const clz = useClassName(ComponentName);
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
+
+<script setup lang="ts">
+  import { props } from './_props';
 
   const _props = defineProps(props);
   const _emits = defineEmits(['update:value', 'change']);

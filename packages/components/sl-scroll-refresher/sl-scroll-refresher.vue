@@ -31,20 +31,13 @@
         </slot>
         <text class="font-content color-secondary ml-xs font-secondary">释放立即刷新</text>
       </view>
-      <view v-if="isSucc" class="flex-center height-cell-default bg-primary">
-        <sl-icon name="icon_check" color="white" />
-        <text class="color-white ml-xs">刷新成功</text>
+      <view v-if="isSucc" class="flex-center height-cell-default">
+        <sl-icon name="icon_check" color="secondary" size="36" />
+        <text class="color-secondary ml-s">刷新成功</text>
       </view>
       <view v-if="showList" class="plr-l">
         <slot></slot>
       </view>
-      <!--这块没啥用-->
-      <!-- <view v-if="showAppendTip">
-        <slot name="load_icon">
-          <sl-icon name="icon_loading" className="spin" />
-        </slot>
-        <text class="font-content color-secondary ml-xs">更多数据加载中...</text>
-      </view> -->
       <view v-if="showErrorTip && !refresherTriggered">
         <view class="text-center color-placeholder">{{ showErrorTip }}</view>
       </view>
@@ -55,17 +48,26 @@
     </view>
   </scroll-view>
 </template>
+
+<script lang="ts">
+  import { useClassName } from '../../hooks/use-class-name';
+  const ComponentName = 'sl-scroll-refresher';
+  const clz = useClassName(ComponentName);
+  export default {
+    name: ComponentName,
+    options: {
+      virtualHost: true,
+      inheritAttrs: false,
+    },
+  };
+</script>
+
 <script setup lang="ts">
-  import { useClassName } from '@/hooks/use-class-name';
   import { getCurrentInstance } from 'vue';
   import { props } from './_props';
   import { useScrollRefresher } from './useScrollRefresher';
 
-  const ComponentName = 'sl-scroll-refresher';
-  const clz = useClassName(ComponentName);
-
   const _props = defineProps(props);
-  // defineEmits(['click']);
 
   const instance = getCurrentInstance();
 
@@ -74,7 +76,6 @@
     refresherTriggered,
     showPullTip,
     showRefreshTip,
-    // showAppendTip,
     showErrorTip,
     isShowNoMoreTip,
     showList,
