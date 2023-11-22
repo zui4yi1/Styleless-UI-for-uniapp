@@ -71,8 +71,8 @@ export const props = {
     default: '请输入',
   },
   placeholderStyle: {
-    type: Object as PropType<CSSProperties>,
-    default: () => ({ 'font-size': '28rpx' }),
+    type: String,
+    default: 'font-size: 28rpx',
   },
 
   disabled: {
