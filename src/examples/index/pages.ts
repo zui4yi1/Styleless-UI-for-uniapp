@@ -84,6 +84,7 @@ const pages = [
         componentDesc: '填充行',
         url: '/examples/fill-line/index',
       },
+      { componentName: 'sl-search', componentDesc: '搜索', url: '/examples/search/index' },
     ],
   },
 ];
