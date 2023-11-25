@@ -12,7 +12,7 @@
         ]"
         class="flex flex-grow font-title color-content"
       >
-        <sl-icon v-if="leftIcon.name?.length > 0" v-bind="leftIcon" />
+        <sl-icon v-if="leftIcon.name?.length > 0" v-bind="leftIcon" @click="handleClickLeft" />
         <view
           v-if="prefix || $slots.prefix"
           :class="[clz.join('body', 'prefix')]"
@@ -80,11 +80,8 @@
             @input="handleInput"
             @confirm="$emit('confirm', ($event as any).detail.value)"
           />
-          <view
-            v-if="showClear && focus && value.toString().length > 0"
-            class="ml-xs abs-centerflex-inline"
-          >
-            <sl-icon v-bind="clearIcon" className="radius-round" @click="handleClear" />
+          <view v-if="showClear && focus && value.toString().length > 0" class="ml-xs flex-inline">
+            <sl-icon v-bind="clearIcon" @click="handleClear" />
           </view>
           <view v-if="type === 'password'" class="ml-xs flex-inline">
             <sl-icon
@@ -127,9 +124,23 @@
   import { useInput } from './useInput';
 
   const _props = defineProps(props);
-  const _emits = defineEmits(['update:value', 'input', 'focus', 'blur', 'change', 'confirm']);
-  const { showPassword, focus, handleFocus, handleBlur, handleInput, handleClear } = useInput(
-    _props,
-    _emits,
-  );
+  const _emits = defineEmits([
+    'update:value',
+    'input',
+    'focus',
+    'blur',
+    'change',
+    'confirm',
+    'onLeft',
+    'clear',
+  ]);
+  const {
+    showPassword,
+    focus,
+    handleFocus,
+    handleBlur,
+    handleInput,
+    handleClear,
+    handleClickLeft,
+  } = useInput(_props, _emits);
 </script>
