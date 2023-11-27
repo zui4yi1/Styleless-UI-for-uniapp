@@ -16,11 +16,16 @@
         `bg-${_theme.bg}`,
       ]"
       class="flex-center plr-s"
+      :data-set="dataSet"
       :disabled="disabled"
+      :open-type="openType"
       :hover-start-time="10"
       :hover-stay-time="10"
       :hover-class="hoverClass || `bg-${_theme.bg}-hover`"
-      @click="$emit('click', index)"
+      @click="handleClick(index, $event)"
+      @getphonenumber="getPhonenumber"
+      @openSetting="openSetting"
+      @getUserInfo="getUserInfo"
     >
       <sl-icon v-if="_icon.name" v-bind="_icon" />
       <slot />
@@ -42,11 +47,12 @@
 </script>
 
 <script setup lang="ts">
+  import { debounce } from 'lodash-es';
   import { computed } from 'vue';
   import { props } from './_props';
 
   const _props = defineProps(props);
-  defineEmits(['click']);
+  const _emits = defineEmits(['click', 'getPhonenumber', 'openSetting', 'getUserInfo']);
 
   const _theme = computed(() => {
     return {
@@ -69,4 +75,18 @@
       _props.icon,
     );
   });
+
+  const handleClick = debounce((inx: number, event: any) => {
+    _emits('click', inx, event);
+  }, 300);
+
+  const getPhonenumber = (res: any) => {
+    _emits('getPhonenumber', res);
+  };
+  const getUserInfo = (res: any) => {
+    _emits('getUserInfo', res);
+  };
+  const openSetting = (res: any) => {
+    _emits('openSetting', res);
+  };
 </script>

@@ -16,6 +16,14 @@ export const props = {
     type: String,
     default: 'auto',
   },
+  openType: {
+    type: String as PropType<'none' | 'getPhoneNumber' | 'openSetting' | 'getUserInfo'>,
+    default: 'none',
+  },
+  dataSet: {
+    type: [Object, Array, String, Number, Boolean],
+    default: null,
+  },
   size: {
     type: String as PropType<IHeight>,
     default: 'button-default',
