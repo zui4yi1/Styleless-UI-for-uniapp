@@ -89,6 +89,9 @@
     },
     {
       "path": "examples/search/index"
+    },
+    {
+      "path": "examples/tags/index"
     }
   ],
   "globalStyle": {
