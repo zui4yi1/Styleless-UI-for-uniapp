@@ -112,8 +112,9 @@ export const props = {
     default: () => ({
       iconLib: 'sl-ui-common',
       name: '',
-      size: 24,
+      size: 32,
       color: 'placeholder',
+      className: 'mr-xs',
     }),
   },
   clearIcon: {
@@ -123,7 +124,7 @@ export const props = {
       name: 'icon_close_fill',
       size: 32,
       color: 'placeholder' as IColor,
-      className: 'bg-white',
+      className: 'radius-round',
     }),
   },
   eyeIcon: {

@@ -1,27 +1,29 @@
 <template>
   <view
-    :class="[clz.root(), className, `radius-${radius}`]"
+    :class="[clz.root(), className, `radius-${radius}`, { 'inline-block': type === 'text' }]"
     class="border-none"
-    :style="{ width: width }"
+    :style="{ width: _theme.width }"
   >
     <button
       :class="[
         clz.body(),
         bodyClazz,
+        _theme.paddingClz,
+        _theme.borderClz,
         `radius-${radius}`,
-        `height-${size}`,
+        `height-${_theme.size}`,
         `font-${_theme.fontSize}`,
         `color-${_theme.color}`,
         { 'opacity-disabled disabled': disabled },
         `bg-${_theme.bg}`,
       ]"
-      class="flex-center plr-s"
+      class="flex-center lh-0"
       :data-set="dataSet"
       :disabled="disabled"
       :open-type="openType"
       :hover-start-time="10"
       :hover-stay-time="10"
-      :hover-class="hoverClass || `bg-${_theme.bg}-hover`"
+      hover-class="opacity-disabled"
       @click="handleClick(index, $event)"
       @getphonenumber="getPhonenumber"
       @openSetting="openSetting"
@@ -55,12 +57,38 @@
   const _emits = defineEmits(['click', 'getPhonenumber', 'openSetting', 'getUserInfo']);
 
   const _theme = computed(() => {
-    return {
-      bg: _props.theme.bg || _props.bg || 'primary',
-      color: _props.theme.color || _props.color || 'white',
-      fontSize: _props.theme.fontSize || 'content',
-      borderClz: _props.theme.borderClz || 'border-none',
-    };
+    switch (_props.type) {
+      case 'text':
+        return {
+          bg: 'transparent',
+          color: _props.color || 'primary',
+          fontSize: 'content',
+          borderClz: 'border-none',
+          paddingClz: 'p-all-xxs',
+          width: 'fit-content',
+          size: 'none',
+        };
+      case 'plain':
+        return {
+          bg: _props.bg || 'white',
+          color: _props.color || 'primary',
+          fontSize: 'content',
+          borderClz: 'border border-thick ' + (_props.color || 'primary'),
+          paddingClz: _props.paddingClz || 'plr-s',
+          width: _props.width || 'auto',
+          size: _props.size || 'button-default',
+        };
+      default:
+        return {
+          bg: _props.bg || 'primary',
+          color: _props.color || 'white',
+          fontSize: 'content',
+          borderClz: 'border-none',
+          paddingClz: _props.paddingClz || 'plr-s',
+          width: _props.width || 'auto',
+          size: _props.size || 'button-default',
+        };
+    }
   });
 
   const _icon = computed(() => {

@@ -8,6 +8,10 @@ export const props = {
     type: [String, Array],
     default: '',
   },
+  type: {
+    type: String as PropType<'theme' | 'plain' | 'text'>,
+    default: 'theme',
+  },
   radius: {
     type: String as PropType<IRadius>,
     default: 'default',
@@ -15,6 +19,10 @@ export const props = {
   width: {
     type: String,
     default: 'auto',
+  },
+  paddingClz: {
+    type: String,
+    default: 'plr-s',
   },
   openType: {
     type: String as PropType<'none' | 'getPhoneNumber' | 'openSetting' | 'getUserInfo'>,
@@ -41,7 +49,7 @@ export const props = {
    */
   bodyClazz: {
     type: String,
-    default: 'border-none',
+    default: '',
   },
   bg: {
     type: String as PropType<IColor>,
@@ -51,21 +59,13 @@ export const props = {
     type: String as PropType<IColor>,
     default: 'white',
   },
+  borderColor: {
+    type: String as PropType<IColor>,
+    default: 'none',
+  },
   index: {
     type: Number,
     default: 0,
-  },
-  /**
-   * @description 所有主题的配置, 无默认值，若有则优先级最高, 可用于自定义按钮的风格
-   */
-  theme: {
-    type: Object,
-    default: () => ({
-      bg: '' as IColor,
-      fontSize: '' as IFont,
-      color: '' as IColor,
-      borderClz: '',
-    }),
   },
   icon: {
     type: Object,

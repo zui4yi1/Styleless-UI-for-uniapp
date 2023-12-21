@@ -706,6 +706,10 @@ button[disabled].disabled.color-transparent-hover {
 }
 
 /* margin间距类，形如ml-l, mr-l */
+.mt-none {
+  margin-top: 0px;
+}
+
 .mt-xxs {
   margin-top: 4rpx;
 }
@@ -728,6 +732,10 @@ button[disabled].disabled.color-transparent-hover {
 
 .mt-xl {
   margin-top: 40rpx;
+}
+
+.mr-none {
+  margin-right: 0px;
 }
 
 .mr-xxs {
@@ -754,6 +762,10 @@ button[disabled].disabled.color-transparent-hover {
   margin-right: 40rpx;
 }
 
+.mb-none {
+  margin-bottom: 0px;
+}
+
 .mb-xxs {
   margin-bottom: 4rpx;
 }
@@ -776,6 +788,10 @@ button[disabled].disabled.color-transparent-hover {
 
 .mb-xl {
   margin-bottom: 40rpx;
+}
+
+.ml-none {
+  margin-left: 0px;
 }
 
 .ml-xxs {
@@ -803,6 +819,10 @@ button[disabled].disabled.color-transparent-hover {
 }
 
 /* padding间距类，形如pl-l, pr-l */
+.pt-none {
+  padding-top: 0px;
+}
+
 .pt-xxs {
   padding-top: 4rpx;
 }
@@ -825,6 +845,10 @@ button[disabled].disabled.color-transparent-hover {
 
 .pt-xl {
   padding-top: 40rpx;
+}
+
+.pr-none {
+  padding-right: 0px;
 }
 
 .pr-xxs {
@@ -851,6 +875,10 @@ button[disabled].disabled.color-transparent-hover {
   padding-right: 40rpx;
 }
 
+.pb-none {
+  padding-bottom: 0px;
+}
+
 .pb-xxs {
   padding-bottom: 4rpx;
 }
@@ -873,6 +901,10 @@ button[disabled].disabled.color-transparent-hover {
 
 .pb-xl {
   padding-bottom: 40rpx;
+}
+
+.pl-none {
+  padding-left: 0px;
 }
 
 .pl-xxs {
@@ -900,6 +932,11 @@ button[disabled].disabled.color-transparent-hover {
 }
 
 /* margin间距类，形如mlr-l, mtb-l */
+.mlr-none {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .mlr-xxs {
   margin-left: 4rpx;
   margin-right: 4rpx;
@@ -928,6 +965,11 @@ button[disabled].disabled.color-transparent-hover {
 .mlr-xl {
   margin-left: 40rpx;
   margin-right: 40rpx;
+}
+
+.mtb-none {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .mtb-xxs {
@@ -961,6 +1003,11 @@ button[disabled].disabled.color-transparent-hover {
 }
 
 /* padding间距类，形如plr-l, ptb-l, p-all-l */
+.plr-none {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .plr-xxs {
   padding-left: 4rpx;
   padding-right: 4rpx;
@@ -991,6 +1038,11 @@ button[disabled].disabled.color-transparent-hover {
   padding-right: 40rpx;
 }
 
+.ptb-none {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .ptb-xxs {
   padding-top: 4rpx;
   padding-bottom: 4rpx;
@@ -1019,6 +1071,10 @@ button[disabled].disabled.color-transparent-hover {
 .ptb-xl {
   padding-top: 40rpx;
   padding-bottom: 40rpx;
+}
+
+.p-all-none {
+  padding: 0px;
 }
 
 .p-all-xxs {

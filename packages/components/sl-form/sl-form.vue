@@ -5,6 +5,7 @@
       :key="'group_' + inx"
       :class="[clz.join('body', 'group'), g.groupName]"
     >
+      <slot v-if="g.groupName" name="header" :title="g.groupName" />
       <template v-for="item in g.list" :key="item.prop">
         <sl-form-item
           v-if="item.isRemove !== true"

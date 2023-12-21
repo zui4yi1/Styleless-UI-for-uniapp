@@ -10,7 +10,7 @@
     "scope": "vue",
     "prefix": "vue-base-component",
     "body": [
-      "<template>\r  <view :class=\"[clz.root(), className]\" class=\"\"></view>\r</template>\r<script setup lang=\"ts\">\r  import { useClassName } from '../../hooks/use-class-name';\r  import { props } from './_props';\r\r  const ComponentName = 'sl-';\r  const clz = useClassName(ComponentName);\r\r  defineProps(props);\r  // defineEmits(['click']);\r</script>\r",
+      "<template>\r  <view :class=\"[clz.root(), className]\" class=\"\"></view>\r</template>\r<script lang=\"ts\">\r  import { useClassName } from '../../hooks/use-class-name';\r  const ComponentName = 'sl-$1';\r  const clz = useClassName(ComponentName);\r  export default {\r    name: ComponentName,\r    options: {\r      virtualHost: true,\r      inheritAttrs: false,\r    },\r  };\r</script>\r<script setup lang=\"ts\">\r  import { props } from './_props';\r\r  const _props = defineProps(props);\r  const _emits = defineEmits(['click']);\r</script>\r",
       "$2"
     ],
     "description": "snippets for base components"

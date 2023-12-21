@@ -232,6 +232,7 @@ conf.list.push({
   type: 'gap',
   summary: '间距',
   items: [
+    { key: 'none', value: '0px' },
     { key: 'xxs', value: '4rpx' },
     { key: 'xs', value: '8rpx' },
     { key: 's', value: '16rpx' },
