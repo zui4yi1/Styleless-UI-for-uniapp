@@ -1,6 +1,6 @@
 <template>
   <view
-    :class="[clz.root(), className]"
+    :class="[clz.root(), className, bodyClz]"
     class="fixed z-index-layout abs-top delay-show"
     :style="{
       top: isCustomNavBar ? `${top}px` : 0,
@@ -25,8 +25,8 @@
 </script>
 
 <script setup lang="ts">
-  import { getDom } from '@/utils/dom';
   import { getCurrentInstance, onMounted, ref } from 'vue';
+  import { getDom } from '../../utils/dom';
   import { props } from './_props';
 
   const _props = defineProps(props);

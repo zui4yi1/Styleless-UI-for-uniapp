@@ -17,8 +17,8 @@
 </script>
 
 <script setup lang="ts">
-  import { getDom } from '@/utils/dom';
   import { getCurrentInstance, onMounted, provide, ref } from 'vue';
+  import { getDom } from '../../utils/dom';
   import { props } from './_props';
 
   const _props = defineProps(props);

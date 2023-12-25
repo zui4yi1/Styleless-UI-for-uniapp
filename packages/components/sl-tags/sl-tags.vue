@@ -9,11 +9,18 @@
       >
         <view
           v-if="type === 'bg'"
-          :class="[`bg-${item.bg || bg}`]"
-          class="plr-s ptb-xs text color-white radius-default"
+          :class="[
+            clz.body(),
+            bodyClz,
+            `height-${size}`,
+            `bg-${item.bg || bg}`,
+            `color-${color}`,
+            `radius-${radius}`,
+          ]"
+          class="text flex-inline"
         >
           {{ item.label }}
-          <sl-icon v-if="showDelete" name="icon_close_fill" color="white" />
+          <sl-icon v-if="showDelete" name="icon_close_fill" color="white" className="ml-xxs" />
         </view>
         <text v-else :class="[`color-${color}`]" class="text">{{ item.label }}</text>
       </sl-space-item>
@@ -25,7 +32,7 @@
   import { useClassName } from '../../hooks/use-class-name';
   import { props } from './_props';
 
-  const ComponentName = 'sl-';
+  const ComponentName = 'sl-tags';
   const clz = useClassName(ComponentName);
 
   const _props = defineProps(props);

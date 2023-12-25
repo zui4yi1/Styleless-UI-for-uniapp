@@ -39,6 +39,10 @@ export const props = {
     type: Boolean,
     default: true,
   },
+  bodyClz: {
+    type: String,
+    default: 'plr-l',
+  },
   threshold: {
     type: Number,
     default: 50,

@@ -17,7 +17,7 @@
     @tap="handleToggle"
   >
     <view
-      :class="[clz.body(), value ? `border-transparent` : 'border-line-default']"
+      :class="[clz.body(), bodyClz, value ? `border-transparent` : 'border-line-default']"
       class="absolute radius-round bg-white border shadow-default border-box"
       :style="{
         height: `${calcHeight - 2}px`,

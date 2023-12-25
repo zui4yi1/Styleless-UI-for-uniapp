@@ -25,4 +25,8 @@ export const props = {
     type: Boolean,
     default: false,
   },
+  bodyClz: {
+    type: String,
+    default: '',
+  },
 };

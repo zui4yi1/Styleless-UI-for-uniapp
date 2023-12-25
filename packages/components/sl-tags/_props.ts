@@ -13,13 +13,13 @@ export const props = {
     type: [String, Array],
     default: '',
   },
+  size: {
+    type: String as PropType<IHeight>,
+    default: 'button-none',
+  },
   type: {
     type: String as PropType<'text' | 'bg'>,
     default: 'bg',
-  },
-  color: {
-    type: String as PropType<IColor>,
-    default: 'primary',
   },
   font: {
     type: String as PropType<IFont>,
@@ -29,9 +29,21 @@ export const props = {
     type: Boolean,
     default: false,
   },
+  color: {
+    type: String as PropType<IColor>,
+    default: 'white',
+  },
   bg: {
     type: String as PropType<IColor>,
     default: 'primary',
+  },
+  radius: {
+    type: String as PropType<IRadius>,
+    default: 'default',
+  },
+  bodyClz: {
+    type: String,
+    default: 'plr-s ptb-xs',
   },
   label: {
     type: String,

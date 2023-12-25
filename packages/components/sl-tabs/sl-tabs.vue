@@ -8,7 +8,7 @@
     :enhanced="true"
     class="w100 border-box"
   >
-    <view :id="id" :class="[clz.body()]" class="flex relative pb-s">
+    <view :id="id" :class="[clz.body(), bodyClz]" class="flex relative">
       <view
         v-for="(item, inx) in list"
         :key="'tab-item' + inx"
