@@ -1,5 +1,5 @@
-import { getDom } from '@/utils/dom';
 import { inject, nextTick, onMounted, reactive, ref, watch } from 'vue';
+import { getDom } from '../../utils/dom';
 
 export const useScrollRefresher = (props: any, instance: any) => {
   const isSucc = ref(false);

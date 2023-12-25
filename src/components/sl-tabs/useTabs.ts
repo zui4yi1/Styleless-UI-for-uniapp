@@ -1,6 +1,6 @@
 import { onMounted, ref, type CSSProperties } from 'vue';
 
-import { getDom, getDoms } from '@/utils/dom';
+import { getDom, getDoms } from '../../utils/dom';
 
 export const useTabs = (instance: any, _props: any, _emits: any, clz: any) => {
   const tabBarCssObj = ref({} as CSSProperties);
