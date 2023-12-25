@@ -251,6 +251,11 @@ conf.list.push({
     { key: 'button-small', value: '64rpx' },
     { key: 'cell-default', value: '88rpx' },
     { key: 'cell-large', value: '120rpx' },
+    { key: 'large', value: '55rpx' },
+    { key: 'default', value: '68rpx' },
+    { key: 'small', value: '56rpx' },
+    { key: 'mini', value: '48rpx' },
+    { key: 'none', value: 'unset' },
   ],
 });
 

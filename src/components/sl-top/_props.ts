@@ -17,6 +17,10 @@ export const props = {
     type: Number,
     default: 88,
   },
+  bodyClz: {
+    type: String,
+    default: '',
+  },
 };
 
 export type IProps = typeof props;

@@ -1,6 +1,6 @@
 <template>
   <view
-    :class="[clz.root(), className]"
+    :class="[clz.root(), className, bodyClz]"
     class="fixed z-index-layout abs-top delay-show"
     :style="{
       top: isCustomNavBar ? `${top}px` : 0,

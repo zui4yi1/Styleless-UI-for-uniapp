@@ -2,15 +2,12 @@
   <s-page title="sl-tags" className="plr-l">
     <Brief desc="XXXX" />
     <Tip title="测试" />
-    <sl-tags label="标签" />
-    <sl-tags label="标签" type="text" />
+    <sl-tags label="标签" color="white" />
+    <sl-tags label="标签" color="white" bodyClz=" radius-cell-default plr-l ptb-xs" class="" />
+    <sl-tags label="标签" type="text" color="primary" />
     <sl-tags :list="tags" showDelete />
     <sl-tags :list="tags" />
     <sl-tags :list="tags" type="text" />
-    <view class="flex-between">
-      <view class="radius-round rect-88 bg-pink"></view>
-      <sl-tags label="标签" />
-    </view>
   </s-page>
 </template>
 <script setup lang="ts">
