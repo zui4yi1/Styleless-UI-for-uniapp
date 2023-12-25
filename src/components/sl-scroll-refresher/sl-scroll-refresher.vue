@@ -35,7 +35,7 @@
         <sl-icon name="icon_check" color="secondary" size="36" />
         <text class="color-secondary ml-s">刷新成功</text>
       </view>
-      <view v-if="showList" class="plr-l">
+      <view v-if="showList" :class="bodyClz">
         <slot></slot>
       </view>
       <view v-if="showErrorTip && !refresherTriggered">
