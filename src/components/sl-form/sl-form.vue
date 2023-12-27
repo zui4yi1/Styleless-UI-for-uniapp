@@ -9,19 +9,17 @@
       <template v-for="item in g.list" :key="item.prop">
         <sl-form-item
           v-if="item.isRemove !== true"
+          :className="itemClz"
           ref="childRefs"
-          :type="item.type"
-          :prop="item.prop"
-          :label="item.label"
+          v-bind="item"
           :value="detail[item.prop]"
           :list="dicts[item.prop] || []"
-          :rules="item.rules"
-          :xLayoutClz="item.xLayoutClz"
-          :readOnly="item.readOnly"
-          :isHidden="item.isHidden"
-          :compOps="item.compOps"
           @change="handleChange(item.prop, $event)"
-        />
+        >
+          <template #cus_com="scope">
+            <slot :name="(item.type || '').replaceAll('-', '_')" v-bind="scope" />
+          </template>
+        </sl-form-item>
       </template>
     </view>
   </view>

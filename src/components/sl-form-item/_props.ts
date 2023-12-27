@@ -12,12 +12,20 @@ export const props = {
     default: '',
   },
   type: {
-    type: String as PropType<IFieldType>,
+    type: String as PropType<IFieldType | ''>,
     default: 'sl-input',
+  },
+  isCustom: {
+    type: Boolean,
+    default: false,
   },
   prop: {
     type: String,
     default: '',
+  },
+  itemAlign: {
+    type: String,
+    default: 'right',
   },
   layout: {
     type: String as PropType<'x' | 'y'>,
@@ -60,7 +68,7 @@ export const props = {
     type: Boolean,
     default: false,
   },
-  lableSpan: {
+  labelSpan: {
     type: Number,
     default: 6,
   },

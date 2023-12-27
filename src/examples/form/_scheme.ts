@@ -85,6 +85,33 @@ export const formScheme = (): IFormGroup[] => [
         prop: 'agree',
         label: '同意',
       },
+      {
+        type: 'cus-com',
+        prop: 'cus',
+        label: '自定义',
+        isCustom: true,
+        labelSpan: 0,
+        // itemAlign: 'left',
+        rules: [
+          {
+            required: true,
+            text: '自定义不能为空',
+          },
+        ],
+      },
+      {
+        type: 'cus-com',
+        prop: 'cus2',
+        label: '自定义2',
+        isCustom: true,
+        labelSpan: 0,
+        rules: [
+          {
+            required: true,
+            text: '自定义2不能为空',
+          },
+        ],
+      },
     ],
   },
 ];

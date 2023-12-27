@@ -41,5 +41,14 @@
       "$2"
     ],
     "description": "snippets for base components props"
+  },
+  "vue-cus-form-item": {
+    "scope": "vue",
+    "prefix": "vue-cus-form-item",
+    "body": [
+      "<template>\r  <view class=\"w100\">\r    <!--演示例子-->\r    <view>自定义组件</view>\r    <template v-if=\"mode === 'form'\">\r      <sl-input v-model:value=\"curVal\" />\r    </template>\r    <template v-else>\r      <view class=\"flex-right\">\r        {{ curVal }}\r      </view>\r    </template>\r  </view>\r</template>\r<script setup lang=\"ts\">\r  import { computed } from 'vue';\r\r  /** 自定义组件的三个必要属性, 可自定义其它 */\r  interface IProps {\r    value: string;\r    mode: 'form' | 'detail'; // 自定义组件必须实现form和detail模式, 因为sl-form是表单与详情一体的\r    cusChange: any; // change事件不走emit, 直接用attr模式\r  }\r  const props = withDefaults(defineProps<IProps>(), {\r    value: '',\r    mode: 'form',\r    cusChange: () => {},\r  });\r\r  const curVal = computed({\r    get() {\r      return props.value;\r    },\r    set(val) {\r      props.cusChange(val);\r    },\r  });\r</script>\r",
+      "$2"
+    ],
+    "description": "snippets for base components props"
   }
 }

@@ -14,7 +14,10 @@ export interface IFormItem {
    * @description 是否隐藏节点, 不会删除节点及数据
    */
   isHidden?: boolean;
+  isCustom?: boolean;
   xLayoutClz?: string;
+  labelSpan?: number;
+  itemAlign?: 'left' | 'right';
   rules?: IValidtorRule[];
   compOps?: any;
 }
@@ -34,9 +37,17 @@ export const props = {
     type: [String, Array],
     default: '',
   },
+  itemClz: {
+    type: String,
+    default: '',
+  },
   lableSpan: {
     type: Number,
     default: 6,
+  },
+  itemAlign: {
+    type: String,
+    default: 'right',
   },
   detail: {
     type: Object,

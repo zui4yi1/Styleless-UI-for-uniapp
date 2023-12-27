@@ -56,6 +56,7 @@ const getDetail = () => {
         hobits: [1],
         agree: true,
         advantage: 0,
+        cus: 'cus...',
       });
     }, 1000);
   });
