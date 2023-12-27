@@ -10,6 +10,7 @@
         <sl-form-item
           v-if="item.isRemove !== true"
           :className="itemClz"
+          :errorClz="errorClz"
           ref="childRefs"
           v-bind="item"
           :value="detail[item.prop]"

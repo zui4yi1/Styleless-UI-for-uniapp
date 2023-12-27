@@ -1,8 +1,6 @@
 import type { PropType } from 'vue';
 import type { IValidtorRule } from './_validate';
 
-export type IFieldType = 'sl-input' | 'sl-checkbox' | 'sl-radio' | 'sl-switch' | 'sl-select';
-
 export const props = {
   /**
    * @description inject global classNames to the component root
@@ -12,12 +10,20 @@ export const props = {
     default: '',
   },
   type: {
-    type: String as PropType<IFieldType>,
+    type: String,
     default: 'sl-input',
+  },
+  isCustom: {
+    type: Boolean,
+    default: false,
   },
   prop: {
     type: String,
     default: '',
+  },
+  itemAlign: {
+    type: String,
+    default: 'right',
   },
   layout: {
     type: String as PropType<'x' | 'y'>,
@@ -60,13 +66,21 @@ export const props = {
     type: Boolean,
     default: false,
   },
-  lableSpan: {
+  labelSpan: {
     type: Number,
     default: 6,
   },
   emptyText: {
     type: String,
-    default: '/',
+    default: '',
+  },
+  errorClz: {
+    type: String,
+    default: '',
+  },
+  itemClz: {
+    type: String,
+    default: '',
   },
   compOps: {
     type: Object,

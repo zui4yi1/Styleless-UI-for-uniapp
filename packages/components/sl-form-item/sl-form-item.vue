@@ -1,13 +1,22 @@
 <template>
   <view v-show="isHidden !== true" :class="[clz.root(), className]">
     <view :class="[clz.body(), layout === 'x' ? xLayoutClz : 'block']" class="ptb-s">
-      <view :class="[clz.join('body', 'label'), `span-${lableSpan}`]" class="flex-shrink">
-        <text class="color-error mr-xxs">*</text>
+      <view
+        v-if="labelSpan"
+        :class="[clz.join('body', 'label'), `span-${labelSpan}`]"
+        class="flex-shrink"
+      >
+        <text class="color-error mr-xxs" v-if="form_es.mode.value === 'form'">*</text>
         <text class="text">{{ label }}</text>
       </view>
       <view
-        :class="[clz.join('body', 'value'), { 'border border-error': inValidateText.length }]"
-        class="flex-grow flex-right"
+        :class="[
+          clz.join('body', 'value'),
+          `flex-${itemAlign}`,
+          { 'border border-error ': inValidateText.length },
+          { [errorClz]: inValidateText.length },
+        ]"
+        class="flex-grow"
       >
         <!--只读的展示-->
         <template v-if="form_es.mode.value === 'detail' || readOnly">
@@ -18,6 +27,14 @@
           <text v-else-if="type === 'sl-switch'">
             {{ [undefined, null, ''].includes(itemVal) ? emptyText : itemVal }}
           </text>
+          <slot
+            v-else-if="isCustom"
+            name="cus_com"
+            mode="detail"
+            :value="itemVal"
+            :cusChange="handleCusChange"
+            v-bind="_compOps"
+          />
           <text v-else>{{ itemVal || emptyText }}</text>
         </template>
         <!--表单-->
@@ -52,13 +69,14 @@
               @change="change"
             />
           </template>
-          <!-- <slot
-            v-if="$slots.default"
-            :type="type"
+          <slot
+            v-if="isCustom"
+            name="cus_com"
+            mode="form"
             :value="itemVal"
+            :cusChange="handleCusChange"
             v-bind="_compOps"
-            @change="change"
-          /> -->
+          />
         </template>
       </view>
     </view>
@@ -111,7 +129,9 @@
 
   const _compOps = computed(() => {
     if (_props.type === 'sl-input')
-      return Object.assign({ borderClz: 'border-none', heightSize: 'auto' }, _props.compOps);
+      return _props.compOps.type !== 'textarea'
+        ? Object.assign({ borderClz: 'border-none' }, _props.compOps)
+        : _props.compOps;
     return _props.compOps;
   });
 
@@ -146,6 +166,11 @@
   const change = (val: string) => {
     validator();
     _emits('change', val);
+  };
+
+  const handleCusChange = (val: any) => {
+    itemVal.value = val;
+    change(val);
   };
 
   const reset = (val: any) => {

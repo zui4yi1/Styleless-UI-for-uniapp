@@ -6,14 +6,15 @@
         :class="[clz.join('body', 'label'), `span-${labelSpan}`]"
         class="flex-shrink"
       >
-        <text class="color-error mr-xxs">*</text>
+        <text class="color-error mr-xxs" v-if="form_es.mode.value === 'form'">*</text>
         <text class="text">{{ label }}</text>
       </view>
       <view
         :class="[
           clz.join('body', 'value'),
           `flex-${itemAlign}`,
-          { 'border border-error': inValidateText.length },
+          { 'border border-error ': inValidateText.length },
+          { [errorClz]: inValidateText.length },
         ]"
         class="flex-grow"
       >
@@ -128,7 +129,9 @@
 
   const _compOps = computed(() => {
     if (_props.type === 'sl-input')
-      return Object.assign({ borderClz: 'border-none', heightSize: 'auto' }, _props.compOps);
+      return _props.compOps.type !== 'textarea'
+        ? Object.assign({ borderClz: 'border-none' }, _props.compOps)
+        : _props.compOps;
     return _props.compOps;
   });
 

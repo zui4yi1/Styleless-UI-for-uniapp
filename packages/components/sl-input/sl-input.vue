@@ -1,5 +1,5 @@
 <template>
-  <view :class="[clz.root(), className]">
+  <view :class="[clz.root(), className, 'w100']">
     <!--body-->
     <view :class="clz.body()" class="flex">
       <view
@@ -24,7 +24,7 @@
         </view>
 
         <view
-          :class="[clz.join('body', 'wrap'), type === 'textarea' ? 'flex-plain' : 'flex']"
+          :class="[clz.join('body', 'wrap'), type === 'textarea' ? 'flex-top' : 'flex']"
           class="flex-grow"
         >
           <textarea
@@ -35,7 +35,7 @@
               `text-${align}`,
               `color-${disabled ? 'disabled' : color}`,
             ]"
-            class="flex-grow border-none w100"
+            class="flex-grow border-none"
             :value="value"
             :placeholder="placeholder"
             :placeholderStyle="placeholderStyle"
@@ -43,11 +43,10 @@
             :maxlength="maxlength"
             :fixed="fixed"
             :focus="focus"
-            :confirmType="confirmType"
             :cursorSpacing="cursorSpacing"
             :SelectionStart="SelectionStart"
             :SelectionEnd="SelectionEnd"
-            :style="{ ...Object.assign({ height: height, ...styleObj }) }"
+            :style="{ ...Object.assign({ height: height, width: 'auto', ...styleObj }) }"
             @focus="handleFocus"
             @blur="handleBlur"
             @input="handleInput"

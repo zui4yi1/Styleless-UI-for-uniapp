@@ -1,6 +1,6 @@
 {
   "name": "styleless-ui-for-uniapp",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "一款基于“样式组件化”开发的uniapp UI库, 采用UI组件库跟随业务系统的理念, 整套UI没有一个style， 使用时也不用引入样式, 即styleless",
   "private": false,
   "keywords": [

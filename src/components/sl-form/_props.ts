@@ -53,6 +53,10 @@ export const props = {
     type: Object,
     default: () => {},
   },
+  errorClz: {
+    type: String,
+    default: '',
+  },
   dicts: {
     type: Object,
     default: () => {},
