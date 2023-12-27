@@ -15,7 +15,8 @@ export const useImage = (props: any, emits: any) => {
     isLoading.value = false;
   };
 
-  const handleClick = () => {
+  const handleClick = (e: Event) => {
+    e.stopPropagation();
     if (props.preview) {
       uni.previewImage({
         urls: [props.src],
