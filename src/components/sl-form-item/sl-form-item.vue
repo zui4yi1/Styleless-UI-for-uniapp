@@ -6,7 +6,12 @@
         :class="[clz.join('body', 'label'), `span-${labelSpan}`]"
         class="flex-shrink"
       >
-        <text class="color-error mr-xxs" v-if="form_es.mode.value === 'form'">*</text>
+        <text
+          class="color-error mr-xxs"
+          v-if="form_es.mode.value === 'form' && rules?.some((item) => item.required)"
+        >
+          *
+        </text>
         <text class="text">{{ label }}</text>
       </view>
       <view

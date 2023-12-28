@@ -36,10 +36,10 @@ export const formScheme = (): IFormGroup[] => [
           align: 'right',
         },
         rules: [
-          {
-            required: true,
-            text: '年龄不能为空',
-          },
+          // {
+          //   required: true,
+          //   text: '年龄不能为空',
+          // },
           {
             reg: /\D/,
             text: '请输入数字',
