@@ -44,6 +44,7 @@ const pages = [
       { componentName: 'sl-popup', componentDesc: '底部弹窗', url: '/examples/popup/index' },
       { componentName: 'sl-modal', componentDesc: '中间模态弹窗', url: '/examples/modal/index' },
       { componentName: 'sl-select', componentDesc: '下拉框弹窗', url: '/examples/select/index' },
+      { componentName: 'sl-picker', componentDesc: 'picker联动', url: '/examples/picker/index' },
       {
         componentName: 'sl-action-sheet',
         componentDesc: '操作选择弹窗',

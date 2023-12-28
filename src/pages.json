@@ -85,6 +85,9 @@
       "path": "examples/empty/index"
     },
     {
+      "path": "examples/picker/index"
+    },
+    {
       "path": "examples/fill-line/index"
     },
     {
