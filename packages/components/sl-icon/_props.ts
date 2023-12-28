@@ -25,7 +25,7 @@ export const props = {
     default: '',
   },
   size: {
-    type: Number,
+    type: [Number, String],
     default: 28,
   },
   index: {
