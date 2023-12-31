@@ -5,8 +5,11 @@
       title="默认"
       desc="参数主要是v-model:open,  v-model:value, list(树形式), title, 及columns(默认3)"
     />
+    <view>选中值：{{ val }}</view>
+    <view>标签名:{{ labels }}</view>
     <sl-button @click="open1 = true" className="mt-d">打开</sl-button>
-    <sl-picker v-model:open="open1" title="请选择" v-model:value="val" :list="list" />
+    <sl-button @click="getLabel" className="mt-d">标签名</sl-button>
+    <sl-picker ref="pickRef" v-model:open="open1" title="请选择" v-model:value="val" :list="list" />
   </s-page>
 </template>
 <script setup lang="ts">
@@ -19,7 +22,12 @@
   const themes = ['primary', 'success', 'error'];
   const open1 = ref(false);
 
-  const val = ref(['c', 'c2', 'c22']);
+  const val = ref([]);
+  const pickRef = ref(null as any);
+  const labels = ref('');
+  const getLabel = () => {
+    labels.value = pickRef.value?.getLabels();
+  };
   const list = [
     {
       label: '高中',

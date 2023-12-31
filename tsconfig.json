@@ -1,15 +1,15 @@
 {
   "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
+    "ignoreDeprecations": "5.0",
     "sourceMap": true,
     "baseUrl": ".",
 
     "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types", "@types/uni-app"],
-    "ignoreDeprecations": "5.0",
+    "types": ["@dcloudio/types", "@types/node"],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.ts", "typings/*.d.ts", "src/**/*.vue", "src/typings/*.d.ts"]
+  "include": ["src/**/*.ts", "src/**/*.vue", "typings/*.d.ts", "src/typings/*.d.ts"]
 }

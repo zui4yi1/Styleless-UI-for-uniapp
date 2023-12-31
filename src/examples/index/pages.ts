@@ -1,6 +1,6 @@
 const pages = [
   {
-    title: '系统类',
+    title: '系统/基础类',
     type: 'sys',
     list: [
       { componentName: 'sl-page', componentDesc: '页面根节点', url: '/examples/page/index' },
@@ -10,21 +10,29 @@ const pages = [
         componentDesc: '列表组件, 下拉刷新+触底加载',
         url: '/examples/scroll-refresher/index',
       },
+      { componentName: 'sl-button', componentDesc: '按钮', url: '/examples/button/index' },
     ],
   },
   {
     title: '表单类',
     type: 'form',
     list: [
-      { componentName: 'sl-button', componentDesc: '按钮', url: '/examples/button/index' },
-      { componentName: 'sl-input', componentDesc: '输入框', url: '/examples/input/index' },
-      { componentName: 'sl-checkbox', componentDesc: '复选框', url: '/examples/checkbox/index' },
-      { componentName: 'sl-radio', componentDesc: '单选框', url: '/examples/radio/index' },
-      { componentName: 'sl-switch', componentDesc: '开关', url: '/examples/switch/index' },
       {
         componentName: 'sl-form',
         componentDesc: 'form表单组件, 加强版',
         url: '/examples/form/index',
+      },
+
+      { componentName: 'sl-input', componentDesc: '输入框', url: '/examples/input/index' },
+      { componentName: 'sl-checkbox', componentDesc: '复选框', url: '/examples/checkbox/index' },
+      { componentName: 'sl-radio', componentDesc: '单选框', url: '/examples/radio/index' },
+      { componentName: 'sl-switch', componentDesc: '开关', url: '/examples/switch/index' },
+      { componentName: 'sl-select', componentDesc: '下拉框弹窗', url: '/examples/select/index' },
+      { componentName: 'sl-picker', componentDesc: 'picker联动', url: '/examples/picker/index' },
+      {
+        componentName: 'sl-date-picker',
+        componentDesc: '日期选择器',
+        url: '/examples/date-picker/index',
       },
     ],
   },
@@ -43,8 +51,7 @@ const pages = [
       { componentName: 'sl-mask', componentDesc: '遮罩', url: '/examples/mask/index' },
       { componentName: 'sl-popup', componentDesc: '底部弹窗', url: '/examples/popup/index' },
       { componentName: 'sl-modal', componentDesc: '中间模态弹窗', url: '/examples/modal/index' },
-      { componentName: 'sl-select', componentDesc: '下拉框弹窗', url: '/examples/select/index' },
-      { componentName: 'sl-picker', componentDesc: 'picker联动', url: '/examples/picker/index' },
+
       {
         componentName: 'sl-action-sheet',
         componentDesc: '操作选择弹窗',

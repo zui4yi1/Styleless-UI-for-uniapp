@@ -4,7 +4,10 @@
       <sl-popup-head
         :title="title"
         :mode="mode"
-        @close="isOpen = false"
+        @close="
+          isOpen = false;
+          $emit('close');
+        "
         @confirm="$emit('confirm')"
       />
 
@@ -34,7 +37,7 @@
   import { props } from './_props';
 
   const _props = defineProps(props);
-  const _emits = defineEmits(['update:open', 'confirm']);
+  const _emits = defineEmits(['update:open', 'confirm', 'close']);
 
   const isOpen = computed({
     get() {

@@ -69,7 +69,7 @@ export const formScheme = (): IFormGroup[] => [
         ],
       },
       {
-        type: 'sl-checkbox',
+        type: 'sl-select',
         prop: 'hobits',
         label: '爱好',
         xLayoutClz: 'flex-top',
@@ -79,7 +79,33 @@ export const formScheme = (): IFormGroup[] => [
             text: '爱好不能为空',
           },
         ],
+        compOps: {
+          multiple: true,
+        },
       },
+      {
+        type: 'sl-picker',
+        prop: 'className',
+        label: '班级',
+        rules: [
+          {
+            required: true,
+            text: '班级不能为空',
+          },
+        ],
+      },
+      {
+        type: 'sl-date-picker',
+        prop: 'birthdate',
+        label: '出生日期',
+        rules: [
+          {
+            required: true,
+            text: '出生日期不能为空',
+          },
+        ],
+      },
+
       {
         type: 'sl-switch',
         prop: 'agree',

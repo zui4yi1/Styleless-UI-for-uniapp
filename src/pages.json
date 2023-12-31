@@ -88,6 +88,9 @@
       "path": "examples/picker/index"
     },
     {
+      "path": "examples/date-picker/index"
+    },
+    {
       "path": "examples/fill-line/index"
     },
     {

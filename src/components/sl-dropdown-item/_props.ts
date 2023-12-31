@@ -21,7 +21,7 @@ export const props = {
     default: false,
   },
   type: {
-    type: String as PropType<'select' | 'sort' | 'text' | 'cascade' | 'custom'>,
+    type: String as PropType<'select' | 'sort' | 'text' | 'cascade' | 'date' | 'custom'>,
     default: 'select',
   },
   list: {
@@ -33,6 +33,10 @@ export const props = {
     default: '',
   },
   mutilple: {
+    type: Boolean,
+    default: false,
+  },
+  hasAll: {
     type: Boolean,
     default: false,
   },

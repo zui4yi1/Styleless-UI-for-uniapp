@@ -46,6 +46,69 @@ const getAdvantages = () => {
   });
 };
 
+const getClazzNames = () => {
+  return new Promise<any[]>((resolve) => {
+    setTimeout(() => {
+      resolve([
+        {
+          label: '高中',
+          value: 'h',
+          children: [
+            {
+              label: '高一',
+              value: 'h1',
+              children: [
+                { label: '高一1班', value: 'h11' },
+                { label: '高一2班', value: 'h12' },
+              ],
+            },
+            {
+              label: '高二',
+              value: 'h2',
+              children: [
+                { label: '高二1班', value: 'h21' },
+                { label: '高二2班', value: 'h22' },
+              ],
+            },
+            {
+              label: '高三',
+              value: 'h3',
+              children: [
+                { label: '高三1班', value: 'h31' },
+                { label: '高三2班', value: 'h32' },
+              ],
+            },
+          ],
+        },
+        {
+          label: '初中',
+          value: 'c',
+          children: [
+            {
+              label: '初一',
+              value: 'c1',
+              children: [
+                { label: '初一1班', value: 'c11' },
+                { label: '初一2班', value: 'c12' },
+              ],
+            },
+            {
+              label: '初二',
+              value: 'c2',
+              children: [
+                { label: '初二1班', value: 'c21' },
+                { label: '初二2班', value: 'c22' },
+              ],
+            },
+          ],
+        },
+      ]);
+    }, 500);
+  });
+};
+
+// const list =
+
 const getDetail = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -55,7 +118,7 @@ const getDetail = () => {
         gender: 1,
         hobits: [1],
         agree: true,
-        advantage: 0,
+        advantage: [1],
         cus: 'cus...',
       });
     }, 1000);
@@ -65,6 +128,7 @@ const getDetail = () => {
 export const useDicts = () => {
   const hobits = ref([] as any[]);
   const advantage = ref([] as any[]);
+  const className = ref([] as any[]);
 
   onBeforeMount(() => {
     getHobits().then((res) => {
@@ -73,12 +137,16 @@ export const useDicts = () => {
     getAdvantages().then((res) => {
       advantage.value = res;
     });
+    getClazzNames().then((res) => {
+      className.value = res;
+    });
   });
 
   return {
     gender,
     hobits,
     advantage,
+    className,
   };
 };
 

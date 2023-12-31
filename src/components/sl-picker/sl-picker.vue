@@ -2,16 +2,17 @@
   <sl-popup v-model:open="isOpen" :title="title" @confirm="handleConfirm">
     <view :class="[clz.root(), className]">
       <picker-view
+        v-if="valsInx.length"
         :value="valsInx"
         style="height: 520rpx"
-        @change="handleChange"
-        indicator-class="flex-center border-line-light border-top border-bottom"
-        mask-class=""
+        :indicator-class="indicatorClz"
+        :indicator-style="indicatorStyle"
         class="color-content font-content"
+        @change="handleChange"
       >
         <picker-view-column v-for="count in columns" :key="'column_' + count" class="text-center">
           <view
-            class="center"
+            :style="{ height: pickViewHeight, 'line-height': pickViewHeight }"
             v-for="(item, inx) in getColomnList(valsInx.slice(0, count))"
             :key="'item_' + count + '_' + inx"
           >
@@ -24,6 +25,7 @@
 </template>
 
 <script lang="ts">
+  import { cloneDeep } from 'lodash-es';
   import { useClassName } from '../../hooks/use-class-name';
   const ComponentName = 'sl-picker';
   const clz = useClassName(ComponentName);
@@ -39,6 +41,7 @@
 <script setup lang="ts">
   import { computed, ref, watchEffect } from 'vue';
   import { props } from './_props';
+  import * as _tools from './_tools';
 
   const _props = defineProps(props);
   const _emits = defineEmits(['update:open', 'update:value', 'change']);
@@ -55,20 +58,6 @@
     },
   });
 
-  const _findInxVals = (list: any[], inxs: number[], res: any[]): any[] => {
-    if (inxs.length === 0) return [];
-    const tmpInx = inxs.shift() || 0;
-    res.push(list[tmpInx][_props.dataMap.value]);
-    if (inxs.length === 0) {
-      return res;
-    }
-    return _findInxVals(list[tmpInx]?.children || [], inxs, res);
-  };
-  /** 获取索引在各列对应的值 */
-  const getInxVals = () => {
-    const res = _findInxVals(_props.list, valsInx.value.slice(0), []);
-    return res;
-  };
   const handleChange = (e: any) => {
     const arr = e.detail.value;
     const defenceInx = valsInx.value.findIndex((val, inx) => val !== arr[inx]);
@@ -80,73 +69,36 @@
     ];
   };
 
-  const _findValsInx = (list: any[], vals: string[], res: number[]): any[] => {
-    if (vals.length === 0) return [];
-    const tmpVal = vals.shift();
-    const inx = list.findIndex((t) => t.value === tmpVal);
-    res.push(inx);
-    if (vals.length === 0) {
-      return res;
-    }
-    return _findValsInx(list[inx]?.children || [], vals, res);
-  };
-  /** 获取值在各列对应的索引 */
-  const getValsInx = (vals: string[]) => {
-    const res = _findValsInx(_props.list, vals.slice(0), []);
-    return res;
-  };
-
-  const _findValsName = (list: any[], vals: string[], res: number[]): any[] => {
-    if (vals.length === 0) return [];
-    const tmpVal = vals.shift();
-    const inx = list.findIndex((t) => t.value === tmpVal);
-    res.push(list[inx][_props.dataMap.label]);
-    if (vals.length === 0) {
-      return res;
-    }
-    return _findValsName(list[inx]?.children || [], vals, res);
-  };
-  /** 获取值在各列对应的标签名 */
-  const getValsName = () => {
-    if (_props.value instanceof Array) {
-      const res = _findValsName(_props.list, _props.value.slice(0), []);
-
-      return res;
-    } else {
-      return [];
-    }
-  };
-
-  const _findColumn = (list: any[], inxs: number[]): any[] => {
-    if (inxs.length === 1) return list;
-    const tmpInx = inxs.shift() || 0;
-    return _findColumn(list[tmpInx]?.children || [], inxs);
-  };
   /** 获取列 */
   const getColomnList = (inxs: number[]) => {
-    const res = _findColumn(_props.list, inxs.slice(0));
+    if (!inxs.length || !_props.list.length) return [];
+    const { list, dataMap, hasAll } = _props;
+    const res = _tools.getColomnList(cloneDeep(list), inxs, { dataMap, hasAll });
+
     return res;
   };
 
-  /** 当list有数据后, 初始化默认选中。只执行一次 */
-  const watchOnce = watchEffect(() => {
-    if (_props.list.length) {
-      if (_props.value instanceof Array) {
-        valsInx.value = getValsInx(_props.value);
-      } else {
-        valsInx.value = new Array(_props.columns).fill(0);
-      }
-      setTimeout(() => {
-        watchOnce();
-      }, 80);
+  watchEffect(() => {
+    // 每次打开都须重新计算
+    if (isOpen.value && _props.list.length) {
+      const { list, value, columns, hasAll, dataMap } = _props;
+      const res = _tools.getInitValInxs(list, value, { columns, hasAll, dataMap });
+      valsInx.value = res;
     }
   });
 
+  const getLabels = () => {
+    const { list, hasAll, dataMap } = _props;
+    const res = _tools.getInxsLabel(list, valsInx.value, { hasAll, dataMap });
+    return res;
+  };
+
   const handleConfirm = () => {
-    const res = getInxVals();
+    const { list, hasAll, dataMap } = _props;
+    const res = _tools.getInxsVal(list, valsInx.value, { hasAll, dataMap });
     _emits('update:value', res);
     _emits('change', res);
   };
 
-  defineExpose({ getValsName });
+  defineExpose({ getLabels });
 </script>

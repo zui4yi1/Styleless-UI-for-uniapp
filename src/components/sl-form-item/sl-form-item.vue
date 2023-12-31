@@ -27,6 +27,12 @@
         <template v-if="form_es.mode.value === 'detail' || readOnly">
           <text v-if="type === 'sl-input'">{{ itemVal || emptyText }}</text>
           <text v-else-if="type === 'sl-select'">{{ valueLabel(itemVal) }}</text>
+          <text v-else-if="type === 'sl-picker'">
+            {{ [null, '', undefined].includes(itemVal as any) ? '' : treeLabels(itemVal) }}
+          </text>
+          <text v-else-if="type === 'sl-date-picker'">
+            {{ [null, '', undefined].includes(itemVal as any) ? '' : itemVal }}
+          </text>
           <text v-else-if="type === 'sl-radio'">{{ valueLabel(itemVal) }}</text>
           <text v-else-if="type === 'sl-checkbox'">{{ valuesLabels(itemVal as any[]) }}</text>
           <text v-else-if="type === 'sl-switch'">
@@ -63,13 +69,52 @@
           </template>
           <template v-else-if="type === 'sl-select'">
             <view @click="open = true" class="flex-inline">
-              {{ [null, '', undefined].includes(itemVal as any) ? '请选择' : valueLabel(itemVal) }}
+              {{
+                [null, '', undefined].includes(itemVal as any) || !itemVal?.length
+                  ? '请选择'
+                  : valueLabel(itemVal)
+              }}
               <sl-icon name="icon_arrow_right" :size="32" />
             </view>
             <sl-select
               v-model:open="open"
               v-model:value="itemVal"
               :list="_list"
+              v-bind="_compOps"
+              @change="change"
+            />
+          </template>
+          <template v-else-if="type === 'sl-picker'">
+            <view @click="open = true" class="flex-inline">
+              {{
+                [null, '', undefined].includes(itemVal as any) || !itemVal?.length
+                  ? '请选择'
+                  : treeLabels(itemVal)
+              }}
+              <sl-icon name="icon_arrow_right" :size="32" />
+            </view>
+            <sl-picker
+              v-model:open="open"
+              v-model:value="itemVal"
+              title="请选择"
+              :list="_list"
+              v-bind="_compOps"
+              @change="change"
+            />
+          </template>
+          <template v-else-if="type === 'sl-date-picker'">
+            <view @click="open = true" class="flex-inline">
+              {{
+                [null, '', undefined].includes(itemVal as any) || !itemVal?.length
+                  ? '请选择'
+                  : itemVal
+              }}
+              <sl-icon name="icon_arrow_right" :size="32" />
+            </view>
+            <sl-date-picker
+              v-model:open="open"
+              v-model:value="itemVal"
+              title="请选择"
               v-bind="_compOps"
               @change="change"
             />
@@ -154,10 +199,6 @@
     return res;
   };
 
-  const valueLabel = (value: any) => {
-    return (_list.value as any[]).find((t: any) => t.value === value)?.label || _props.emptyText;
-  };
-
   const valuesLabels = (vals: any[]) => {
     if (!vals || !(vals instanceof Array)) return _props.emptyText;
     return (
@@ -166,6 +207,31 @@
         .map((v: any) => v.label)
         .join(',') || _props.emptyText
     );
+  };
+
+  const valueLabel = (value: any) => {
+    if (_props.compOps.multiple) return valuesLabels(value);
+    return (_list.value as any[]).find((t: any) => t.value === value)?.label || _props.emptyText;
+  };
+  const _treeData = (list: any[], vals: any[], labels: string[] = []): string[] => {
+    if (vals.length === 0) return [];
+    const tmpVal = vals.shift();
+    const inx = list.findIndex((t) => t.value === tmpVal) || 0;
+    if (inx === -1) {
+      return labels;
+    } else {
+      labels.push(list[inx]?.label || '');
+    }
+    // 如果是最后一个则终止迭代
+    if (vals.length === 0) {
+      return labels;
+    }
+    return _treeData(list[inx]?.children || [], vals, labels);
+  };
+  const treeLabels = (vals: any[]) => {
+    if (!vals?.length) return '';
+    const res = _treeData(((_list.value as any[]) || []).slice(0), vals.slice(0), []);
+    return res?.join(',') || '';
   };
 
   const change = (val: string) => {
