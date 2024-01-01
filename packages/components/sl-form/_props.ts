@@ -6,17 +6,13 @@ export interface IFormItem {
   prop: string;
   label: string;
   readOnly?: boolean;
-  /**
-   * @description 是否移除节点. 注意是真实移除dom节点且相应修改的数据也会移除, 若先true再false, 则值为初始值
-   */
   isRemove?: boolean;
-  /**
-   * @description 是否隐藏节点, 不会删除节点及数据
-   */
   isHidden?: boolean;
   isCustom?: boolean;
   xLayoutClz?: string;
   labelSpan?: number;
+  emptyText?: string;
+  layout?: 'x' | 'y';
   itemAlign?: 'left' | 'right';
   rules?: IValidtorRule[];
   compOps?: any;
@@ -27,16 +23,24 @@ export interface IFormGroup {
   list: IFormItem[];
 }
 
-// export type IEffects = (prop: string, value: any):void => {};
-
+/**
+ * @summary
+ * @description
+ * @param lableSpan label的宽度, 栅格模式
+ * @param detail 详情, 可用作表单的初始值
+ * @param dicts 字典集, {propName:[{label,value}]}的形式
+ * @param mode form或detail模式
+ * @param itemClz 透传到sl-form-item的类名
+ * @param useEffect 表单变化, 后续改为onFormChange, 可用于处理联动
+ * @param scheme 表单json配置, 二维数据。详见下面
+ * @param errorClz 验证错误时的样式
+ */
 export const props = {
-  /**
-   * @description inject global classNames to the component root
-   */
   className: {
     type: [String, Array],
     default: '',
   },
+  /** 透传到sl-form-item的类名 */
   itemClz: {
     type: String,
     default: '',
@@ -45,10 +49,7 @@ export const props = {
     type: Number,
     default: 6,
   },
-  itemAlign: {
-    type: String,
-    default: 'right',
-  },
+
   detail: {
     type: Object,
     default: () => {},
@@ -61,19 +62,10 @@ export const props = {
     type: Object,
     default: () => {},
   },
-  /** 水平布局时的布局类 */
-  xLayoutClz: {
-    type: String,
-    default: 'flex',
-  },
   mode: {
     type: String as PropType<'form' | 'detail'>,
     default: 'form',
   },
-
-  /**
-   * @description 二维数组, 这是为了支持多块的表单
-   */
   scheme: {
     type: Array as PropType<IFormGroup[]>,
     default: () => [],

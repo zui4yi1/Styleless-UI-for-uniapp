@@ -10,7 +10,7 @@
     :style="{ paddingTop: type === 'x' ? 0 : `${top}rpx` }"
   >
     <sl-icon
-      name="icon_nodata"
+      :name="iconName"
       :color="color"
       :size="size"
       :className="type === 'x' ? 'mr-xs' : ''"

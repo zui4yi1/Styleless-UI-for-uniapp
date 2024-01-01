@@ -9,7 +9,7 @@
       marginLeft: `${(100 / 24) * Number(offset)}%`,
       textAlign: align,
     }"
-    @tap="$emit('click', index)"
+    @tap="$emit('click')"
   >
     <view
       :class="[clz.body(), bodyClz, `radius-${radius}`, `bg-${bg}`]"

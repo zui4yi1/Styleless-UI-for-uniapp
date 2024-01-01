@@ -4,10 +4,11 @@
     class="flex-shrink relative flex-center"
     @click="handleDropdown(selfIndex)"
   >
+    <!--标题-->
     <view :style="{ maxWidth: maxWidth }" class="flex-center scroll-hidden">
       <template v-if="type === 'select'">
         <view class="scroll-hidden">
-          <template v-if="labels.length > 0">
+          <template v-if="labels.length">
             <view class="text-ellipsis color-primary">
               <slot name="customSelect" :labels="labels">
                 {{ labels.join(',') }}
@@ -18,11 +19,50 @@
             <view>{{ title }}</view>
           </template>
         </view>
-        <sl-icon name="icon_arrow_up" v-if="selfIndex === activeInx" :size="32" />
-        <sl-icon v-else name="icon_arrow_down" :size="32" />
+        <sl-icon
+          :name="selfIndex === activeInx ? 'icon_arrow_up' : 'icon_arrow_down'"
+          :color="labels.length ? 'primary' : 'placeholder'"
+          :size="32"
+        />
+      </template>
+      <template v-else-if="type === 'cascade'">
+        <view class="scroll-hidden">
+          <template v-if="pickerLabels.length">
+            <view class="text-ellipsis color-primary">
+              <slot name="customCascade" :labels="pickerLabels">
+                {{ pickerLabels }}
+              </slot>
+            </view>
+          </template>
+          <template v-else>
+            <view>{{ title }}</view>
+          </template>
+        </view>
+        <sl-icon
+          :name="selfIndex === activeInx ? 'icon_arrow_up' : 'icon_arrow_down'"
+          :color="pickerLabels.length ? 'primary' : 'placeholder'"
+          :size="32"
+        />
       </template>
       <template v-else-if="type === 'text'">
         <view class="text-ellipsis" :class="[{ 'color-primary': isActive }]">{{ title }}</view>
+      </template>
+      <template v-else-if="type === 'date'">
+        <view class="scroll-hidden">
+          <template v-if="dateText.length">
+            <view class="text-ellipsis color-primary">
+              {{ dateText }}
+            </view>
+          </template>
+          <template v-else>
+            <view>{{ title }}</view>
+          </template>
+        </view>
+        <sl-icon
+          :name="selfIndex === activeInx ? 'icon_arrow_up' : 'icon_arrow_down'"
+          :color="dateText.length ? 'primary' : 'placeholder'"
+          :size="32"
+        />
       </template>
       <template v-else-if="type === 'sort'">
         <view class="text-ellipsis" :class="[{ 'color-primary': isActive }]">
@@ -85,6 +125,27 @@
       </view>
     </view>
   </template>
+  <!--日期-->
+  <sl-date-picker
+    v-if="type === 'date'"
+    title="请选择日期"
+    v-model:open="isPopupOpen"
+    v-model:value="dateText"
+    @close="handleClosePopup"
+  />
+
+  <sl-picker
+    v-if="type === 'cascade'"
+    ref="pickreRef"
+    :hasAll="hasAll"
+    :title="`请选择${title}`"
+    v-model:open="isPopupOpen"
+    v-model:value="pickerValues"
+    :list="list"
+    @close="handleClosePopup"
+    @change="handleConfirm"
+  />
+  <sl-picker />
 </template>
 <script lang="ts">
   import { useClassName } from '../../hooks/use-class-name';
@@ -106,7 +167,14 @@
   const _props = defineProps(props);
   const _emits = defineEmits(['update:value', 'select']);
 
+  // 排序类计数
   const sortCount = ref(0);
+
+  // 日期类文本
+  const dateText = ref('');
+  const isPopupOpen = ref(false);
+
+  const pickreRef = ref(null as any);
 
   const { scroll, dropdownItems, activeInx, topPos, addItem, updateActiveInx, onChange } = inject(
     'dropdownParent',
@@ -131,6 +199,10 @@
   const labels = computed(() => {
     return _props.list.filter((t) => values.value.includes(t.value)).map((t) => t.label);
   });
+  const pickerLabels = ref('');
+  const pickerValues = computed(() => {
+    return _props.value instanceof Array && _props.value.length ? [..._props.value] : [];
+  });
 
   onBeforeMount(() => {
     addItem(_props.title);
@@ -142,7 +214,7 @@
     }
   });
 
-  const handleDropdown = (val: number) => {
+  const handleDropdown = (inx: number) => {
     if (_props.type === 'sort') {
       sortCount.value = sortCount.value === 2 ? 0 : sortCount.value + 1;
       onChange(selfIndex.value, sortCount.value);
@@ -150,17 +222,31 @@
         updateActiveInx(-1);
         return;
       }
-    } else if (_props.type !== 'select') {
+    } else if (['date', 'cascade'].includes(_props.type)) {
+      isPopupOpen.value = true;
+    } else if (_props.type === 'text') {
+      // 主要是文本类
       onChange(selfIndex.value, null);
     }
-    updateActiveInx(val);
+    // TODO: 自定义类的还未实现
+    updateActiveInx(inx);
   };
+
+  /** select类型 */
   const handleSelect = (val: any) => {
     if (!_props.mutilple) {
-      _emits('select', val);
-      _emits('update:value', val);
       updateActiveInx(-1);
-      onChange(selfIndex.value, val);
+      if (_props.value && _props.value === val) {
+        // 取消
+        _emits('select', '');
+        _emits('update:value', '');
+        // updateActiveInx(-1);
+        onChange(selfIndex.value, '');
+      } else {
+        _emits('select', val);
+        _emits('update:value', val);
+        onChange(selfIndex.value, val);
+      }
     } else {
       const _vals = [...values.value];
       const inx = _vals.findIndex((v) => v === val);
@@ -173,5 +259,16 @@
       _emits('update:value', _vals);
       onChange(selfIndex.value, _vals);
     }
+  };
+
+  const handleConfirm = (vals: string[]) => {
+    pickerLabels.value = pickreRef.value?.getLabels().join(',') || '';
+    _emits('update:value', vals);
+    onChange(selfIndex.value, vals);
+    isPopupOpen.value = false;
+  };
+
+  const handleClosePopup = () => {
+    updateActiveInx(-1);
   };
 </script>

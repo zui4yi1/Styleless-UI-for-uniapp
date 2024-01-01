@@ -1,9 +1,15 @@
 import type { PropType } from 'vue';
 
+/**
+ * @summary
+ * @description
+ * @param value 双向绑定, 默认''
+ * @param isAutoSearch 是否自动查询, 由防抖控制, 0.2秒
+ * @param paddingClz input与边框的间距, 默认plr-d
+ * @param borderClz 边框样式, 默认none
+ * @param leftIcon 左图标对象, 完整的sl-icon参数
+ */
 export const props = {
-  /**
-   * @description inject global classNames to the component root
-   */
   className: {
     type: [String, Array],
     default: '',

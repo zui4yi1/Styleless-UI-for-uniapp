@@ -1,9 +1,36 @@
 import type { CSSProperties, PropType } from 'vue';
 
+/**
+ * @summary
+ * @description
+ * @param type input的默认, 默认text
+ * @param value 双向绑定, 默认''
+ * @param paddingClz input与边框的间距, 默认plr-d
+ * @param borderClz 边框样式, 默认只有底边框, 即border-bottom border-line-default
+ * @param heightSize type不为textarea时的高度类,  默认cell-default
+ * @param height type为textarea时的高度
+ * @param fontSize 文字尺寸, 默认content
+ * @param align 对齐, 默认left
+ * @param prefix 前缀
+ * @param prefixClz 前缀类名, 默认color-placeholder
+ * @param suffix 后缀
+ * @param suffixClz 后缀类名, 默认color-content
+ * @param maxlength 最大输入
+ * @param placeholder 默认"请输入"
+ * @param placeholderStyle 默认font-size: 28rpx
+ * @param disabled 默认false
+ * @param fixed type为textarea时是否固定距离 默认true
+ * @param showClear 是否自动显示清空按钮
+ * @param confirmType 默认"完成"
+ * @param cursorSpacing 光标与输入框的距离
+ * @param SelectionStart 选中开始距离
+ * @param SelectionEnd 选中结束距离
+ * @param styleObj 样式, 默认{}
+ * @param leftIcon 左图标对象, 完整的sl-icon参数
+ * @param clearIcon 清空图标对象, 完整的sl-icon参数
+ * @param eyeIcon 眼睛图标对象, 完整的sl-icon参数
+ */
 export const props = {
-  /**
-   * @description inject global classNames to the component root
-   */
   className: {
     type: [String, Array],
     default: '',
@@ -61,6 +88,15 @@ export const props = {
   prefixClz: {
     type: String,
     default: 'color-placeholder',
+  },
+
+  suffix: {
+    type: String,
+    default: '',
+  },
+  suffixClz: {
+    type: String,
+    default: 'color-content',
   },
   maxlength: {
     type: Number,

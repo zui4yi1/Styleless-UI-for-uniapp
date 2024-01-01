@@ -1,9 +1,11 @@
 import type { PropType } from 'vue';
 
+/**
+ * @summary
+ * @description
+ * @param hasShadow 是否要有阴影, 默认true
+ */
 export const props = {
-  /**
-   * @description inject global classNames to the component root
-   */
   className: {
     type: [String, Array],
     default: '',
@@ -16,7 +18,7 @@ export const props = {
     type: String as PropType<IRadius>,
     default: 'default',
   },
-  paddingClz: {
+  bodyClz: {
     type: String,
     default: 'plr-l ptb-d',
   },
@@ -27,9 +29,5 @@ export const props = {
   hasShadow: {
     type: Boolean,
     default: true,
-  },
-  index: {
-    type: Number,
-    default: 0,
   },
 };

@@ -4,7 +4,7 @@
       <sl-space-item
         v-for="(item, inx) in _list"
         :key="'tag_' + inx"
-        :className="[clz.body(), `font-${font}`]"
+        :className="[clz.body()]"
         @click="handleClick(inx)"
       >
         <view
@@ -16,6 +16,7 @@
             `bg-${item.bg || bg}`,
             `color-${color}`,
             `radius-${radius}`,
+            `font-${font}`,
           ]"
           class="text flex-inline"
         >

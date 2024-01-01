@@ -6,7 +6,7 @@
       paddingRight: `${gutter}rpx`,
       paddingTop: `${rowGutter}rpx`,
     }"
-    @tap="$emit('click', index)"
+    @tap="$emit('click')"
   >
     <slot />
   </view>

@@ -1,9 +1,18 @@
 import type { PropType } from 'vue';
 
+/**
+ * @summary 导航栏组件
+ * @description 可自动显示home或left图标
+ * @param title 标题
+ * @param showTitle 是否显示标题文本, 默认true
+ * @param autoHomeOrLeftIcon 左侧是否自动控制home或left图标
+ * @param iconColor 左图标的颜色类型, 默认content
+ * @param iconSize 左图标的尺寸, 默认48
+ * @param iconLib 左图标的图标库, 默认sl-ui-common
+ * @param filterPages 不需要在左侧显示图标的页面, 一般是登录页及各大首页
+ * @param homePath 主页,即点击home图标后relauch的页面
+ */
 export const props = {
-  /**
-   * @description inject global classNames to the component root
-   */
   className: {
     type: [String, Array],
     default: '',
@@ -41,7 +50,7 @@ export const props = {
   },
   iconLib: {
     type: String,
-    default: 'common',
+    default: 'sl-ui-common',
   },
   /**
    * @description 不需要在左侧显示图标的页面, 一般是登录页及各大首页

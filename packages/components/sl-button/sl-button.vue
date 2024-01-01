@@ -24,7 +24,7 @@
       :hover-start-time="10"
       :hover-stay-time="10"
       hover-class="opacity-disabled"
-      @click="handleClick(index, $event)"
+      @click="handleClick($event)"
       @getphonenumber="getPhonenumber"
       @openSetting="openSetting"
       @getUserInfo="getUserInfo"
@@ -104,8 +104,8 @@
     );
   });
 
-  const handleClick = debounce((inx: number, event: any) => {
-    _emits('click', inx, event);
+  const handleClick = debounce((event: any) => {
+    _emits('click', event);
   }, 300);
 
   const getPhonenumber = (res: any) => {

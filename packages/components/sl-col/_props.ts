@@ -1,9 +1,13 @@
 import type { PropType } from 'vue';
 
+/**
+ * @summary grid栅格布局
+ * @description 使用float方式, 故所有项必须保持高度一致
+ * @param span 占据多少格
+ * @param offset 左边偏移多少格
+ * @param align text-align对齐方式, 默认left
+ */
 export const props = {
-  /**
-   * @description inject global classNames to the component root
-   */
   className: {
     type: [String, Array],
     default: '',
@@ -19,10 +23,6 @@ export const props = {
   align: {
     type: String as PropType<'left' | 'right' | 'center'>,
     default: 'left',
-  },
-  index: {
-    type: Number,
-    default: 0,
   },
   bodyClz: {
     type: String,

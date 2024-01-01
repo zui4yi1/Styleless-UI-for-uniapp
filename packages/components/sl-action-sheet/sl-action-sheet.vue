@@ -15,7 +15,7 @@
                   class="text-ellipsis"
                   :class="[`color-${item.disabled ? 'disabled' : item.color || 'content'}`]"
                 >
-                  {{ item.text }}
+                  {{ item.label }}
                 </view>
               </slot>
             </view>

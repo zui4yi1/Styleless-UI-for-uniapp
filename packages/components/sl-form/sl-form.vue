@@ -46,7 +46,6 @@
   const childRefs = ref([]);
 
   const _props = defineProps(props);
-  defineEmits(['submit', 'reset']);
 
   const form = reactive({} as any);
   const _mode = computed(() => _props.mode);
@@ -104,6 +103,6 @@
     getForm,
     reset,
     setPropValue,
-    initData: toRaw(initData.value),
+    getInitVal: () => toRaw(initData.value),
   });
 </script>

@@ -6,7 +6,7 @@
     :hover-start-time="10"
     :hover-stay-time="10"
     :hover-class="hoverClass"
-    @click="$emit('click', index)"
+    @click="$emit('click')"
   >
     <view
       :class="[clz.body(), iconLib, `${iconLib}-${name}`, `color-${color}`]"
