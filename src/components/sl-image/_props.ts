@@ -1,5 +1,21 @@
 import type { PropType } from 'vue';
 
+/**
+ * @summary
+ * @description
+ * @param src 图片路径
+ * @param mode 填充模式, 默认aspectFill
+ * @param width 默认100%
+ * @param height 默认100%
+ * @param lazyLoad 是否懒加载, 默认true
+ * @param showMenuByLongpress 是否长按显示菜单
+ * @param iconLib iconfont类名
+ * @param loadingIcon 加载图标时的图标名
+ * @param errorIcon 加载失败时的图标名
+ * @param showLoading 加载图标时是否显示转圈圈
+ * @param showError 加载失败时是否失败图
+ * @param preview 是否可预览
+ */
 export const props = {
   className: {
     type: [String, Array],
@@ -14,11 +30,11 @@ export const props = {
     default: 'aspectFill',
   },
   width: {
-    type: [String, Number],
+    type: String,
     default: '100%',
   },
   height: {
-    type: [String, Number],
+    type: String,
     default: '100%',
   },
   radius: {

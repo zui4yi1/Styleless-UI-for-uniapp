@@ -12,7 +12,7 @@
           :name="iconName"
           :iconLib="iconLib"
           :label="item.label"
-          :size="size"
+          :size="iconSize"
           :labelClz="labelClz"
           :iconClz="
             [

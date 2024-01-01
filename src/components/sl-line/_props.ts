@@ -1,5 +1,15 @@
 import type { PropType } from 'vue';
 
+/**
+ * @summary
+ * @description
+ * @param borderWidth 边框厚度, 默认1px
+ * @param direction 方向x或y, 默认x
+ * @param length 长度或高度, 视direction方向
+ * @param isHairLine 是否细线
+ * @param lineStyle 线的风格, 'solid' | 'dashed' | 'dotted',默认solid
+ */
+
 export const props = {
   className: {
     type: [String, Array],

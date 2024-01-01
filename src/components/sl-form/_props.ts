@@ -27,13 +27,24 @@ export interface IFormGroup {
   list: IFormItem[];
 }
 
-// export type IEffects = (prop: string, value: any):void => {};
-
+/**
+ * @summary
+ * @description
+ * @param lableSpan label的宽度, 栅格模式
+ * @param detail 详情, 可用作表单的初始值
+ * @param dicts 字典集, {propName:[{label,value}]}的形式
+ * @param xLayoutClz 水平布局时的布局类, 默认flex, 可配置为'flex,flex-top,flex-bottom等'
+ * @param mode form或detail模式
+ * @param itemClz 透传到sl-form-item的类名
+ * @param useEffect 表单变化, 后续改为onFormChange, 可用于处理联动
+ * @param scheme 表单json配置, 二维数据。详见下面
+ */
 export const props = {
   className: {
     type: [String, Array],
     default: '',
   },
+  /** 透传到sl-form-item的类名 */
   itemClz: {
     type: String,
     default: '',
@@ -42,10 +53,7 @@ export const props = {
     type: Number,
     default: 6,
   },
-  itemAlign: {
-    type: String,
-    default: 'right',
-  },
+
   detail: {
     type: Object,
     default: () => {},

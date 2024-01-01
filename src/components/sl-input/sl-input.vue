@@ -92,8 +92,10 @@
         </view>
       </view>
       <!--right-->
-      <view :class="[clz.right()]" class="flex-shrink">
-        <slot name="right" />
+      <view v-if="suffix || $slots.right" :class="[clz.right()]" class="flex-shrink ml-xs">
+        <slot name="right">
+          <text :class="[clz.join('body', 'right', 'text'), suffixClz]">{{ suffix }}</text>
+        </slot>
       </view>
     </view>
     <!--foot-->

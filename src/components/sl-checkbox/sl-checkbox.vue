@@ -11,13 +11,13 @@
           :name="iconName"
           :iconLib="iconLib"
           :label="item.label"
-          :size="size"
+          :size="iconSize"
           :labelClz="labelClz"
           :iconClz="
             [
               'border',
               type === 'circle' ? 'radius-round' : '',
-              value.includes(item.value)
+              (value || []).includes(item.value)
                 ? 'bg-primary border-transparent'
                 : 'bg-white border-line-default',
             ].join(' ')

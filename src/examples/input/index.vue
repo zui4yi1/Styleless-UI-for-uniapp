@@ -11,6 +11,8 @@
     />
     <sl-input v-model:value="inputVal" />
 
+    <sl-input v-model:value="inputVal" suffix="单位元" />
+
     <Tip
       title="灰色背景风格"
       desc="背景bg=fill-default, 圆角radius=default, 去边框borderClz='border-none'"
