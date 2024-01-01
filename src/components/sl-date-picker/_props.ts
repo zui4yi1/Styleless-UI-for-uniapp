@@ -6,9 +6,6 @@ export type IMode = 'date' | 'time' | 'datetime';
 const pxHeight = uni.upx2px(68);
 
 export const props = {
-  /**
-   * @description inject global classNames to the component root
-   */
   className: {
     type: [String, Array],
     default: '',

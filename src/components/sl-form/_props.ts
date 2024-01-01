@@ -30,9 +30,6 @@ export interface IFormGroup {
 // export type IEffects = (prop: string, value: any):void => {};
 
 export const props = {
-  /**
-   * @description inject global classNames to the component root
-   */
   className: {
     type: [String, Array],
     default: '',

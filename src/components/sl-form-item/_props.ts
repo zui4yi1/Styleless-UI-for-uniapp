@@ -2,9 +2,6 @@ import type { PropType } from 'vue';
 import type { IValidtorRule } from './_validate';
 
 export const props = {
-  /**
-   * @description inject global classNames to the component root
-   */
   className: {
     type: [String, Array],
     default: '',
