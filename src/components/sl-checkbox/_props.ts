@@ -44,7 +44,7 @@ export const props = {
     default: 'font-content color-content',
   },
   iconSize: {
-    type: Number,
+    type: [Number, String],
     default: 28,
   },
   iconName: {

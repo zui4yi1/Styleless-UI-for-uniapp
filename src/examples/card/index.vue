@@ -5,14 +5,14 @@
     />
     <Tip
       title="默认"
-      desc="bg=white, radius=default, hasShadow=true, paddingClz='plr-l ptb-d', borderClz='border border-line-default'"
+      desc="bg=white, radius=default, hasShadow=true, bodyClz='plr-l ptb-d', borderClz='border border-line-default'"
     />
     <sl-card className="mt-d">
       <view>卡片卡片</view>
       <view>卡片卡片。。。</view>
     </sl-card>
-    <Tip title="换内间距" desc="paddingClz='plr-xl ptb-xs'" className="mt-d" />
-    <sl-card paddingClz="plr-xl ptb-xs" className="mt-d">
+    <Tip title="换内间距" desc="bodyClz='plr-xl ptb-xs'" className="mt-d" />
+    <sl-card bodyClz="plr-xl ptb-xs" className="mt-d">
       <view>卡片卡片</view>
       <view>卡片卡片。。。</view>
     </sl-card>

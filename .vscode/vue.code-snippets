@@ -50,5 +50,10 @@
       "$2"
     ],
     "description": "snippets for base components props"
+  },
+  "markdown-template": {
+    "prefix": "markdown-template",
+    "body": ["aaaaaaa", "$2"],
+    "description": "md模板"
   }
 }

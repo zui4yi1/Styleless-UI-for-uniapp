@@ -10,7 +10,6 @@ import type { PropType } from 'vue';
  * @param openType 小程序用的开放类型
  * @param dataSet 存数据
  * @param size 高度类, IHeight 默认button-default
- * @param disabled 是否禁用
  * @param hoverClass 点击颜色, 默认'', 内置统一使用opacity-disabled
  * @param icon 图标对象, 完整的sl-icon参数,  {name,className, iconLib, bg, size, color}, 默认{
       name: '',

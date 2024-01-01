@@ -1,18 +1,22 @@
 # styleless
 
-写样式，更具“灵性”
+写样式，背景字体等七类样式直接给个名字即可
+
+```
+<sl-tags label="一个标签" bg="primary" color="white" font="secondary" radius="default"  />
+```
 
 ### 通用七类样式属性
 
-|   属性    |         类型         |                        描述                         |              示例              |
-| :-------: | :------------------: | :-------------------------------------------------: | :----------------------------: |
-| className |       `string`       |     透传类到组件的根结点, 常用于设置间距或背景      | `<sl-card  className="mt-d"/>` |
-|   color   |       `IColor`       |                      字体颜色                       |  ` <sl-tags color="white" />`  |
-|    bg     |       `IColor`       |                      背景颜色                       |    `<sl-tags bg="white" />`    |
-|  radius   |      `IRadius`       |                圆角,带边框的组件都有                |             单元格             |
-|   font    |       `IFont`        |                   文本字体的尺寸,                   |  `font-content`,`font-title`   |
-|   size    | `IHeight` 或像素单位 | 仅两种, 与 sl-icon 有关时是像素单位, 其它都是高度类 |
-| ——Clz 类  |       `string`       |    如`bodyClz, paddingClz` 令配置 dom 样式更灵活    |    大部分组件都有`bodyClz`     |
+|   属性    |         类型         |                        描述                         |               示例               |
+| :-------: | :------------------: | :-------------------------------------------------: | :------------------------------: |
+| className |       `string`       |     透传类到组件的根结点, 常用于设置间距或背景      |  `<sl-card  className="mt-d"/>`  |
+|   color   |       `IColor`       |                      字体颜色                       |   ` <sl-tags color="white" />`   |
+|    bg     |       `IColor`       |                      背景颜色                       |    `<sl-tags bg="primary" />`    |
+|  radius   |      `IRadius`       |                圆角,带边框的组件都有                |  `<sl-tags radius="default" />`  |
+|   font    |       `IFont`        |                   文本字体的尺寸,                   |   `<sl-tags font="content" />`   |
+|   size    | `IHeight` 或像素单位 | 仅两种, 与 sl-icon 有关时是像素单位, 其它都是高度类 | `<sl-tags size="button-none" />` |
+|  bodyClz  |       `string`       |     body 节点的样式类, 除了弹窗类大部分组件都有     |  `<sl-tags bodyClz="plr-l" />`   |
 
 ### 弹窗类
 

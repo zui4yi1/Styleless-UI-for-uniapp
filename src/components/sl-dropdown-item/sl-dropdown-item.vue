@@ -29,7 +29,7 @@
         <view class="scroll-hidden">
           <template v-if="pickerLabels.length">
             <view class="text-ellipsis color-primary">
-              <slot name="customSelect" :labels="labels">
+              <slot name="customCascade" :labels="pickerLabels">
                 {{ pickerLabels }}
               </slot>
             </view>

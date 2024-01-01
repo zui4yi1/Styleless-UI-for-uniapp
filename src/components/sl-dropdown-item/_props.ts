@@ -9,8 +9,8 @@ import type { PropType } from 'vue';
  * @param isMask 点击项时是否打开遮罩, 暂时无用, 后续增加自定义模式的时候可用
  * @param type 选项类型, 暂时支持五种'select' | 'cascade' | 'date'| 'sort' | 'text', 默认select
  * @param list 数据列, select或cascade可传
- * @param mutilple 是否可多选, select时传
- * @param hasAll cascade是否自动添加"全部"选项
+ * @param mutilple 是否可多选, type为select时传
+ * @param hasAll 是否自动添加"全部"选项, type为cascade时可传
  */
 export const props = {
   className: {
