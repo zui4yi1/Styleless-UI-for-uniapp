@@ -16,10 +16,7 @@ export const props = {
     type: String,
     default: '',
   },
-  size: {
-    type: String as PropType<IFont>,
-    default: 'content',
-  },
+
   list: {
     type: Array as PropType<{ text: string; color: IColor; disabled: boolean }[]>,
     default: () => [],

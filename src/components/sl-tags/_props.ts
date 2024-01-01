@@ -13,6 +13,7 @@ export const props = {
     type: [String, Array],
     default: '',
   },
+  /** 默认不设置高度 */
   size: {
     type: String as PropType<IHeight>,
     default: 'button-none',
