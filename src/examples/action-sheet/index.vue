@@ -17,26 +17,26 @@
   const open1 = ref(false);
   const list = [
     {
-      text: '新增',
+      label: '新增',
       color: 'primary',
     },
     {
-      text: '编辑',
+      label: '编辑',
       color: 'content',
     },
     {
-      text: '不可点击',
+      label: '不可点击',
       color: 'disabled',
       disabled: true,
     },
     {
-      text: '其它1',
+      label: '其它1',
     },
     {
-      text: '其它2',
+      label: '其它2',
     },
     {
-      text: '删除',
+      label: '删除',
       color: 'error',
     },
   ];
