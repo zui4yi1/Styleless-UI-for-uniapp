@@ -1,19 +1,17 @@
 <template>
-  <view
-    :class="[
-      clz.root(),
-      className,
-      paddingClz,
-      borderClz,
-      `bg-${bg}`,
-      `radius-${radius}`,
-      {
-        'shadow-default': hasShadow,
-      },
-    ]"
-    @click="$emit('click', index)"
-  >
-    <view :class="clz.body()">
+  <view :class="[clz.root(), className]" class="border-none" @click="$emit('click', index)">
+    <view
+      :class="[
+        clz.body(),
+        bodyClz,
+        borderClz,
+        `bg-${bg}`,
+        `radius-${radius}`,
+        {
+          'shadow-default': hasShadow,
+        },
+      ]"
+    >
       <slot />
     </view>
   </view>

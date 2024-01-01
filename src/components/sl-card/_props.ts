@@ -16,7 +16,7 @@ export const props = {
     type: String as PropType<IRadius>,
     default: 'default',
   },
-  paddingClz: {
+  bodyClz: {
     type: String,
     default: 'plr-l ptb-d',
   },
