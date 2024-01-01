@@ -25,10 +25,6 @@ export const props = {
     type: [Number, String],
     default: 28,
   },
-  index: {
-    type: Number,
-    default: 0,
-  },
   styleProps: {
     type: Object as PropType<CSSProperties>,
     default: () => ({}),

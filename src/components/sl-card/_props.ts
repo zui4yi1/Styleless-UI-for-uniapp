@@ -1,5 +1,10 @@
 import type { PropType } from 'vue';
 
+/**
+ * @summary
+ * @description
+ * @param hasShadow 是否要有阴影, 默认true
+ */
 export const props = {
   className: {
     type: [String, Array],
@@ -24,9 +29,5 @@ export const props = {
   hasShadow: {
     type: Boolean,
     default: true,
-  },
-  index: {
-    type: Number,
-    default: 0,
   },
 };

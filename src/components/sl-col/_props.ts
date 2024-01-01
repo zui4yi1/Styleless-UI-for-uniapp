@@ -17,10 +17,6 @@ export const props = {
     type: String as PropType<'left' | 'right' | 'center'>,
     default: 'left',
   },
-  index: {
-    type: Number,
-    default: 0,
-  },
   bodyClz: {
     type: String,
     default: '',

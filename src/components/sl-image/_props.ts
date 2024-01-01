@@ -59,10 +59,7 @@ export const props = {
     type: String as PropType<IColor>,
     default: 'transparent',
   },
-  index: {
-    type: Number,
-    default: 0,
-  },
+
   preview: {
     type: Boolean,
     default: false,

@@ -60,10 +60,7 @@ export const props = {
     type: String as PropType<IColor>,
     default: 'none',
   },
-  index: {
-    type: Number,
-    default: 0,
-  },
+
   icon: {
     type: Object,
     default: () => ({

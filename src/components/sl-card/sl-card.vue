@@ -1,5 +1,5 @@
 <template>
-  <view :class="[clz.root(), className]" class="border-none" @click="$emit('click', index)">
+  <view :class="[clz.root(), className]" class="border-none" @click="$emit('click')">
     <view
       :class="[
         clz.body(),

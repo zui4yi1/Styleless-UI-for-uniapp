@@ -3,8 +3,4 @@ export const props = {
     type: [String, Array],
     default: '',
   },
-  index: {
-    type: Number,
-    default: 0,
-  },
 };
