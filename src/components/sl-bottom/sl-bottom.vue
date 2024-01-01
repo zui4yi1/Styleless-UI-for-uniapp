@@ -1,5 +1,5 @@
 <template>
-  <view :class="[clz.root(), className, paddingClz]" class="fixed z-index-layout abs-bottom">
+  <view :class="[clz.root(), className, rootClz]" class="fixed z-index-layout abs-bottom">
     <slot />
     <sl-fill-line isBottom />
   </view>
