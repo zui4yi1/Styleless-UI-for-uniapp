@@ -11,17 +11,17 @@ theme-带主题背景色, plain-文字和边框, text-只有文字, 默认 theme
 
 ### 其它属性
 
-|    属性    |                    类型                     | 默认                                                                                         | 描述                                                    |
-| :--------: | :-----------------------------------------: | :------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
-|    type    |              theme/plain/text               | theme                                                                                        | 按钮模式                                                |
-|  disabled  |                   boolean                   | false                                                                                        | 是否禁用                                                |
-|   width    |                   string                    | auto                                                                                         | 需带单位                                                |
-| paddingClz |                   string                    | plr-s                                                                                        | type 为 theme 或 plain 时可用, 用于配置文字与边框的间距 |
-|    size    |                   IHeight                   | button-default                                                                               | 高度类                                                  |
-| hoverClass |                   string                    | ''                                                                                           | 点击颜色类, 内置统一使用 opacity-disabled               |
-|    icon    |                   object                    | { name: '',className: 'mr-xs',iconLib: 'sl-ui-common',bg: 'primary',size: 32,color: 'white'} |                                                         |
-|  openType  | none/getPhoneNumber/openSetting/getUserInfo | none                                                                                         | 小程序用的开放类型                                      |
-|  dataSet   |                     any                     | null                                                                                         | 存数据                                                  |
+|    属性    |                    类型                     | 默认                                                                                           | 描述                                                    |
+| :--------: | :-----------------------------------------: | :--------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
+|    type    |              theme/plain/text               | theme                                                                                          | 按钮模式                                                |
+|  disabled  |                   boolean                   | false                                                                                          | 是否禁用                                                |
+|   width    |                   string                    | auto                                                                                           | 需带单位                                                |
+| paddingClz |                   string                    | plr-s                                                                                          | type 为 theme 或 plain 时可用, 用于配置文字与边框的间距 |
+|    size    |                   IHeight                   | button-default                                                                                 | 高度类                                                  |
+| hoverClass |                   string                    | ''                                                                                             | 点击颜色类, 内置统一使用 opacity-disabled               |
+|    icon    |                   object                    | { name: '',\_className: 'mr-xs',iconLib: 'sl-ui-common',bg: 'primary',size: 32,color: 'white'} |                                                         |
+|  openType  | none/getPhoneNumber/openSetting/getUserInfo | none                                                                                           | 小程序用的开放类型                                      |
+|  dataSet   |                     any                     | null                                                                                           | 存数据                                                  |
 
 ### 插糟
 

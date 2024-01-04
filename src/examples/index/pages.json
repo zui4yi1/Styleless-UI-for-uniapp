@@ -11,7 +11,7 @@
       },
       {
         "componentName": "sl-scroll-refresher",
-        "componentDesc": "列表组件, 下拉刷新+触底加载",
+        "componentDesc": "列表组件",
         "url": "/examples/scroll-refresher/index"
       },
       { "componentName": "sl-button", "componentDesc": "按钮", "url": "/examples/button/index" }
@@ -23,7 +23,7 @@
     "list": [
       {
         "componentName": "sl-form",
-        "componentDesc": "form表单组件, 加强版",
+        "componentDesc": "表单组件, json模式",
         "url": "/examples/form/index"
       },
 
@@ -42,7 +42,7 @@
       },
       {
         "componentName": "sl-picker",
-        "componentDesc": "picker联动",
+        "componentDesc": "联动",
         "url": "/examples/picker/index"
       },
       {
@@ -59,7 +59,7 @@
       { "componentName": "sl-image", "componentDesc": "图片", "url": "/examples/image/index" },
       {
         "componentName": "sl-icon",
-        "componentDesc": "svg矢量小图标",
+        "componentDesc": "矢量小图标",
         "url": "/examples/icon/index"
       }
     ]
@@ -75,7 +75,6 @@
         "componentDesc": "中间模态弹窗",
         "url": "/examples/modal/index"
       },
-
       {
         "componentName": "sl-action-sheet",
         "componentDesc": "操作选择弹窗",
@@ -88,8 +87,12 @@
     "type": "layout",
     "list": [
       { "componentName": "sl-table", "componentDesc": "表格", "url": "/examples/table/index" },
-      { "componentName": "sl-grid", "componentDesc": "栅格", "url": "/examples/grid/index" },
-      { "componentName": "sl-space", "componentDesc": "空间", "url": "/examples/space/index" },
+      { "componentName": "sl-row", "componentDesc": "栅格row/col", "url": "/examples/grid/index" },
+      {
+        "componentName": "sl-space-group",
+        "componentDesc": "空间",
+        "url": "/examples/space/index"
+      },
       {
         "componentName": "sl-dropdown",
         "componentDesc": "组合筛选",
@@ -103,8 +106,13 @@
         "url": "/examples/address-book/index"
       },
       {
-        "componentName": "sl-top/sl-bottom",
-        "componentDesc": "固定顶部/底部",
+        "componentName": "sl-top",
+        "componentDesc": "固定顶部",
+        "url": "/examples/top/index"
+      },
+      {
+        "componentName": "sl-bottom",
+        "componentDesc": "固定底部",
         "url": "/examples/top/index"
       }
     ]

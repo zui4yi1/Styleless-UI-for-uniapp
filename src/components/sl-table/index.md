@@ -11,13 +11,13 @@
 
 ### 其它属性
 
-|    属性     |        类型         | 默认  | 描述                                                                                         |
-| :---------: | :-----------------: | :---- | :------------------------------------------------------------------------------------------- |
-| cellspacing |       string        | ''    | cell 间距                                                                                    |
-|   custom    |       string        | false | 是否自定义,默认 false, 即走 json 配置模式。为 true 时，需手动使用 sl-th,sl-tr,sl-td 这些标签 |
-| tableProps  | {thClz,trClz,tdClz} | {}    | 各 dom 的样式类, custom 为 false 时可用, table 的样式类。可分别配置{thClz,trClz,tdClz}的类名 |
-|   columns   | {name,value,width}  | {}    | 列的定义, custom 为 false 时可用列, 可分别定义{name,value,width}                             |
-|    list     |        array        | []    | custom 为 false 时可用, 具体属性与 columns 对应                                              |
+|    属性     |  类型  | 默认  | 描述                                                                                         |
+| :---------: | :----: | :---- | :------------------------------------------------------------------------------------------- |
+| cellspacing | string | ''    | cell 间距                                                                                    |
+|   custom    | string | false | 是否自定义,默认 false, 即走 json 配置模式。为 true 时，需手动使用 sl-th,sl-tr,sl-td 这些标签 |
+| tableProps  |   {}   | {}    | 各 dom 的样式类, custom 为 false 时可用, table 的样式类。可分别配置{thClz,trClz,tdClz}的类名 |
+|   columns   |   {}   | {}    | 列的定义, custom 为 false 时可用列, 可分别定义 name,value,width                              |
+|    list     | array  | []    | custom 为 false 时可用, 具体属性与 columns 对应                                              |
 
 ### 插糟
 

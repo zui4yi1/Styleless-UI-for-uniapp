@@ -8,17 +8,17 @@
 
 ### 其它属性
 
-|   属性    |     类型      | 默认                          | 描述                                |
-| :-------: | :-----------: | :---------------------------- | :---------------------------------- |
-|   value   |     array     | []                            | 使用时必须使用 v-model:value 的形式 |
-|   list    | {label,value} | []                            | 选项列表,暂无 dataMap 字段映射      |
-| direction |      x/y      | x                             | 布局方向, 水平/纵向                 |
-|   type    | circle/square | square                        | 形状                                |
-| disabled  |    boolean    | false                         | 是否禁用                            |
-| labelClz  |    string     | `font-content与color-content` | 标签的样式类                        |
-| iconSize  |    Number     | 28                            | 打勾图标的尺寸                      |
-|  iconLib  |    string     | sl-ui-common                  | 图标库名                            |
-| iconName  |    string     | icon_check                    | 打勾图标名                          |
+|   属性    |     类型      | 默认                          | 描述                                              |
+| :-------: | :-----------: | :---------------------------- | :------------------------------------------------ |
+|   value   |     array     | []                            | 使用时必须使用 v-model:value 的形式               |
+|   list    |     array     | []                            | 选项列表,{label,value}格式, 暂无 dataMap 字段映射 |
+| direction |      x/y      | x                             | 布局方向, 水平/纵向                               |
+|   type    | circle/square | square                        | 形状                                              |
+| disabled  |    boolean    | false                         | 是否禁用                                          |
+| labelClz  |    string     | `font-content与color-content` | 标签的样式类                                      |
+| iconSize  |    Number     | 28                            | 打勾图标的尺寸                                    |
+|  iconLib  |    string     | sl-ui-common                  | 图标库名                                          |
+| iconName  |    string     | icon_check                    | 打勾图标名                                        |
 
 ### 插糟
 

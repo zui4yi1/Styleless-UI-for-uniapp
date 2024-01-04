@@ -1,7 +1,7 @@
 import type { PropType } from 'vue';
 
 /**
- * @summary 导航栏组件
+ * @summary 页面根结点组件
  * @description 可自动显示home或left图标
  * @param showNavBar 是否显示导航栏
  * @param navBarBg 导航栏背景,IColor, 默认white

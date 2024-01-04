@@ -1,28 +1,8 @@
 module.exports = {
-  title: 'Styleless UI',
-  themeConfig: {
-    siteTitle: 'Styleless UI',
-    sidebar: [
-      {
-        text: '测试路径',
-        items: [{ text: 'md2', link: 'md/com-construct2' }],
-      },
-      {
-        text: '快速上手',
-        items: [
-          { text: '使用说明', link: 'styleless' },
-          { text: '组件结构', link: 'com-construct2' },
-        ],
-      },
-      {
-        text: '组件列表',
-        items: [
-          {
-            text: 'pina和vuex',
-            link: '/com-construct1',
-          },
-        ],
-      },
-    ],
-  },
-};
+        title: 'Styleless UI',
+        themeConfig: {
+          siteTitle: 'Styleless UI',
+          sidebar: [{"text":"开始","items":[{"text":"简介","link":"guides/introduction"},{"text":"快速上手","link":"guides/quick-start"}]},{"text":"系统/基础类","items":[{"text":"sl-page 页面根节点","link":"components/sl-page"},{"text":"sl-nav-bar 自定义导航栏","link":"components/sl-nav-bar"},{"text":"sl-scroll-refresher 列表组件","link":"components/sl-scroll-refresher"},{"text":"sl-button 按钮","link":"components/sl-button"}]},{"text":"表单类","items":[{"text":"sl-form 表单组件, json模式","link":"components/sl-form"},{"text":"sl-input 输入框","link":"components/sl-input"},{"text":"sl-checkbox 复选框","link":"components/sl-checkbox"},{"text":"sl-radio 单选框","link":"components/sl-radio"},{"text":"sl-switch 开关","link":"components/sl-switch"},{"text":"sl-select 下拉框弹窗","link":"components/sl-select"},{"text":"sl-picker 联动","link":"components/sl-picker"},{"text":"sl-date-picker 日期选择器","link":"components/sl-date-picker"}]},{"text":"图片图标类","items":[{"text":"sl-image 图片","link":"components/sl-image"},{"text":"sl-icon 矢量小图标","link":"components/sl-icon"}]},{"text":"弹窗类","items":[{"text":"sl-mask 遮罩","link":"components/sl-mask"},{"text":"sl-popup 底部弹窗","link":"components/sl-popup"},{"text":"sl-modal 中间模态弹窗","link":"components/sl-modal"},{"text":"sl-action-sheet 操作选择弹窗","link":"components/sl-action-sheet"}]},{"text":"布局/容器类","items":[{"text":"sl-table 表格","link":"components/sl-table"},{"text":"sl-row 栅格row/col","link":"components/sl-row"},{"text":"sl-space-group 空间","link":"components/sl-space-group"},{"text":"sl-dropdown 组合筛选","link":"components/sl-dropdown"},{"text":"sl-tabs 标签页","link":"components/sl-tabs"},{"text":"sl-card 卡片","link":"components/sl-card"},{"text":"sl-address-book 通讯录","link":"components/sl-address-book"},{"text":"sl-top 固定顶部","link":"components/sl-top"},{"text":"sl-bottom 固定底部","link":"components/sl-bottom"}]},{"text":"其它","items":[{"text":"sl-line 线","link":"components/sl-line"},{"text":"sl-empty 无数据提示","link":"components/sl-empty"},{"text":"sl-fill-line 填充行","link":"components/sl-fill-line"},{"text":"sl-search 搜索","link":"components/sl-search"},{"text":"sl-tags 标签","link":"components/sl-tags"}]}]
+        }
+    }     
+  

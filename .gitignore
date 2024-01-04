@@ -12,7 +12,7 @@ node_modules
 dist
 *.local
 
-docs/md
+docs/components
 docs/.vitepress/cache
 packages/hooks
 packages/components
