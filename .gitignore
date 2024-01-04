@@ -11,8 +11,11 @@ node_modules
 .DS_Store
 dist
 *.local
-packages/components
+
+docs/md
+docs/.vitepress/cache
 packages/hooks
+packages/components
 packages/utils
 
 # Editor directories and files

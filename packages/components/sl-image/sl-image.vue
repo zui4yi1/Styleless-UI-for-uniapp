@@ -26,16 +26,18 @@
       :class="[`radius-${radius}`]"
       class="absolute abs-cover flex-center bg-white"
     >
-      <slot v-if="$slots.loading" name="loading" />
-      <sl-icon name="icon_loading" :size="64" className="spin" />
+      <slot name="loading">
+        <sl-icon name="icon_loading" :size="64" className="spin" />
+      </slot>
     </view>
     <view
       v-if="showError && isError"
       :class="[`radius-${radius}`]"
       class="absolute abs-full flex-center bg-white"
     >
-      <slot v-if="$slots.error" name="error" />
-      <sl-icon name="icon_image_fail" color="disabled" :size="64" />
+      <slot name="error">
+        <sl-icon name="icon_image_fail" color="disabled" :size="64" />
+      </slot>
     </view>
   </view>
 </template>

@@ -12,7 +12,6 @@ export type ITagItem = {
  * @param label 标记名, 只有单个时使用
  * @param list 标记列表, 有多个时使用。属性{label, bg, color}
  * @param type 展示模式, text-只有文字, bg-带背景
- * @param font IFont 字体尺寸类, 默认secondary
  * @param showDelete 是否显示删除
  */
 export const props = {

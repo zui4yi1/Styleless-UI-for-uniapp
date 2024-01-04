@@ -19,7 +19,7 @@ import type { CSSProperties, PropType } from 'vue';
  * @param placeholder 默认"请输入"
  * @param placeholderStyle 默认font-size: 28rpx
  * @param disabled 默认false
- * @param fixed type为textarea时是否固定距离 默认true
+ * @param fixed 如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true
  * @param showClear 是否自动显示清空按钮
  * @param confirmType 默认"完成"
  * @param cursorSpacing 光标与输入框的距离
@@ -99,7 +99,7 @@ export const props = {
     default: 'color-content',
   },
   maxlength: {
-    type: Number,
+    type: [Number, String],
     default: 200,
   },
   placeholder: {
@@ -117,7 +117,7 @@ export const props = {
   },
   fixed: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   showClear: {
     type: Boolean,

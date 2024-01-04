@@ -4,7 +4,7 @@
       <view
         v-if="labelSpan"
         :class="[clz.join('body', 'label'), `span-${labelSpan}`]"
-        class="flex-shrink"
+        class="flex-shrink ptb-xxs"
       >
         <text
           class="color-error mr-xxs"

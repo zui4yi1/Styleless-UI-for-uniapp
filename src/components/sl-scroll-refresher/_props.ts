@@ -10,8 +10,6 @@
  * @param showNoMoreTip 是否显示没有更多数据
  * @param totalMap total字段映射, 默认total
  * @param threshold 下拉时的距离达到多少触发刷新功能
- * @param indicatorClz 选中项的类, 默认text-center border-line-light border-top border-bottom(即文本居中+上下边框)
- * @param indicatorStyle 选中项的样式, 默认height: uni.upx2px(68)+px
  */
 export const props = {
   className: {

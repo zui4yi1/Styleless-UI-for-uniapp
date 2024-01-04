@@ -17,7 +17,10 @@
     "type-check": "vue-tsc --noEmit",
     "eslint": "eslint . --ext .ts",
     "pkg:ui": "node ./build/package/index.js ui",
-    "pkg:typing": "node ./build/package/index.js typing"
+    "pkg:typing": "node ./build/package/index.js typing",
+    "docs:dev": "node ./build/package/index.js md && vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-3081220230817001",
@@ -60,6 +63,7 @@
     "prettier": "^2.4.1",
     "typescript": "^5.1.6",
     "vite": "4.1.4",
+    "vitepress": "^1.0.0-rc.34",
     "vue-tsc": "^1.0.24"
   }
 }

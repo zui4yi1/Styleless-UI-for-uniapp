@@ -108,7 +108,7 @@ export const useScrollRefresher = (props: any, instance: any) => {
       isScroll2Bottom.value = false;
     }, 1000);
     if (!props.isLoadMore || pager.pageNum * pager.pageSize >= pager.total) {
-      isShowNoMoreTip.value = props.showNoMoreTip ? true : false;
+      isShowNoMoreTip.value = pager.pageNum > 1 && props.showNoMoreTip ? true : false;
       return;
     }
     showAppendTip.value = true;

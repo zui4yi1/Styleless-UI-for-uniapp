@@ -6,7 +6,7 @@
       <sl-dropdown-item title="类型" :list="list" v-model:value="val" />
       <sl-dropdown-item title="价格" type="sort" />
       <sl-dropdown-item title="销售" type="text" />
-      <sl-dropdown-item title="班级" type="cascade" v-model:value="clazz" :list="tree" />
+      <sl-dropdown-item title="班级" type="cascade" hasAll v-model:value="clazz" :list="tree" />
     </sl-dropdown>
     <Tip
       title="左对齐"

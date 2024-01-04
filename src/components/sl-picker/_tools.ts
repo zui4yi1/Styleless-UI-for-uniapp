@@ -6,7 +6,7 @@ const _findValsInx = (list: any[], vals: string[], inxs: number[], options: any)
   const inx = list.findIndex((t) => t.value === tmpVal);
   if (inx === -1) {
     inxs.push(0);
-    return inxs;
+    // don't return inxs;
   } else {
     inxs.push(inx + addtionCount);
   }
@@ -21,7 +21,12 @@ const _findValsInx = (list: any[], vals: string[], inxs: number[], options: any)
 /** 获取初始值的索引 */
 function getInitValInxs(cascadeTree: any[], propVal: any[], options: any) {
   if (!propVal?.length) return Array(options.columns).fill(0);
-  const res = _findValsInx(cascadeTree, propVal.slice(0), [], options);
+  const vals = propVal.slice(0);
+  if (propVal.length < options.columns && options.hasAll) {
+    // if hasAll fill ''
+    vals.push(...Array(options.columns - propVal.length).fill(''));
+  }
+  const res = _findValsInx(cascadeTree, vals, [], options);
   return res;
 }
 
@@ -39,8 +44,6 @@ const _findColumn = (cascadeTree: any[], inxs: number[], options: any): any[] =>
 };
 /** 获取列 */
 function getColomnList(cascadeTree: any[], inxs: number[], options: any) {
-  if (!inxs.length || !cascadeTree.length) return [];
-
   const res = _findColumn(cascadeTree, inxs.slice(0), options);
   // 全部功能, 涉及太多, 后面再完善
   if (options.hasAll) {

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const Types = ['ui', 'typing']; // vitepress
+const Types = ['ui', 'typing', 'md']; // vitepress
 const argv = process.argv;
 const buildType = argv.splice(2)[0];
 

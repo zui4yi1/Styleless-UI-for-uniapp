@@ -42,7 +42,7 @@
         <view class="text-center color-placeholder">{{ showErrorTip }}</view>
       </view>
       <view v-if="isShowNoMoreTip">
-        <view class="text-center color-placeholder font-secondary">--没有更多了--</view>
+        <view class="text-center color-placeholder font-secondary ptb-s">--没有更多了--</view>
       </view>
       <sl-fill-line isBottom />
     </view>

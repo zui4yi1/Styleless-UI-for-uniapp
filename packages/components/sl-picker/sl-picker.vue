@@ -71,7 +71,6 @@
 
   /** 获取列 */
   const getColomnList = (inxs: number[]) => {
-    if (!inxs.length || !_props.list.length) return [];
     const { list, dataMap, hasAll } = _props;
     const res = _tools.getColomnList(cloneDeep(list), inxs, { dataMap, hasAll });
 
@@ -95,7 +94,7 @@
 
   const handleConfirm = () => {
     const { list, hasAll, dataMap } = _props;
-    const res = _tools.getInxsVal(list, valsInx.value, { hasAll, dataMap });
+    const res = _tools.getInxsVal(list, valsInx.value.slice(0), { hasAll, dataMap });
     _emits('update:value', res);
     _emits('change', res);
   };

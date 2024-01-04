@@ -18,7 +18,7 @@
       desc="direction=y, length=60px(高和宽都统一使用参数length)"
       className="mt-d"
     />
-    <sl-line direction="y" length="60rpx" :isHairLine="false" size="2px" color="pink" />
+    <sl-line direction="y" length="60rpx" :isHairLine="false" />
   </s-page>
 </template>
 <script setup lang="ts">

@@ -38,7 +38,7 @@
 
   const fetchDataFunc = async (
     pager: { pageNum: number; pageSize: number; total: number },
-    type: string,
+    type: 'new' | 'append',
   ) => {
     const tmp = [] as IList[];
 
