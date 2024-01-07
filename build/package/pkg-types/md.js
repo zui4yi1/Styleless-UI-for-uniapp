@@ -32,6 +32,7 @@ const buildPkg = async () => {
       items: [
         { text: '简介', link: 'guides/introduction' },
         { text: '快速上手', link: 'guides/quick-start' },
+        { text: '安装', link: 'guides/install' },
       ],
     },
   ];
