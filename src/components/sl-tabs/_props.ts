@@ -18,7 +18,7 @@ export const props = {
     default: 0,
   },
   list: {
-    type: Array as PropType<{ name: string; count: number }[]>,
+    type: Array as PropType<{ name: string; count?: number }[]>,
     default: () => [],
   },
   scroll: {
