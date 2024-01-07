@@ -124,6 +124,10 @@
   onBeforeMount(() => {
     // 先实现日期的, time和datetime后面再说
     columns.value = (_props.field === 'date' && 3) || (_props.field === 'month' && 2) || 1;
-    range.value = _tools.initDateRange(_props.start, _props.end, _props.format);
+    const { startIsToday, endIsToday } = _props;
+    range.value = _tools.initDateRange(_props.start, _props.end, _props.format, {
+      startIsToday,
+      endIsToday,
+    });
   });
 </script>

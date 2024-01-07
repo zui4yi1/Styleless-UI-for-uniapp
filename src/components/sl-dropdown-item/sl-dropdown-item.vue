@@ -132,6 +132,7 @@
     v-model:open="isPopupOpen"
     v-model:value="dateText"
     @close="handleClosePopup"
+    v-bind="comOps"
   />
 
   <sl-picker
@@ -142,6 +143,7 @@
     v-model:open="isPopupOpen"
     v-model:value="pickerValues"
     :list="list"
+    v-bind="comOps"
     @close="handleClosePopup"
     @change="handleConfirm"
   />
@@ -200,8 +202,8 @@
     return _props.list.filter((t) => values.value.includes(t.value)).map((t) => t.label);
   });
   const pickerLabels = ref('');
-  const pickerValues = computed(() => {
-    return _props.value instanceof Array && _props.value.length ? [..._props.value] : [];
+  const pickerValues = computed<any[]>(() => {
+    return _props.value instanceof Array ? (_props.value.length ? [..._props.value] : []) : [];
   });
 
   onBeforeMount(() => {

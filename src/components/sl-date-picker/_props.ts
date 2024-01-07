@@ -15,6 +15,8 @@ const pxHeight = uni.upx2px(68);
  * @param field 列模式, year只有年, month年月, date年月日, 默认date
  * @param start string格式的起始日期, 无则默认前80年的年初
  * @param end string格式的结束日期, 无则默认后10年的年末
+ * @param startIsToday 起始日期是否是今天, 默认false
+ * @param endIsToday 结束日期是否是是今天, 默认false
  * @param format 日期格式, 默认YYYY-MM-DD
  * @param pickViewHeight 每项的高度, 默认uni.upx2px(68)+px, 必须使用uni.upx2px转成px格式, 直接使用rpx会有小数导致不居中
  * @param indicatorClz 选中项的类, 默认text-center border-line-light border-top border-bottom(即文本居中+上下边框)
@@ -53,6 +55,14 @@ export const props = {
   end: {
     type: String,
     default: '',
+  },
+  startIsToday: {
+    type: Boolean,
+    default: false,
+  },
+  endIsToday: {
+    type: Boolean,
+    default: false,
   },
   format: {
     type: String,

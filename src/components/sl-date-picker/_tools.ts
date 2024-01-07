@@ -72,11 +72,24 @@ function genDates(range: Dayjs[], yearMon: number[]) {
 }
 
 /** 初始日期范围, 返回dayjs对象 */
-function initDateRange(start: string, end: string, format = 'YYYY-MM-DD') {
+function initDateRange(
+  start: string,
+  end: string,
+  format = 'YYYY-MM-DD',
+  { startIsToday = false, endIsToday = false },
+) {
   const now = dayjs();
   // 不传startd时, 默认前80年的年初, 不传end时默认后10的年末
-  const startDate = start ? dayjs(start, format) : now.subtract(80, 'year').startOf('y');
-  const endDate = end ? dayjs(end, format) : now.add(10, 'year').endOf('y');
+  const startDate = start
+    ? dayjs(start, format)
+    : startIsToday
+    ? dayjs(now, format)
+    : now.subtract(80, 'year').startOf('y');
+  const endDate = end
+    ? dayjs(end, format)
+    : endIsToday
+    ? dayjs(now, format)
+    : now.add(10, 'year').endOf('y');
   return [startDate, endDate];
 }
 

@@ -50,4 +50,8 @@ export const props = {
     type: Boolean,
     default: false,
   },
+  comOps: {
+    type: Object,
+    default: () => {},
+  },
 };

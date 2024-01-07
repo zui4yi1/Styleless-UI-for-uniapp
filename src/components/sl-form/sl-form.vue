@@ -18,7 +18,7 @@
           @change="handleChange(item.prop, $event)"
         >
           <template #cus_com="scope">
-            <slot :name="(item.type || '').replaceAll('-', '_')" v-bind="scope" />
+            <slot :name="(item.type || '').replace(/-/g, '_')" v-bind="scope" />
           </template>
         </sl-form-item>
       </template>
@@ -90,6 +90,12 @@
     return JSON.parse(JSON.stringify(toRaw(form)));
   };
 
+  /** 更新初始值, 仅有字段联动的时候, 才需要 */
+  const updateInitVal = (prop: string, val: any) => {
+    setPropValue(prop, val);
+    initData.value[prop] = val;
+  };
+
   const reset = () => {
     childRefs.value.forEach((k: any) => {
       const prop = k.prop;
@@ -103,6 +109,7 @@
     getForm,
     reset,
     setPropValue,
+    updateInitVal,
     getInitVal: () => toRaw(initData.value),
   });
 </script>

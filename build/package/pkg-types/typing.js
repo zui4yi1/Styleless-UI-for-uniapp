@@ -20,7 +20,7 @@ const buildPkg = async () => {
   });
 
   fse.writeFileSync(
-    `${path.join(packageRoot, 'types')}/sl-ui.d.ts`,
+    `${path.join(packageRoot, 'types')}/index.d.ts`,
     `${imports.join('\n')}
     import '@vue/runtime-core';
     declare module '@vue/runtime-core' {

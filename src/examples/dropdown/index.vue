@@ -17,7 +17,13 @@
       <sl-dropdown-item title="类型" :list="list" v-model:value="val" />
       <sl-dropdown-item title="价格" type="sort" />
       <sl-dropdown-item title="销售" type="text" />
-      <sl-dropdown-item title="日期" type="date" v-model:value="dateText" maxWidth="200rpx" />
+      <sl-dropdown-item
+        title="日期"
+        type="date"
+        v-model:value="dateText"
+        :comOps="{ endIsToday: true, start: '2023-09-09' }"
+        maxWidth="200rpx"
+      />
     </sl-dropdown>
     <Tip title="下拉多选" className="mt-d" />
     <sl-dropdown :scroll="false" className="mt-d">

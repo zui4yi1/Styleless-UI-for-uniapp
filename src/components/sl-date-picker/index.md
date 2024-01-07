@@ -19,6 +19,8 @@
 |     field      |  year/month/date   | `date`                                                   | 列模式,year 只有年, month 年月, date 年月日                       |
 |     start      |       string       | ''                                                       | string 格式的起始日期, 无则默认前 80 年的年初                     |
 |      end       |       string       | ''                                                       | string 格式的结束日期, 无则默认后 10 年的年末                     |
+|  startIsToday  |      boolean       | false                                                    | 起始日期是否是今天                                                |
+|   endIsToday   |      boolean       | false                                                    | 结束日期是否是是今天                                              |
 |     format     |       string       | `YYYY-MM-DD  `                                           | 日期格式                                                          |
 | pickViewHeight |       string       | `uni.upx2px(68)+px`                                      | 必须使用 uni.upx2px 转成 px 格式, 直接使用 rpx 会有小数导致不居中 |
 |  indicatorClz  |       string       | `text-center border-line-light border-top border-bottom` | 选中项的类                                                        |
