@@ -49,10 +49,10 @@
 </script>
 
 <script setup lang="ts">
-  import { debounce } from 'lodash-es';
   import { computed } from 'vue';
   import { props } from './_props';
 
+  import debounce from '../../utils/debounce/index';
   const _props = defineProps(props);
   const _emits = defineEmits(['click', 'getPhonenumber', 'openSetting', 'getUserInfo']);
 
@@ -104,7 +104,8 @@
     );
   });
 
-  const handleClick = debounce((event: any) => {
+  type IClick = (ev: any) => void;
+  const handleClick: IClick = debounce((event: any) => {
     _emits('click', event);
   }, 300);
 
