@@ -31,6 +31,7 @@ interface IFormItem {
   type: string; // 组件名, 若是自定义组件则isCustom需为true
   isCustom?: boolean; // 是否自定义组件
   labelSpan?: number; // 标签宽度, 栅格模式, 若为0则不显示标签
+  labelClz?: string;
   readOnly?: boolean; // 是否只读, 此时该项会自动转为详情模式, 而非disabled模式
   isRemove?: boolean; // 是否在表单中移除, 注意dom和form内都会移除
   isHidden?: boolean; // 是否隐藏, 只是dom不显示, 但form有值

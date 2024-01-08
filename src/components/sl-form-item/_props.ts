@@ -80,6 +80,10 @@ export const props = {
     type: String,
     default: '',
   },
+  labelClz: {
+    type: String,
+    default: 'ptb-xxs',
+  },
   compOps: {
     type: Object,
     default: () => ({}),

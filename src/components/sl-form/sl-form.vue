@@ -18,7 +18,18 @@
           @change="handleChange(item.prop, $event)"
         >
           <template #cus_com="scope">
+            <!-- #ifdef MP-WEIXIN -->
+            <slot
+              :name="(item.type || '').replace(/-/g, '_')"
+              :value="scope.value"
+              :mode="scope.mode"
+              :cusChange="scope.cusChange"
+              :compOps="scope.compOps"
+            />
+            <!-- #endif -->
+            <!-- #ifndef MP-WEIXIN -->
             <slot :name="(item.type || '').replace(/-/g, '_')" v-bind="scope" />
+            <!-- #endif -->
           </template>
         </sl-form-item>
       </template>

@@ -4,13 +4,14 @@ import type { IValidtorRule } from '../sl-form-item/_validate';
 export interface IFormItem {
   type: string;
   prop: string;
-  label: string;
+  label?: string | number;
   readOnly?: boolean;
   isRemove?: boolean;
   isHidden?: boolean;
   isCustom?: boolean;
   xLayoutClz?: string;
   labelSpan?: number;
+  labelClz?: string;
   emptyText?: string;
   layout?: 'x' | 'y';
   itemAlign?: 'left' | 'right';

@@ -3,8 +3,8 @@
     <view :class="[clz.body(), layout === 'x' ? xLayoutClz : 'block']" class="ptb-s">
       <view
         v-if="labelSpan"
-        :class="[clz.join('body', 'label'), `span-${labelSpan}`]"
-        class="flex-shrink ptb-xxs"
+        :class="[clz.join('body', 'label'), `span-${labelSpan}`, labelClz]"
+        class="flex-shrink"
       >
         <text
           class="color-error mr-xxs"
@@ -38,14 +38,27 @@
           <text v-else-if="type === 'sl-switch'">
             {{ [undefined, null, ''].includes(itemVal) ? emptyText : itemVal }}
           </text>
-          <slot
-            v-else-if="isCustom"
-            name="cus_com"
-            mode="detail"
-            :value="itemVal"
-            :cusChange="handleCusChange"
-            v-bind="_compOps"
-          />
+          <template v-else-if="isCustom">
+            <!-- #ifdef MP-WEIXIN -->
+            <slot
+              name="cus_com"
+              :mode="('detail' as const)"
+              :value="itemVal"
+              :compOps="_compOps"
+              :cusChange="handleCusChange"
+            />
+            <!--#endif-->
+            <!-- #ifndef MP-WEIXIN -->
+            <slot
+              name="cus_com"
+              :mode="('detail' as const)"
+              :value="itemVal"
+              :cusChange="handleCusChange"
+              v-bind="_compOps"
+            />
+            <!--#endif-->
+          </template>
+
           <text v-else>{{ itemVal || emptyText }}</text>
         </template>
         <!--表单-->
@@ -119,14 +132,26 @@
               @change="change"
             />
           </template>
-          <slot
-            v-if="isCustom"
-            name="cus_com"
-            mode="form"
-            :value="itemVal"
-            :cusChange="handleCusChange"
-            v-bind="_compOps"
-          />
+          <template v-if="isCustom">
+            <!-- #ifdef MP-WEIXIN -->
+            <slot
+              name="cus_com"
+              :mode="('form' as const)"
+              :value="itemVal"
+              :compOps="_compOps"
+              :cusChange="handleCusChange"
+            />
+            <!--#endif -->
+            <!-- #ifndef MP-WEIXIN -->
+            <slot
+              name="cus_com"
+              :mode="('form' as const)"
+              :value="itemVal"
+              :cusChange="handleCusChange"
+              v-bind="_compOps"
+            />
+            <!--#endif -->
+          </template>
         </template>
       </view>
     </view>
