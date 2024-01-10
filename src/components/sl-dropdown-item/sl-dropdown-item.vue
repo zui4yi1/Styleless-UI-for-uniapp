@@ -131,8 +131,9 @@
     title="请选择日期"
     v-model:open="isPopupOpen"
     v-model:value="dateText"
-    @close="handleClosePopup"
     v-bind="comOps"
+    @close="handleClosePopup"
+    @change="handleConfirmDatePicker"
   />
 
   <sl-picker
@@ -145,7 +146,7 @@
     :list="list"
     v-bind="comOps"
     @close="handleClosePopup"
-    @change="handleConfirm"
+    @change="handleConfirmPicker"
   />
   <sl-picker />
 </template>
@@ -242,7 +243,6 @@
         // 取消
         _emits('select', '');
         _emits('update:value', '');
-        // updateActiveInx(-1);
         onChange(selfIndex.value, '');
       } else {
         _emits('select', val);
@@ -263,14 +263,19 @@
     }
   };
 
-  const handleConfirm = (vals: string[]) => {
+  const handleConfirmDatePicker = (vals: string[]) => {
+    _emits('update:value', vals);
+    onChange(selfIndex.value, vals);
+  };
+
+  const handleConfirmPicker = (vals: string[]) => {
     pickerLabels.value = pickreRef.value?.getLabels().join(',') || '';
     _emits('update:value', vals);
     onChange(selfIndex.value, vals);
-    isPopupOpen.value = false;
   };
 
   const handleClosePopup = () => {
+    isPopupOpen.value = false;
     updateActiveInx(-1);
   };
 </script>
