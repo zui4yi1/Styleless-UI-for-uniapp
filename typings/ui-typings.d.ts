@@ -14,6 +14,7 @@ type IColor =
   | 'disabled'
   | 'line-light'
   | 'line-default'
+  | 'line-deep'
   | 'fill-light'
   | 'fill-default'
   | 'fill-deep'
@@ -35,6 +36,15 @@ type IMask = 'default' | 'deep';
 
 type IShadow = 'default';
 
-type IHeight = 'button-default' | 'button-small' | 'cell-default' | 'cell-large';
+type IHeight =
+  | 'button-default'
+  | 'button-small'
+  | 'cell-default'
+  | 'cell-large'
+  | 'large'
+  | 'default'
+  | 'small'
+  | 'mini'
+  | 'none';
 
 type IRadius = 'none' | 'round' | 'small' | 'default' | 'large' | 'xl' | 'cell-default';

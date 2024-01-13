@@ -12,6 +12,7 @@ import type { PropType } from 'vue';
  * @param iconSize 打勾图标的尺寸
  * @param iconLib 图标库名, 默认sl-ui-common
  * @param iconName 打勾图标名, 默认icon_check
+ * @param iconClz 图标样式, 可用来调整勾勾与边框的距离
  */
 export const props = {
   className: {
@@ -50,6 +51,10 @@ export const props = {
   iconName: {
     type: String,
     default: 'icon_check',
+  },
+  iconClz: {
+    type: String,
+    default: '',
   },
   iconLib: {
     type: String,

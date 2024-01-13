@@ -17,6 +17,7 @@
           :iconClz="
             [
               'radius-round border',
+              iconClz,
               value === item.value
                 ? 'bg-primary border-transparent'
                 : 'bg-white border-line-default',

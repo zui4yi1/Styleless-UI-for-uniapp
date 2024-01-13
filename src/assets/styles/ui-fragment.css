@@ -60,6 +60,10 @@
   color: #c3c3c3;
 }
 
+.color-line-deep {
+  color: #b3b3b3;
+}
+
 .color-fill-light {
   color: #f5f5f5;
 }
@@ -167,6 +171,10 @@
 
 .border-line-default {
   border-color: #c3c3c3;
+}
+
+.border-line-deep {
+  border-color: #b3b3b3;
 }
 
 .border-fill-light {
@@ -278,6 +286,10 @@
   background-color: #c3c3c3;
 }
 
+.bg-line-deep {
+  background-color: #b3b3b3;
+}
+
 .bg-fill-light {
   background-color: #f5f5f5;
 }
@@ -385,6 +397,10 @@
 
 .bg-line-default-cover {
   background-color: #c3c3c3;
+}
+
+.bg-line-deep-cover {
+  background-color: #b3b3b3;
 }
 
 .bg-fill-light-cover {
@@ -496,6 +512,10 @@ button[disabled].disabled.bg-line-default {
   background-color: #c3c3c3;
 }
 
+button[disabled].disabled.bg-line-deep {
+  background-color: #b3b3b3;
+}
+
 button[disabled].disabled.bg-fill-light {
   background-color: #f5f5f5;
 }
@@ -603,6 +623,10 @@ button[disabled].disabled.color-line-light {
 
 button[disabled].disabled.color-line-default {
   color: #c3c3c3;
+}
+
+button[disabled].disabled.color-line-deep {
+  color: #b3b3b3;
 }
 
 button[disabled].disabled.color-fill-light {
@@ -1116,6 +1140,26 @@ button[disabled].disabled.color-transparent-hover {
 
 .height-cell-large {
   height: 120rpx;
+}
+
+.height-large {
+  height: 55rpx;
+}
+
+.height-default {
+  height: 68rpx;
+}
+
+.height-small {
+  height: 56rpx;
+}
+
+.height-mini {
+  height: 48rpx;
+}
+
+.height-none {
+  height: unset;
 }
 
 /* 圆角类 */

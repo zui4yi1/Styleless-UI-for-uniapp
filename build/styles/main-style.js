@@ -173,6 +173,10 @@ conf.list.push({
       key: 'line-default',
       value: '#c3c3c3',
     },
+    {
+      key: 'line-deep',
+      value: '#b3b3b3',
+    },
   ],
 });
 

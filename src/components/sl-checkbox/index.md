@@ -19,6 +19,7 @@
 | iconSize  |    Number     | 28                            | 打勾图标的尺寸                                    |
 |  iconLib  |    string     | sl-ui-common                  | 图标库名                                          |
 | iconName  |    string     | icon_check                    | 打勾图标名                                        |
+|  iconClz  |    string     | ''                            | 图标样式, 可用来调整勾勾与边框的距离              |
 
 ### 插糟
 

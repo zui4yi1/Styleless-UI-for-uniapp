@@ -16,10 +16,11 @@
           :iconClz="
             [
               'border',
+              iconClz,
               type === 'circle' ? 'radius-round' : '',
               (value || []).includes(item.value)
                 ? 'bg-primary border-transparent'
-                : 'bg-white border-line-default',
+                : 'bg-white border-line-deep',
             ].join(' ')
           "
         />
