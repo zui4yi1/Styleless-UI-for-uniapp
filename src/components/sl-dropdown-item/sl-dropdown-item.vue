@@ -129,6 +129,7 @@
   <sl-date-picker
     v-if="type === 'date'"
     title="请选择日期"
+    ref="dateRef"
     v-model:open="isPopupOpen"
     v-model:value="dateText"
     v-bind="comOps"
@@ -164,7 +165,7 @@
 </script>
 
 <script setup lang="ts">
-  import { computed, inject, onBeforeMount, ref, watchEffect } from 'vue';
+  import { computed, inject, nextTick, onBeforeMount, ref, watchEffect } from 'vue';
   import { props } from './_props';
 
   const _props = defineProps(props);
@@ -178,16 +179,25 @@
   const isPopupOpen = ref(false);
 
   const pickreRef = ref(null as any);
+  const dateRef = ref(null as any);
+  const defaultValue = ref();
 
-  const { scroll, dropdownItems, activeInx, topPos, addItem, updateActiveInx, onChange } = inject(
-    'dropdownParent',
-    {
-      scroll: false,
-      dropdownItems: [],
-      activeInx: -1,
-      topPos: 0,
-    } as any,
-  );
+  const {
+    scroll,
+    dropdownItems,
+    activeInx,
+    resetCount,
+    topPos,
+    addItem,
+    updateActiveInx,
+    onChange,
+  } = inject('dropdownParent', {
+    scroll: false,
+    dropdownItems: [],
+    activeInx: -1,
+    resetCount: 0,
+    topPos: 0,
+  } as any);
   const selfIndex = computed(() => {
     return dropdownItems.value.findIndex((t: any) => t === _props.title);
   });
@@ -203,17 +213,62 @@
     return _props.list.filter((t) => values.value.includes(t.value)).map((t) => t.label);
   });
   const pickerLabels = ref('');
-  const pickerValues = computed<any[]>(() => {
-    return _props.value instanceof Array ? (_props.value.length ? [..._props.value] : []) : [];
+  const pickerValues = computed<any[]>({
+    get() {
+      return _props.value instanceof Array ? (_props.value.length ? [..._props.value] : []) : [];
+    },
+    set(val) {
+      _emits('update:value', val);
+    },
   });
 
   onBeforeMount(() => {
     addItem(_props.title);
+    defaultValue.value = _props.value;
+    if (_props.type === 'select') {
+      if (_props.mutilple && !(_props.value instanceof Array)) {
+        defaultValue.value = [];
+      }
+    }
   });
 
   watchEffect(() => {
     if (_props.type === 'sort' && !isActive.value) {
       sortCount.value = 0;
+    }
+  });
+
+  function reset() {
+    let val = defaultValue.value;
+    switch (_props.type) {
+      case 'select':
+        _emits('select', val);
+        _emits('update:value', val);
+        onChange(selfIndex.value, val);
+        break;
+      case 'cascade':
+        pickerValues.value = val;
+        nextTick(() => {
+          pickerLabels.value = getPickerLabels('value');
+        });
+        _emits('update:value', val);
+        onChange(selfIndex.value, val);
+        break;
+      case 'date':
+        dateText.value = val;
+        _emits('update:value', val);
+        onChange(selfIndex.value, val);
+        break;
+      default:
+        break;
+    }
+
+    updateActiveInx(-1);
+  }
+
+  watchEffect(() => {
+    if (resetCount.value) {
+      reset();
     }
   });
 
@@ -268,8 +323,26 @@
     onChange(selfIndex.value, vals);
   };
 
+  function getPickerLabels(type: 'index' | 'value' = 'index') {
+    const arr = pickreRef.value?.getLabels(type) || [];
+    if (_props.showLastLabel) return arr.pop() || '';
+    else return arr.join(',') || '';
+  }
+
+  /** 初始化cascade和date, 并初始化后销毁 */
+  const once = watchEffect(() => {
+    if (_props.type === 'cascade' && pickreRef.value && _props.list.length) {
+      pickerLabels.value = getPickerLabels('value');
+      once();
+    }
+    if (_props.type === 'date' && dateRef.value) {
+      dateText.value = _props.value as string;
+      once();
+    }
+  });
+
   const handleConfirmPicker = (vals: string[]) => {
-    pickerLabels.value = pickreRef.value?.getLabels().join(',') || '';
+    pickerLabels.value = getPickerLabels();
     _emits('update:value', vals);
     onChange(selfIndex.value, vals);
   };

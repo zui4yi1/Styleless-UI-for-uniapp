@@ -103,7 +103,7 @@ const getClazzNames = () => {
           ],
         },
       ]);
-    }, 500);
+    }, 1500);
   });
 };
 
@@ -118,6 +118,8 @@ const getDetail = () => {
         gender: 1,
         hobits: [1],
         agree: true,
+        birthdate: '2023-12-12',
+        className: ['c', 'c1', 'c12'],
         advantage: [1],
         cus: 'cus...',
       });

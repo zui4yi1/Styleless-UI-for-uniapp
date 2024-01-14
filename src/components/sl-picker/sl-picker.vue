@@ -86,9 +86,13 @@
     }
   });
 
-  const getLabels = () => {
-    const { list, hasAll, dataMap } = _props;
-    const res = _tools.getInxsLabel(list, valsInx.value, { hasAll, dataMap });
+  const getLabels = (type: 'index' | 'value' = 'index') => {
+    const { list, value, columns, hasAll, dataMap } = _props;
+    const inxs =
+      type === 'index'
+        ? valsInx.value
+        : _tools.getInitValInxs(list, value, { columns, hasAll, dataMap });
+    const res = _tools.getInxsLabel(list, inxs, { hasAll, dataMap });
     return res;
   };
 

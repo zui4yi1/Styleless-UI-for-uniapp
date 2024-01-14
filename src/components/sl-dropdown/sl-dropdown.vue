@@ -27,6 +27,7 @@
   const activeInx = ref(-1);
   const dropdownItems = ref([] as string[]);
   const topPos = ref(-1);
+  const resetCount = ref(0);
 
   const instance = getCurrentInstance();
 
@@ -39,6 +40,7 @@
     scroll: _props.scroll,
     dropdownItems,
     activeInx,
+    resetCount,
     topPos,
     addItem: (title: string) => {
       dropdownItems.value.push(title);
@@ -48,6 +50,11 @@
     },
     onChange: (inx: number, value: any) => {
       _emits('change', { inx, value });
+    },
+  });
+  defineExpose({
+    reset: () => {
+      resetCount.value++;
     },
   });
 </script>

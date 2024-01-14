@@ -50,6 +50,10 @@ export const props = {
     type: Boolean,
     default: false,
   },
+  showLastLabel: {
+    type: Boolean,
+    default: true,
+  },
   comOps: {
     type: Object,
     default: () => {},

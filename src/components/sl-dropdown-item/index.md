@@ -10,15 +10,16 @@
 
 ### 其它属性
 
-|   属性   |             类型              | 默认     | 描述                                                              |
-| :------: | :---------------------------: | :------- | :---------------------------------------------------------------- |
-|   type   | select/cascade/date/sort/text | select   | 选项类型                                                          |
-|  title   |            string             | ''       | 弹窗标题                                                          |
-| maxWidth |            string             | '160rpx' | 每项的最大宽度, 若是日期要手动设置 200rpx 左右                    |
-|  value   |        string/string[]        | ''       | select, cascade 或 date 可传, 使用时必须使用 v-model:value 的形式 |
-|   list   |    {label,value,children}     | []       | 数据列, select 或 cascade 可传                                    |
-| mutilple |            boolean            | false    | 是否可多选, select 时传                                           |
-|  hasAll  |            boolean            | false    | 是否自动添加"全部"选项, type 为 cascade 时可传                    |
+|     属性      |             类型              | 默认     | 描述                                                              |
+| :-----------: | :---------------------------: | :------- | :---------------------------------------------------------------- |
+|     type      | select/cascade/date/sort/text | select   | 选项类型                                                          |
+|     title     |            string             | ''       | 弹窗标题                                                          |
+|   maxWidth    |            string             | '160rpx' | 每项的最大宽度, 若是日期要手动设置 200rpx 左右                    |
+|     value     |        string/string[]        | ''       | select, cascade 或 date 可传, 使用时必须使用 v-model:value 的形式 |
+|     list      |    {label,value,children}     | []       | 数据列, select 或 cascade 可传                                    |
+|   mutilple    |            boolean            | false    | 是否可多选, select 时传                                           |
+|    hasAll     |            boolean            | false    | type 为 cascade 时可用, 是否自动添加"全部"选项                    |
+| showLastLabel |            boolean            | true     | type 为 cascade 时可用, 若为 true 则只显示选中的最后一项          |
 
 ### 插糟
 
