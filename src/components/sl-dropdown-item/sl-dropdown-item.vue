@@ -165,7 +165,7 @@
 </script>
 
 <script setup lang="ts">
-  import { computed, inject, nextTick, onBeforeMount, ref, watchEffect } from 'vue';
+  import { computed, inject, nextTick, onMounted, ref, watchEffect } from 'vue';
   import { props } from './_props';
 
   const _props = defineProps(props);
@@ -222,7 +222,7 @@
     },
   });
 
-  onBeforeMount(() => {
+  onMounted(() => {
     addItem(_props.title);
     defaultValue.value = _props.value;
     if (_props.type === 'select') {
